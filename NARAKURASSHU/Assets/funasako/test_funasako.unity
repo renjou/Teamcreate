@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 1650799989}
   m_Layer: 0
   m_Name: "\u30A2\u30DB1_0"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,6 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2c8c89c68ce89468f797c174757a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControl
+  attack1Prefab: {fileID: 0}
 --- !u!212 &1650799985
 SpriteRenderer:
   serializedVersion: 2
