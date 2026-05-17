@@ -6,8 +6,10 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D PlayerRigid;
     float jumpforce = 300;
     float speed = 5.0f; // 移動速度
-    float playerDirection = 1; // 自機の向き　　1で右向き
+    public float playerDirection = 1; // 自機の向き　　1で右向き
+    bool isAttacking = false;
     public GameObject attack1Prefab;
+    public GameObject attack2Prefab;
 
     void Start()
     {
@@ -19,8 +21,9 @@ public class PlayerControl : MonoBehaviour
     {
         move();
         jump();
-        attack1();
-        attack2();
+        if (isAttacking) return;
+        if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
+        else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
     }
 
 
@@ -52,27 +55,54 @@ public class PlayerControl : MonoBehaviour
 
     void attack1()
     {
+        isAttacking = true;
         // 通常攻撃
-        if (Keyboard.current.rKey.wasPressedThisFrame)
+        if (playerDirection == 1)
         {
-            if (playerDirection == 1)
-            {
-                Debug.Log("攻撃1右");
-                Instantiate(attack1Prefab,
-                transform.position + Vector3.right,
-                Quaternion.identity);
-            }
-            else Debug.Log("攻撃1左");
+            Debug.Log("攻撃1右");
+            GameObject attack = Instantiate(attack1Prefab,
+            transform.position + Vector3.right,
+            Quaternion.identity);
+            attack.GetComponent<AttackObject1>().direction = playerDirection;
         }
+        else 
+        {
+            Debug.Log("攻撃1左");
+            GameObject attack = Instantiate(attack1Prefab,
+            transform.position + Vector3.left,
+            Quaternion.identity);
+            attack.GetComponent <AttackObject1>().direction = playerDirection;
+        }
+        Invoke(nameof(endAttack), 0.6f);
     }
 
     void attack2()
     {
+        isAttacking = true;
         // 強攻撃
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (playerDirection == 1)
         {
-            if (playerDirection == 1) Debug.Log("攻撃2右");
-            else Debug.Log("攻撃2左");
+             Debug.Log("攻撃2右");
+             GameObject attack = Instantiate(attack2Prefab,
+             transform.position + Vector3.right,
+             Quaternion.identity);
+             attack.GetComponent<AttackObject1>().direction = playerDirection;
         }
+        else 
+        {
+             GameObject attack = Instantiate(attack2Prefab,
+             transform.position + Vector3.left,
+             Quaternion.identity);
+             Debug.Log("攻撃2左");
+             attack.GetComponent<AttackObject1>().direction = playerDirection;
+        }
+        Invoke(nameof(endAttack), 0.6f);
+        
     }
+
+    void endAttack()
+    {
+        isAttacking = false;
+    }
+    
 }
