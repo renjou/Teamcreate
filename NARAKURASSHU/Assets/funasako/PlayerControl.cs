@@ -7,7 +7,9 @@ public class PlayerControl : MonoBehaviour
     float jumpforce = 300;
     float speed = 5.0f; // 移動速度
     public float playerDirection = 1; // 自機の向き　　1で右向き
+    public int playerHP = 5;
     bool isAttacking = false;
+    public HPUI hpUI;
     public GameObject attack1Prefab;
     public GameObject attack2Prefab;
 
@@ -104,5 +106,15 @@ public class PlayerControl : MonoBehaviour
     {
         isAttacking = false;
     }
-    
+
+    public void damage()
+    {
+        playerHP -= 1;
+        if (playerHP < 0)
+        {
+            playerHP = 0;
+        }
+
+        hpUI.UpdateHP(playerHP);
+    }
 }
