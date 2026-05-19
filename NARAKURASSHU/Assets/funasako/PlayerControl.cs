@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     float speed = 5.0f; // 移動速度
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
+    public float knockBackPower = 10f;
     bool isAttacking = false;
     public HPUI hpUI;
     public GameObject attack1Prefab;
@@ -15,12 +16,17 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+        hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
         this.PlayerRigid = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            PlayerDamage();
+        }
         move();
         jump();
         if (isAttacking) return;
@@ -28,7 +34,14 @@ public class PlayerControl : MonoBehaviour
         else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
+    {
+        if (collision.CompareTag("enemy"))
+        {
+            PlayerDamage();
+            knockBack(collision.transform.position);
+        }
+    }
 
     void jump() // ジャンプ
     {
@@ -52,7 +65,8 @@ public class PlayerControl : MonoBehaviour
             move = -1;
             playerDirection = -1;
         }
-        transform.Translate(this.speed * move * Time.deltaTime, 0, 0);
+        //transform.Translate(this.speed * move * Time.deltaTime, 0, 0);
+        PlayerRigid.linearVelocity = new Vector2(move * speed, PlayerRigid.linearVelocity.y);
     }
 
     void attack1()
@@ -107,7 +121,7 @@ public class PlayerControl : MonoBehaviour
         isAttacking = false;
     }
 
-    public void damage()
+    public void PlayerDamage()　// ダメージ処理
     {
         playerHP -= 1;
         if (playerHP < 0)
@@ -116,5 +130,16 @@ public class PlayerControl : MonoBehaviour
         }
 
         hpUI.UpdateHP(playerHP);
+    }
+
+    void knockBack(Vector3 enemyPos) // 被弾時ノックバック
+    {
+        Debug.Log("痛み");
+        Vector2 direction = (transform.position - enemyPos).normalized;
+        direction.x *= 2;
+        direction.y = 0.5f;
+        PlayerRigid.linearVelocity = Vector2.zero;
+        PlayerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
+       
     }
 }
