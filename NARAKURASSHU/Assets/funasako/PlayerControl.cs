@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
     public int playerHP = 5;
     public float knockBackPower = 10f;
     bool isAttacking = false;
+    bool isKnockBack = false;
+    public bool gameover = false;
     public HPUI hpUI;
     public GameObject attack1Prefab;
     public GameObject attack2Prefab;
@@ -21,19 +23,6 @@ public class PlayerControl : MonoBehaviour
         this.PlayerRigid = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            PlayerDamage();
-        }
-        move();
-        jump();
-        if (isAttacking) return;
-        if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
-        else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
     {
         if (collision.CompareTag("enemy"))
@@ -42,6 +31,27 @@ public class PlayerControl : MonoBehaviour
             knockBack(collision.transform.position);
         }
     }
+    void Update()
+    {
+        if (playerHP == 0)
+        {
+            Debug.Log("gameover");
+            gameover = true;
+            PlayerRigid.linearVelocity = Vector3.zero;
+        }
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            PlayerDamage();
+        }
+        if (isKnockBack) return;
+        if (gameover) return;
+        move();
+        jump();
+        if (isAttacking) return;
+        if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
+        else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
+    }
+
 
     void jump() // ジャンプ
     {
@@ -135,11 +145,18 @@ public class PlayerControl : MonoBehaviour
     void knockBack(Vector3 enemyPos) // 被弾時ノックバック
     {
         Debug.Log("痛み");
+        isKnockBack = true;
         Vector2 direction = (transform.position - enemyPos).normalized;
-        direction.x *= 2;
+        direction.x *= 0.5f;
         direction.y = 0.5f;
         PlayerRigid.linearVelocity = Vector2.zero;
         PlayerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
-       
+        Invoke(nameof(endKnockBack), 0.3f);
     }
+
+    void endKnockBack()
+    {
+        isKnockBack = false;
+    }
+
 }
