@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e2160b226fc74446dbd7b0521cb0ccf6
+timeCreated: 1512804440
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106811
+  packageName: Pixel Hero Warrior 16x16
+  packageVersion: 1.1
+  assetPath: Assets/Universal Pixel Hero (Warrior)/AnimatorControllers/PlayerWarrior.controller
+  uploadId: 223584
