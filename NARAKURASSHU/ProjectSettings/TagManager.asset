@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - wall
-  - PlayerAttack
+
   layers:
   - Default
   - TransparentFX

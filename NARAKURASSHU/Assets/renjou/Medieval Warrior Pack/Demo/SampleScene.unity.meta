@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 3eed0c955a54e4c429da3bdeec01f34e
+=======
+guid: 50bdfd49a756955469dbfbdd221f5a13
+>>>>>>> main
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159577
+  packageName: Medieval Warrior Pack
+  packageVersion: 1.0
+  assetPath: Assets/Medieval Warrior Pack/Demo/SampleScene.unity
+  uploadId: 343852
