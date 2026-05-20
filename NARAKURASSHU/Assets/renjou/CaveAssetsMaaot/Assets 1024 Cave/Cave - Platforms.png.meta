@@ -158,12 +158,12 @@ TextureImporter:
       name: Cave - Platforms_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 808
-        width: 193
-        height: 192
+        x: 22
+        y: 810
+        width: 191
+        height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,12 +180,12 @@ TextureImporter:
       name: Cave - Platforms_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 998
-        width: 16
-        height: 8
+        x: 68
+        y: 999
+        width: 14
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: Cave - Platforms_2
       rect:
         serializedVersion: 2
-        x: 232
-        y: 811
-        width: 391
-        height: 191
+        x: 233
+        y: 812
+        width: 389
+        height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: Cave - Platforms_3
       rect:
         serializedVersion: 2
-        x: 27
-        y: 435
-        width: 564
-        height: 365
+        x: 28
+        y: 436
+        width: 562
+        height: 363
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: Cave - Platforms_4
       rect:
         serializedVersion: 2
-        x: 529
-        y: 798
-        width: 16
-        height: 8
+        x: 530
+        y: 799
+        width: 14
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: Cave - Platforms_5
       rect:
         serializedVersion: 2
-        x: 668
-        y: 644
-        width: 311
-        height: 325
+        x: 669
+        y: 645
+        width: 309
+        height: 323
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,12 +290,12 @@ TextureImporter:
       name: Cave - Platforms_6
       rect:
         serializedVersion: 2
-        x: 47
-        y: 15
-        width: 193
-        height: 366
+        x: 94
+        y: 381
+        width: 14
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: Cave - Platforms_7
       rect:
         serializedVersion: 2
-        x: 93
-        y: 379
-        width: 16
-        height: 8
+        x: 616
+        y: 262
+        width: 389
+        height: 364
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,12 +334,12 @@ TextureImporter:
       name: Cave - Platforms_8
       rect:
         serializedVersion: 2
-        x: 273
-        y: 316
-        width: 305
-        height: 64
+        x: 48
+        y: 16
+        width: 191
+        height: 364
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,12 +356,12 @@ TextureImporter:
       name: Cave - Platforms_9
       rect:
         serializedVersion: 2
-        x: 615
-        y: 261
-        width: 391
-        height: 366
+        x: 274
+        y: 317
+        width: 303
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: Cave - Platforms_10
       rect:
         serializedVersion: 2
-        x: 292
-        y: 144
-        width: 269
-        height: 160
+        x: 293
+        y: 145
+        width: 267
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,12 +400,12 @@ TextureImporter:
       name: Cave - Platforms_11
       rect:
         serializedVersion: 2
-        x: 627
-        y: 167
-        width: 358
-        height: 65
+        x: 628
+        y: 168
+        width: 356
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: Cave - Platforms_12
       rect:
         serializedVersion: 2
-        x: 721
-        y: 30
-        width: 193
-        height: 106
+        x: 722
+        y: 31
+        width: 191
+        height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -444,12 +444,12 @@ TextureImporter:
       name: Cave - Platforms_13
       rect:
         serializedVersion: 2
-        x: 852
-        y: 134
-        width: 16
-        height: 8
+        x: 853
+        y: 135
+        width: 14
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -466,12 +466,12 @@ TextureImporter:
       name: Cave - Platforms_14
       rect:
         serializedVersion: 2
-        x: 267
-        y: 16
-        width: 391
-        height: 107
+        x: 268
+        y: 18
+        width: 389
+        height: 104
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,7 +488,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 55ac0a97f3e3ce641b7912b383fb9add
     internalID: 0
     vertices: []
     indices: 
@@ -496,7 +496,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Cave - Platforms_0: -3019536060254245042
       Cave - Platforms_1: 7610613980440067738
