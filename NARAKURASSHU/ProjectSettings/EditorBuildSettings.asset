@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/renjou/tyu-toriaru.unity
     guid: d71977d91a43e4d4f912c2bc8bf72c8b
   - enabled: 1
-    path: Assets/renjou/j.unity
+    path: Assets/renjou/ki.unity
     guid: 7286463c35b219f4e9ecc588ce838551
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

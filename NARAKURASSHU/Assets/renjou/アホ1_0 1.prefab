@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2087039272402373663}
   - component: {fileID: 6923401657572688927}
   - component: {fileID: 2098292900753219662}
+  - component: {fileID: 7064736847954315491}
   m_Layer: 0
   m_Name: "\u30A2\u30DB1_0 1"
   m_TagString: Player
@@ -30,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 1617028049286373733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 3.47, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -3.68, y: -1.46, z: 0}
+  m_LocalScale: {x: 0.2754, y: 0.19425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617028049286373733}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d2c8c89c68ce89468f797c174757a03, type: 3}
   m_Name: 
@@ -111,6 +112,8 @@ MonoBehaviour:
   playerHP: 5
   knockBackPower: 10
   gameover: 0
+  sprite: {fileID: 0}
+  circle: {fileID: 0}
   hpUI: {fileID: 0}
   attack1Prefab: {fileID: 1218759003848467357, guid: cb6149c1ddcd9774ea30ee2377bee747, type: 3}
   attack2Prefab: {fileID: 809524503572319940, guid: 2171ba70c4abc8d4d99afe8f496b3040, type: 3}
@@ -223,3 +226,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7064736847954315491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617028049286373733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b528bf0dd15a443962067785a38f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveSpeed: 5
