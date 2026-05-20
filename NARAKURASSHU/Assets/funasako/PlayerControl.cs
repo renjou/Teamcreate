@@ -11,20 +11,27 @@ public class PlayerControl : MonoBehaviour
     public float knockBackPower = 10f;
     bool isAttacking = false;
     bool isKnockBack = false;
+    bool isDameging = false;
     public bool gameover = false;
+    public Transform sprite;
+    public Transform circle;
     public HPUI hpUI;
     public GameObject attack1Prefab;
     public GameObject attack2Prefab;
+    RespawnManager reborn;
 
     void Start()
     {
         hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
         this.PlayerRigid = GetComponent<Rigidbody2D>();
+        reborn = FindFirstObjectByType<RespawnManager>();
+        reborn.Register(transform);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
     {
+        if (isDameging) return;
         if (collision.CompareTag("enemy"))
         {
             PlayerDamage();
@@ -33,11 +40,12 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-        if (playerHP == 0)
+        if (playerHP == 0) // 死亡
         {
             Debug.Log("gameover");
             gameover = true;
             PlayerRigid.linearVelocity = Vector3.zero;
+            Invoke(nameof(RespawanCall), 0.5f);
         }
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
@@ -68,12 +76,14 @@ public class PlayerControl : MonoBehaviour
         {
             move = 1;
             playerDirection = 1;
+            sprite.localScale = new Vector3(1, 1, 1);
         }
         // 左に移動
         if (Keyboard.current.leftArrowKey.isPressed)
         {
             move = -1;
             playerDirection = -1;
+            sprite.localScale = new Vector3(-1, 1, 1);
         }
         //transform.Translate(this.speed * move * Time.deltaTime, 0, 0);
         PlayerRigid.linearVelocity = new Vector2(move * speed, PlayerRigid.linearVelocity.y);
@@ -87,7 +97,7 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("攻撃1右");
             GameObject attack = Instantiate(attack1Prefab,
-            transform.position + Vector3.right,
+            circle.position,
             Quaternion.identity);
             attack.GetComponent<AttackObject1>().direction = playerDirection;
         }
@@ -95,7 +105,7 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("攻撃1左");
             GameObject attack = Instantiate(attack1Prefab,
-            transform.position + Vector3.left,
+            circle.position,
             Quaternion.identity);
             attack.GetComponent <AttackObject1>().direction = playerDirection;
         }
@@ -110,14 +120,14 @@ public class PlayerControl : MonoBehaviour
         {
              Debug.Log("攻撃2右");
              GameObject attack = Instantiate(attack2Prefab,
-             transform.position + Vector3.right,
+             circle.position,
              Quaternion.identity);
              attack.GetComponent<AttackObject1>().direction = playerDirection;
         }
         else 
         {
              GameObject attack = Instantiate(attack2Prefab,
-             transform.position + Vector3.left,
+             circle.position,
              Quaternion.identity);
              Debug.Log("攻撃2左");
              attack.GetComponent<AttackObject1>().direction = playerDirection;
@@ -133,6 +143,7 @@ public class PlayerControl : MonoBehaviour
 
     public void PlayerDamage()　// ダメージ処理
     {
+        isDameging = true;
         playerHP -= 1;
         if (playerHP < 0)
         {
@@ -152,6 +163,7 @@ public class PlayerControl : MonoBehaviour
         PlayerRigid.linearVelocity = Vector2.zero;
         PlayerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
         Invoke(nameof(endKnockBack), 0.3f);
+        Invoke(nameof(endInvincible), 1f);
     }
 
     void endKnockBack()
@@ -159,4 +171,16 @@ public class PlayerControl : MonoBehaviour
         isKnockBack = false;
     }
 
+    void RespawanCall()
+    {
+        playerHP = 5;
+        reborn.RespawnALL();
+        hpUI.UpdateHP(playerHP);
+        gameover = false;
+    }
+
+    void endInvincible()
+    {
+        isDameging = false;
+    }
 }
