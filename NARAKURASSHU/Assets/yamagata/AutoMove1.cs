@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class AutoMove : MonoBehaviour
 {
-    public float speed = 1.0f;
-    private int direction = 1;
+    public float speed = 2.0f;
+    private int direction = 2;
 
     // HP
     public int hp = 1;
@@ -47,23 +47,27 @@ public class AutoMove : MonoBehaviour
 
             {
                 Destroy(gameObject);
+            
 
                 //プレイヤーに当たった
 
-                if (collision.gameObject.CompareTag("Player"))
-                {
-                    // PlayerHP取得
 
-                    PlayerHP playerHp = collision.gameObject.GetComponent<PlayerHP>();
+                
+            }
 
-                    // ダメージ1
+        }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // PlayerHP取得
 
-                    if (playerHp != null)
-                    {
-                        playerHp.TakeDamage(1);
+            PlayerHP playerHp = collision.gameObject.GetComponent<PlayerHP>();
 
-                    }
-                }
+            // ダメージ1
+
+            if (playerHp != null)
+            {
+                playerHp.TakeDamage(2);
+
             }
         }
     }
