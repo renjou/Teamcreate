@@ -113,9 +113,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< HEAD
-=======
-    buildTarget: Android
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -128,7 +126,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
->>>>>>> main
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -141,109 +138,93 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> main
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water-animation_0
+      name: water_animated_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 47
         width: 80
-        height: 16
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: 29c343480ea70b240b6b5e8b9e7c8963
+      internalID: 1504040931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_1
+      name: water_animated_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 16
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: c8d549a3d91bd7b45bb59bcb299b98f2
+      internalID: -962832182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_2
+      name: water_animated_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 15
         width: 80
-        height: 16
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: 9e265d0a7814f40488a5dd7f6912aa07
+      internalID: -60476372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_3
+      name: water_animated_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 80
-        height: 16
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: 837bc47dcad4c9e4eadd2edbdeae91f5
+      internalID: 623138351
       vertices: []
       indices: 
       edges: []
@@ -252,7 +233,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a7c6ccfae6f61614fbbeb4c3dbf6b696
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +241,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      water-animation_0: 21300000
-      water-animation_1: 21300002
-      water-animation_2: 21300004
-      water-animation_3: 21300006
+      water_animated_0: 1504040931
+      water_animated_1: -962832182
+      water_animated_2: -60476372
+      water_animated_3: 623138351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

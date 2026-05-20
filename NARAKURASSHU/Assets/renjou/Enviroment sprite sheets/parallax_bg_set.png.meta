@@ -119,9 +119,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< HEAD
-=======
-    buildTarget: Android
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -134,7 +132,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
->>>>>>> main
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -147,27 +144,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> main
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: loopable_backgrounds_0
+      name: parallax_bg_set_0
       rect:
         serializedVersion: 2
         x: 0
@@ -175,125 +156,103 @@ TextureImporter:
         width: 704
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: c345942dbcb68d54a89a1b45e10b01a1
+      internalID: -263889597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: loopable_backgrounds_1
+      name: parallax_bg_set_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 576
+        y: 431
         width: 704
-        height: 144
+        height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: a56b2e352c707fb4f8d960c3c0cb9cf3
+      internalID: -224090721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: loopable_backgrounds_2
+      name: parallax_bg_set_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 432
+        y: 287
         width: 704
-        height: 144
+        height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: b5db56a334ff31544a31a500e5159273
+      internalID: -738534090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: loopable_backgrounds_3
+      name: parallax_bg_set_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 288
+        y: 575
         width: 704
-        height: 144
+        height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: ac43f4bd589959c479cafe3644a8c21c
+      internalID: -556610344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: loopable_backgrounds_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 144
-        width: 704
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: loopable_backgrounds_5
+      name: parallax_bg_set_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 704
-        height: 144
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
+      spriteID: fc0a985b4ff69c6438c408b3db5cabe0
+      internalID: 1973203541
       vertices: []
       indices: 
       edges: []
@@ -302,7 +261,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: be918f8f17cc02f4a97bf0a42aa0668f
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +269,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      loopable_backgrounds_0: 21300000
-      loopable_backgrounds_1: 21300002
-      loopable_backgrounds_2: 21300004
-      loopable_backgrounds_3: 21300006
-      loopable_backgrounds_4: 21300008
-      loopable_backgrounds_5: 21300010
+      parallax_bg_set_0: -263889597
+      parallax_bg_set_1: -224090721
+      parallax_bg_set_2: -738534090
+      parallax_bg_set_3: -556610344
+      parallax_bg_set_4: 1973203541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
