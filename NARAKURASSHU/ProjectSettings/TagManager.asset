@@ -3,8 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< Updated upstream
   tags:
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+  - Ground
+  - enemy
+  - Wall
+=======
 
+>>>>>>> main
+=======
+  - Ground
+>>>>>>> Stashed changes
+=======
+  tags: []
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

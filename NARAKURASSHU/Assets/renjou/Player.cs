@@ -2,10 +2,18 @@ using UnityEngine;
 // 新しい入力システムを使うためにこれを追加
 using UnityEngine.InputSystem;
 
-public class PlayerControl1 : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
     public float moveSpeed = 5.0f;
-
+    public float jumpForce = 8.0f;
+    void Start()
+    {
+        // 自分のオブジェクトからSpriteRendererを取得
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         // 新しいInput Systemでのキーボード入力の取得方法
@@ -26,10 +34,29 @@ public class PlayerControl1 : MonoBehaviour
         // キャラクターを移動させる
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
-        // 移動している方向にキャラクターを向かせる
-        if (moveDirection != Vector3.zero)
+
+
+        // 【修正例】移動している方向にキャラクターを向かせる
+
+        if (moveDirection.x > 0)
         {
-            transform.forward = moveDirection;
+            transform.localScale = new Vector3(-0.5f, 0.5f, 1f); // 元の向き
         }
+        else if (moveDirection.x < 0)
+        {
+            transform.localScale = new Vector3(0.5f, 0.5f, 1f); // 左右反転
+        }
+
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            // 上方向に向けて一瞬だけ力を加える（Impulse）
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        if (moveDirection.y > 0)
+        {
+            transform.localScale = new Vector3(0.5f, 0.5f, 1f); // 上向き
+
+        }
+        
     }
 }
