@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
         }
         if (moveDirection.y > 0)
         {
-            transform.localScale = new Vector3(transform.localScale.x, 0.5f, 1f); // ãŒü‚«
+            transform.localScale = new Vector3(0.5f, 0.5f, 1f); // ãŒü‚«
 
         }
         
