@@ -9,7 +9,7 @@ public class cf : MonoBehaviour
     public Vector3 offset;
 
     // 追従のなめらかさ
-    public float smoothSpeed = 5f;
+    public float smoothSpeed = 2f;
 
     void LateUpdate()
     {

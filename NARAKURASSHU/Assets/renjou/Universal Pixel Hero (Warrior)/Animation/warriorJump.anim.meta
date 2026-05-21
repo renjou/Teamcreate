@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a6d6733b09264fca9786ffa83bd604b
+timeCreated: 1512806494
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106811
+  packageName: Pixel Hero Warrior 16x16
+  packageVersion: 1.1
+  assetPath: Assets/Universal Pixel Hero (Warrior)/Animation/warriorJump.anim
+  uploadId: 223584

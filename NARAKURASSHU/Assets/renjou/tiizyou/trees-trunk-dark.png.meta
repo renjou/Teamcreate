@@ -1,0 +1,1840 @@
+fileFormatVersion: 2
+guid: 3a0e0e9389f595442bff65be2c3c7c67
+AssetOrigin:
+  serializedVersion: 1
+  productId: 61672
+  packageName: 2D Platfrom Tile Set - Cave
+  packageVersion: 1.2
+  assetPath: Assets/Cave Platformer Tileset/Enviroment sprite sheets/trees-trunk-dark.png
+  uploadId: 154679
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: trees-trunk-dark_0
+  - first:
+      213: 21300002
+    second: trees-trunk-dark_1
+  - first:
+      213: 21300004
+    second: trees-trunk-dark_2
+  - first:
+      213: 21300006
+    second: trees-trunk-dark_3
+  - first:
+      213: 21300008
+    second: trees-trunk-dark_4
+  - first:
+      213: 21300010
+    second: trees-trunk-dark_5
+  - first:
+      213: 21300012
+    second: trees-trunk-dark_6
+  - first:
+      213: 21300014
+    second: trees-trunk-dark_7
+  - first:
+      213: 21300016
+    second: trees-trunk-dark_8
+  - first:
+      213: 21300018
+    second: trees-trunk-dark_9
+  - first:
+      213: 21300020
+    second: trees-trunk-dark_10
+  - first:
+      213: 21300022
+    second: trees-trunk-dark_11
+  - first:
+      213: 21300024
+    second: trees-trunk-dark_12
+  - first:
+      213: 21300026
+    second: trees-trunk-dark_13
+  - first:
+      213: 21300028
+    second: trees-trunk-dark_14
+  - first:
+      213: 21300030
+    second: trees-trunk-dark_15
+  - first:
+      213: 21300032
+    second: trees-trunk-dark_16
+  - first:
+      213: 21300034
+    second: trees-trunk-dark_17
+  - first:
+      213: 21300036
+    second: trees-trunk-dark_18
+  - first:
+      213: 21300038
+    second: trees-trunk-dark_19
+  - first:
+      213: 21300040
+    second: trees-trunk-dark_20
+  - first:
+      213: 21300042
+    second: trees-trunk-dark_21
+  - first:
+      213: 21300044
+    second: trees-trunk-dark_22
+  - first:
+      213: 21300046
+    second: trees-trunk-dark_23
+  - first:
+      213: 21300048
+    second: trees-trunk-dark_24
+  - first:
+      213: 21300050
+    second: trees-trunk-dark_25
+  - first:
+      213: 21300052
+    second: trees-trunk-dark_26
+  - first:
+      213: 21300054
+    second: trees-trunk-dark_27
+  - first:
+      213: 21300056
+    second: trees-trunk-dark_28
+  - first:
+      213: 21300058
+    second: trees-trunk-dark_29
+  - first:
+      213: 21300060
+    second: trees-trunk-dark_30
+  - first:
+      213: 21300062
+    second: trees-trunk-dark_31
+  - first:
+      213: 21300064
+    second: trees-trunk-dark_32
+  - first:
+      213: 21300066
+    second: trees-trunk-dark_33
+  - first:
+      213: 21300068
+    second: trees-trunk-dark_34
+  - first:
+      213: 21300070
+    second: trees-trunk-dark_35
+  - first:
+      213: 21300072
+    second: trees-trunk-dark_36
+  - first:
+      213: 21300074
+    second: trees-trunk-dark_37
+  - first:
+      213: 21300076
+    second: trees-trunk-dark_38
+  - first:
+      213: 21300078
+    second: trees-trunk-dark_39
+  - first:
+      213: 21300080
+    second: trees-trunk-dark_40
+  - first:
+      213: 21300082
+    second: trees-trunk-dark_41
+  - first:
+      213: 21300084
+    second: trees-trunk-dark_42
+  - first:
+      213: 21300086
+    second: trees-trunk-dark_43
+  - first:
+      213: 21300088
+    second: trees-trunk-dark_44
+  - first:
+      213: 21300090
+    second: trees-trunk-dark_45
+  - first:
+      213: 21300092
+    second: trees-trunk-dark_46
+  - first:
+      213: 21300094
+    second: trees-trunk-dark_47
+  - first:
+      213: 21300096
+    second: trees-trunk-dark_48
+  - first:
+      213: 21300098
+    second: trees-trunk-dark_49
+  - first:
+      213: 21300100
+    second: trees-trunk-dark_50
+  - first:
+      213: 21300102
+    second: trees-trunk-dark_51
+  - first:
+      213: 21300104
+    second: trees-trunk-dark_52
+  - first:
+      213: 21300106
+    second: trees-trunk-dark_53
+  - first:
+      213: 21300108
+    second: trees-trunk-dark_54
+  - first:
+      213: 21300110
+    second: trees-trunk-dark_55
+  - first:
+      213: 21300112
+    second: trees-trunk-dark_56
+  - first:
+      213: 21300114
+    second: trees-trunk-dark_57
+  - first:
+      213: 21300116
+    second: trees-trunk-dark_58
+  - first:
+      213: 21300118
+    second: trees-trunk-dark_59
+  - first:
+      213: 21300120
+    second: trees-trunk-dark_60
+  - first:
+      213: 21300122
+    second: trees-trunk-dark_61
+  - first:
+      213: 21300124
+    second: trees-trunk-dark_62
+  - first:
+      213: 21300126
+    second: trees-trunk-dark_63
+  - first:
+      213: 21300128
+    second: trees-trunk-dark_64
+  - first:
+      213: 21300130
+    second: trees-trunk-dark_65
+  - first:
+      213: 21300132
+    second: trees-trunk-dark_66
+  - first:
+      213: 21300134
+    second: trees-trunk-dark_67
+  - first:
+      213: 21300136
+    second: trees-trunk-dark_68
+  - first:
+      213: 21300138
+    second: trees-trunk-dark_69
+  - first:
+      213: 21300140
+    second: trees-trunk-dark_70
+  - first:
+      213: 21300142
+    second: trees-trunk-dark_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 16
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trees-trunk-dark_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 255
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846d553320533324fac324fed1b8fe59
+      internalID: 2013450292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 56
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbf584270600c24da5063a1abb4ce2b
+      internalID: 89714076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 255
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c137c1c37c0bd94381ba39db42fc817
+      internalID: 1073152772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 255
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fd85434891e57439f7f1c264a88761
+      internalID: -1078481394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_4
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 255
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ae05146181c5c43badb97a4d779b71
+      internalID: 1917914348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 255
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d046fa0c1fe0c4da3f82d445bf9d01
+      internalID: 1494439399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_6
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 255
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c8e53200f63f448a497d8cff4e5a96
+      internalID: -1454862565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_7
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 255
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24705772cd76c3941a5dff2b934be1f2
+      internalID: 273367066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_8
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 0
+        width: 56
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbbc54215f619e48879adc86e53a2f8
+      internalID: -1389795582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_9
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 255
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bf02fb6a3681445911cd8a727a6935
+      internalID: 45433966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_10
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 255
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb173d07840fa944f8caa8e54c06c883
+      internalID: 1993847220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_11
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 255
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9960e276f1bd4fc47bfeee95e6988c02
+      internalID: -1379146737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_12
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 255
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a4049ea1414a149abde98fe9c784da
+      internalID: 908982030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_13
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 255
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c5d7e15dfb74c47bae672214349a9f
+      internalID: -1442986302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_14
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 255
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ddf07adbf436e4385cdede50d6c45b
+      internalID: -1255700580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_15
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e893f59c40adb74488b1142be455fca2
+      internalID: -1952277676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 191
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415c0f5bbd4dbc144982d65ee047a338
+      internalID: -886535403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_17
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 191
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efca9e2b5b8c59d4e8c2c9bfae0206c6
+      internalID: -1213253233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_18
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 191
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7be7b37a72f8147b44a7cd5630e2de
+      internalID: -1235363227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_19
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 191
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c11ce59efa3454eacbad13eba6d4d8
+      internalID: 704906370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 191
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7af586b8aef864aa8d5d79b7fe304a
+      internalID: -1373585595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_21
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 191
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fe6d824f4872d48bd55b2d971fbd70
+      internalID: -120374461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_22
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 191
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ab90e81b4579947b9f3042276cbefb
+      internalID: 1298624693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_23
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 191
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8820f4aef544a4b92f2adafbd98014
+      internalID: -575435116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_24
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 191
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7230816f9b3911748ab4555ab8638094
+      internalID: 1638722881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_25
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 191
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8820b93d1365a774eb855fc96beb3f29
+      internalID: 1331205065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_26
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 191
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e004b8ceb1c5b94c8d515e8be8584ff
+      internalID: -866314765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_27
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 191
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5fc105ee587ea49b708cd0742e9ac0
+      internalID: 179497459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_28
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 127
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0105808b4b131a94ba6435c44101844c
+      internalID: 313722407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_29
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 127
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19090c1677605d4d97ae7622952b061
+      internalID: 1673898715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_30
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 127
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f697e427568b10428e73d958c9c50a7
+      internalID: -1519323037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_31
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 127
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ceacfefa972d8241832997da5b3d014
+      internalID: 185621783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_32
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 127
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff30f29b69e3324bafcccc86bc90b58
+      internalID: 1987042553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_33
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 127
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c283945396904e94ea58d42092250b64
+      internalID: 1678111706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_34
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 127
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f4aa45665111f4c9d17236a58eaa39
+      internalID: 2069321476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_35
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 127
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0716080e4aa4f049b22c34b4e7c91e9
+      internalID: -668846903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_36
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 127
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e1db257db9bc54481efbde1783037e
+      internalID: 142530578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_37
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 127
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb89c0bb7f35bf542af2254f00bc8ffd
+      internalID: -1022072071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_38
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 127
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138c286cc25b1fe49913ff931ee0f6e0
+      internalID: 1791974741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_39
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 127
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb36b31f95c278d4cb04cadfaceab62a
+      internalID: 750557129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_40
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 63
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6067087acc92484478200178caa2aad7
+      internalID: 681185109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 63
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07815c37003c5bc48ad9eaa17fca8ca6
+      internalID: 1372496783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_42
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 63
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14a84b810fe2c042884a3898d7f171f
+      internalID: 1840367148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_43
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 63
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6eef9746811b934091b0868a0597fa8
+      internalID: -892923971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_44
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 63
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4c8382815b54f439a713955a45f6a4
+      internalID: -1792144372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_45
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 63
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587b6bd452adcb74b8c2a733dd0a927d
+      internalID: -861705138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_46
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 63
+        width: 46
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dea0e51c70c914bbc1b7c68111182f
+      internalID: 220739809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_47
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 63
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964e223fb30c0d84499ab4699c93670a
+      internalID: -918786477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_48
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 63
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de001193201b6143893646b4bf98ca8
+      internalID: 924918101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_49
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 63
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92317f4aef9cb394db359265e103cdf1
+      internalID: -1877967308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_50
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 63
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc464498e02a6846be43a7544927d39
+      internalID: -2049771952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_51
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 63
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb7bcb7cc59ebd49b83de87dfc6cb89
+      internalID: -99208235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_52
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2205100767e93894d835554ac97f1091
+      internalID: 321899137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_53
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250fd8b9ff0a51a4381d8ba3eb06d75f
+      internalID: 1528467732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_54
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c4228b887f89a4b9bd73b08dc8e002
+      internalID: 328507520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_55
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99ecd2023b39d04fbc043af79d4554b
+      internalID: -342474073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_56
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada429b110785ae43a94cfb7c45cc42c
+      internalID: 2057847944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_57
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0c81f3f8069db48a794ff615ebeb07
+      internalID: 1948231487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_58
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 0
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4a69f15dc5d2247b8413efb8ef5d0b
+      internalID: -1753571101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_59
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 0
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabbfb11a487c674baf4e46f44ed5487
+      internalID: 1713892803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_60
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f07c97bc9b6e489d96f5c37054e70
+      internalID: -2021722125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_61
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 0
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08d3af9bf0270c4b98d289be2e7e554
+      internalID: -780914989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_62
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bdbf4d4df06c241b656e6dcb2ea8f1
+      internalID: 84561162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trees-trunk-dark_63
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 0
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7d96015c1a65946955d309869e5338
+      internalID: -1684360477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a6588fd7d89163b49b6655ab03ed8fb8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      trees-trunk-dark_0: 2013450292
+      trees-trunk-dark_1: 89714076
+      trees-trunk-dark_10: 1993847220
+      trees-trunk-dark_11: -1379146737
+      trees-trunk-dark_12: 908982030
+      trees-trunk-dark_13: -1442986302
+      trees-trunk-dark_14: -1255700580
+      trees-trunk-dark_15: -1952277676
+      trees-trunk-dark_16: -886535403
+      trees-trunk-dark_17: -1213253233
+      trees-trunk-dark_18: -1235363227
+      trees-trunk-dark_19: 704906370
+      trees-trunk-dark_2: 1073152772
+      trees-trunk-dark_20: -1373585595
+      trees-trunk-dark_21: -120374461
+      trees-trunk-dark_22: 1298624693
+      trees-trunk-dark_23: -575435116
+      trees-trunk-dark_24: 1638722881
+      trees-trunk-dark_25: 1331205065
+      trees-trunk-dark_26: -866314765
+      trees-trunk-dark_27: 179497459
+      trees-trunk-dark_28: 313722407
+      trees-trunk-dark_29: 1673898715
+      trees-trunk-dark_3: -1078481394
+      trees-trunk-dark_30: -1519323037
+      trees-trunk-dark_31: 185621783
+      trees-trunk-dark_32: 1987042553
+      trees-trunk-dark_33: 1678111706
+      trees-trunk-dark_34: 2069321476
+      trees-trunk-dark_35: -668846903
+      trees-trunk-dark_36: 142530578
+      trees-trunk-dark_37: -1022072071
+      trees-trunk-dark_38: 1791974741
+      trees-trunk-dark_39: 750557129
+      trees-trunk-dark_4: 1917914348
+      trees-trunk-dark_40: 681185109
+      trees-trunk-dark_41: 1372496783
+      trees-trunk-dark_42: 1840367148
+      trees-trunk-dark_43: -892923971
+      trees-trunk-dark_44: -1792144372
+      trees-trunk-dark_45: -861705138
+      trees-trunk-dark_46: 220739809
+      trees-trunk-dark_47: -918786477
+      trees-trunk-dark_48: 924918101
+      trees-trunk-dark_49: -1877967308
+      trees-trunk-dark_5: 1494439399
+      trees-trunk-dark_50: -2049771952
+      trees-trunk-dark_51: -99208235
+      trees-trunk-dark_52: 321899137
+      trees-trunk-dark_53: 1528467732
+      trees-trunk-dark_54: 328507520
+      trees-trunk-dark_55: -342474073
+      trees-trunk-dark_56: 2057847944
+      trees-trunk-dark_57: 1948231487
+      trees-trunk-dark_58: -1753571101
+      trees-trunk-dark_59: 1713892803
+      trees-trunk-dark_6: -1454862565
+      trees-trunk-dark_60: -2021722125
+      trees-trunk-dark_61: -780914989
+      trees-trunk-dark_62: 84561162
+      trees-trunk-dark_63: -1684360477
+      trees-trunk-dark_7: 273367066
+      trees-trunk-dark_8: -1389795582
+      trees-trunk-dark_9: 45433966
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
