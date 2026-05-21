@@ -2569,8 +2569,13 @@ Transform:
   m_GameObject: {fileID: 730889839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 74.8103, y: -12.2417, z: 0}
   m_LocalScale: {x: 3.4639227, y: 9.718035, z: 1}
+=======
+  m_LocalPosition: {x: -2.16, y: -17.65, z: 0}
+  m_LocalScale: {x: 1.3600987, y: 3.9945283, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
