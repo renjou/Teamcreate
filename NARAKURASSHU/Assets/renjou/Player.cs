@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem; // 新しい入力システム用
 
-public class PlayerControl1 : MonoBehaviour
+public class Player : MonoBehaviour
 {
+<<<<<<< Updated upstream
     [Header("移動速度")]
     public float moveSpeed = 5.0f;
 
@@ -15,6 +16,18 @@ public class PlayerControl1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+=======
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    public float moveSpeed = 5.0f;
+    public float jumpForce = 8.0f;
+    void Start()
+    {
+        // 自分のオブジェクトからSpriteRendererを取得
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+>>>>>>> Stashed changes
     void Update()
     {
         // キーボードの入力を受け取る処理（Update内で行う）
@@ -33,10 +46,34 @@ public class PlayerControl1 : MonoBehaviour
         movementInput = new Vector2(moveX, moveY).normalized;
     }
 
+<<<<<<< Updated upstream
     // 物理演算による移動は Update ではなく FixedUpdate で行うのがUnityの鉄則です
     void FixedUpdate()
     {
         // Rigidbody の速度（velocity）を直接書き換えて移動させる
         rb.linearVelocity = movementInput * moveSpeed;
+=======
+        // キャラクターを移動させる
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+
+       
+
+        // 【修正例】移動している方向にキャラクターを向かせる
+        
+        if (moveDirection.x > 0)
+        {
+            transform.localScale = new Vector3(-0.5f, 0.5f, 1f); // 元の向き
+        }
+        else if (moveDirection.x < 0)
+        {
+            transform.localScale = new Vector3(0.5f, 0.5f, 1f); // 左右反転
+        }
+
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            // 上方向に向けて一瞬だけ力を加える（Impulse）
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+>>>>>>> Stashed changes
     }
 }
