@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public float speed = 1.0f;
     private int direction = 1;
