@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
     Rigidbody2D PlayerRigid;
-    float jumpforce = 300;
+    float jumpforce = 1000;
     float speed = 5.0f; // 移動速度
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
@@ -13,11 +13,15 @@ public class PlayerControl : MonoBehaviour
     bool isKnockBack = false;
     bool isDameging = false;
     public bool gameover = false;
+    bool Run = false;
+    bool Jump = false;
+    bool Fall = false;
     public Transform sprite;
     public Transform circle;
     public HPUI hpUI;
     public GameObject attack1Prefab;
     public GameObject attack2Prefab;
+    Animator animator;
     RespawnManager reborn;
 
     void Start()
@@ -26,6 +30,7 @@ public class PlayerControl : MonoBehaviour
         Application.targetFrameRate = 60;
         this.PlayerRigid = GetComponent<Rigidbody2D>();
         reborn = FindFirstObjectByType<RespawnManager>();
+        animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
     }
 
@@ -58,6 +63,7 @@ public class PlayerControl : MonoBehaviour
         if (isAttacking) return;
         if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
         else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
+        JumpFallAnime();   
     }
 
 
@@ -87,6 +93,14 @@ public class PlayerControl : MonoBehaviour
         }
         //transform.Translate(this.speed * move * Time.deltaTime, 0, 0);
         PlayerRigid.linearVelocity = new Vector2(move * speed, PlayerRigid.linearVelocity.y);
+        if (move == 0)
+        {
+            animator.SetBool("Run", false);
+        }
+        else
+        {
+            animator.SetBool("Run", true);
+        }
     }
 
     void attack1()
@@ -182,5 +196,22 @@ public class PlayerControl : MonoBehaviour
     void endInvincible()
     {
         isDameging = false;
+    }
+
+    void JumpFallAnime()
+    {
+        if (PlayerRigid.linearVelocityY > 0.1f)
+        {
+            animator.SetBool("Jump", true);
+        }
+        else if (PlayerRigid.linearVelocityY <-0.1f)
+        {
+            animator.SetBool("Fall", true);
+        }
+        else
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Fall", false);
+        }
     }
 }
