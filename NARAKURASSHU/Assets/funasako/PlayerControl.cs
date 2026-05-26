@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
+    public BoxCollider2D NormalAttack;
     Rigidbody2D PlayerRigid;
     float jumpforce = 1000;
     float speed = 5.0f; // 移動速度
@@ -10,19 +11,22 @@ public class PlayerControl : MonoBehaviour
     public int playerHP = 5;
     public float knockBackPower = 10f;
     bool isAttacking = false;
+    bool isAttacking1 = false;
+    bool isAttacking2 = false;
     bool isKnockBack = false;
     bool isDameging = false;
     public bool gameover = false;
     public Transform sprite;
     public Transform circle;
     public HPUI hpUI;
-    public GameObject attack1Prefab;
+    // public GameObject attack1Prefab;
     public GameObject attack2Prefab;
     Animator animator;
     RespawnManager reborn;
 
     void Start()
     {
+        Debug.Log(NormalAttack);
         hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
         this.PlayerRigid = GetComponent<Rigidbody2D>();
@@ -50,7 +54,6 @@ public class PlayerControl : MonoBehaviour
             isDameging = false;
             isKnockBack = false;
             PlayerRigid.linearVelocity = Vector3.zero;
-            animator.SetTrigger("Death");
             Invoke(nameof(RespawanCall), 2f);
         }
         if (gameover) return;
@@ -60,9 +63,9 @@ public class PlayerControl : MonoBehaviour
             PlayerDamage();
         }
         if (isKnockBack) return; // ノックバック中は操作無効
+        if (isAttacking) return; // 攻撃中は別の攻撃は不可
         move();
         jump();
-        if (isAttacking) return; // 攻撃中は別の攻撃は不可
         if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
         else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
            
@@ -108,22 +111,19 @@ public class PlayerControl : MonoBehaviour
     void attack1()
     {
         isAttacking = true;
+        isAttacking1 = true;
         // 通常攻撃
         if (playerDirection == 1)
         {
+            PlayerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1右");
-            GameObject attack = Instantiate(attack1Prefab,
-            circle.position,
-            Quaternion.identity);
-            attack.GetComponent<AttackObject1>().direction = playerDirection;
+            NormalAttack.enabled = true;
         }
         else 
         {
+            PlayerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1左");
-            GameObject attack = Instantiate(attack1Prefab,
-            circle.position,
-            Quaternion.identity);
-            attack.GetComponent <AttackObject1>().direction = playerDirection;
+            NormalAttack.enabled = true;
         }
         Invoke(nameof(endAttack), 0.6f);
     }
@@ -131,9 +131,11 @@ public class PlayerControl : MonoBehaviour
     void attack2()
     {
         isAttacking = true;
+        isAttacking2 = true;
         // 強攻撃
         if (playerDirection == 1)
         {
+             PlayerRigid.linearVelocityX = 0;
              Debug.Log("攻撃2右");
              GameObject attack = Instantiate(attack2Prefab,
              circle.position,
@@ -142,7 +144,8 @@ public class PlayerControl : MonoBehaviour
         }
         else 
         {
-             GameObject attack = Instantiate(attack2Prefab,
+            PlayerRigid.linearVelocityX = 0;
+            GameObject attack = Instantiate(attack2Prefab,
              circle.position,
              Quaternion.identity);
              Debug.Log("攻撃2左");
@@ -155,6 +158,9 @@ public class PlayerControl : MonoBehaviour
     void endAttack()
     {
         isAttacking = false;
+        isAttacking1 = false;
+        isAttacking2 = false;
+        NormalAttack.enabled = false;
     }
 
     public void PlayerDamage()　// ダメージ処理
@@ -234,13 +240,23 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("isDead", false);
         }
 
-        if (isAttacking)
+        if (isAttacking1)
         {
             animator.SetBool("isattacking1", true);
         }
         else
         {
             animator.SetBool("isattacking1", false);
+        }
+
+        if (isAttacking2)
+        {
+            animator.SetBool("isattacking2", true);
+        }
+        else
+        {
+            animator.SetBool("isattacking2", false);
+
         }
     }
 }
