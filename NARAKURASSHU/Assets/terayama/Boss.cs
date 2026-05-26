@@ -6,6 +6,7 @@ public class Boss : MonoBehaviour
     enum State
     {
         Idle,
+        Charge,
         Dash
     }
 
@@ -16,12 +17,15 @@ public class Boss : MonoBehaviour
     public float dashCooldown = 3f;
     public float CooldownTimer;
     private float currentDashSpeed;
-
+    private SpriteRenderer sr;
     // ボスの移動速度
-    public float dashSpeed = 5f;
-    private float dashTime = 0.5f;
+    public float dashSpeed = 6f;
+    private float dashTime = 01f;
     private float dashTimer;
     private float dashDir;
+    private float chargeTime = 1f;
+    private float chargeTimer;
+    public int attackPower = 1;
 
     // プレイヤー発見距離
     public float detectRange = 10f;
@@ -30,6 +34,8 @@ public class Boss : MonoBehaviour
     {
         state = State.Idle;
        
+        sr = GetComponent<SpriteRenderer>();
+
         CooldownTimer = 0f;
 
         dashTimer = dashTime;
@@ -95,8 +101,28 @@ public class Boss : MonoBehaviour
                     // 発見したら突進
                     if (CooldownTimer <= 0 && distance <= detectRange)
                     {
-                        StartDash(dirToPlayer);
+                        StartCharge(dirToPlayer);
                     }
+                }
+
+                break;
+
+            // 予備動作
+            case State.Charge:
+
+                chargeTimer -= Time.deltaTime;
+
+                // 点滅
+                sr.color = Color.Lerp(
+                    Color.white,
+                    Color.red,
+                    Mathf.PingPong(
+                        Time.time * 8f,
+                        1f));
+
+                if (chargeTimer <= 0)
+                {
+                    StartDash(dashDir);
                 }
 
                 break;
@@ -146,19 +172,24 @@ public class Boss : MonoBehaviour
 
         dashDir = dir;
 
+        currentDashSpeed = dashSpeed;
+
         Debug.Log(dashDir);
 
         dashTimer = dashTime;
+
+        // 色戻す
+        sr.color = Color.white;
     }
 
     // ダッシュ
     void Dash()
     {
         Debug.Log("Dashing");
-        transform.Translate(Vector2.right * dashDir * dashSpeed * Time.deltaTime);
+        transform.Translate(Vector2.right * dashDir * currentDashSpeed * Time.deltaTime);
 
         // 徐々に減速
-        currentDashSpeed -= 20f * Time.deltaTime;
+        currentDashSpeed -= 5f * Time.deltaTime;
 
         // 0以下防止
         if (currentDashSpeed < 0)
@@ -194,5 +225,18 @@ public class Boss : MonoBehaviour
         Debug.Log("Boss dead");
         // ボスが死んだときの処理
         Destroy(gameObject);
+    }
+
+    //予備動作
+    void StartCharge(float dir)
+    {
+        state = State.Charge;
+
+        dashDir = dir;
+
+        chargeTimer = chargeTime;
+
+        // 赤くする
+        sr.color = Color.red;
     }
 }

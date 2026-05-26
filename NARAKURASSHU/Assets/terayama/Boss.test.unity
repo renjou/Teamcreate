@@ -500,6 +500,7 @@ MonoBehaviour:
   dashCooldown: 3
   CooldownTimer: 0
   dashSpeed: 5
+  attackPower: 1
   detectRange: 10
 --- !u!50 &1015208628
 Rigidbody2D:
@@ -509,7 +510,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015208626}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -632,8 +633,8 @@ Transform:
   m_GameObject: {fileID: 1015208626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.15, y: -2.57, z: 0}
-  m_LocalScale: {x: 1.9215478, y: 1.4928979, z: 1}
+  m_LocalPosition: {x: -3.1056, y: -2.4026, z: 0}
+  m_LocalScale: {x: 1.9212991, y: 1.8276496, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
