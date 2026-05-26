@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttackObject1 : MonoBehaviour
 {
     public float direction = 1;
-    float speed = 100;
+    float speed = 50;
     void Start()
     {
         Destroy(gameObject, 1f);
