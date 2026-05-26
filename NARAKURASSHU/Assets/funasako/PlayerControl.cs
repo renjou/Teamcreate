@@ -13,9 +13,6 @@ public class PlayerControl : MonoBehaviour
     bool isKnockBack = false;
     bool isDameging = false;
     public bool gameover = false;
-    bool Run = false;
-    bool Jump = false;
-    bool Fall = false;
     public Transform sprite;
     public Transform circle;
     public HPUI hpUI;
@@ -45,25 +42,30 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-        if (playerHP == 0) // 死亡
+        playerAnime();
+        if (playerHP == 0 && !gameover) // 死亡
         {
             Debug.Log("gameover");
             gameover = true;
+            isDameging = false;
+            isKnockBack = false;
             PlayerRigid.linearVelocity = Vector3.zero;
-            Invoke(nameof(RespawanCall), 0.5f);
+            animator.SetTrigger("Death");
+            Invoke(nameof(RespawanCall), 2f);
         }
+        if (gameover) return;
+
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
             PlayerDamage();
         }
-        if (isKnockBack) return;
-        if (gameover) return;
+        if (isKnockBack) return; // ノックバック中は操作無効
         move();
         jump();
-        if (isAttacking) return;
+        if (isAttacking) return; // 攻撃中は別の攻撃は不可
         if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
         else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
-        JumpFallAnime();   
+           
     }
 
 
@@ -95,11 +97,11 @@ public class PlayerControl : MonoBehaviour
         PlayerRigid.linearVelocity = new Vector2(move * speed, PlayerRigid.linearVelocity.y);
         if (move == 0)
         {
-            animator.SetBool("Run", false);
+            animator.SetBool("isRun", false);
         }
         else
         {
-            animator.SetBool("Run", true);
+            animator.SetBool("isRun", true);
         }
     }
 
@@ -158,7 +160,7 @@ public class PlayerControl : MonoBehaviour
     public void PlayerDamage()　// ダメージ処理
     {
         isDameging = true;
-        playerHP -= 1;
+        playerHP--;
         if (playerHP < 0)
         {
             playerHP = 0;
@@ -198,20 +200,47 @@ public class PlayerControl : MonoBehaviour
         isDameging = false;
     }
 
-    void JumpFallAnime()
+    void playerAnime()
     {
-        if (PlayerRigid.linearVelocityY > 0.1f)
+        if (PlayerRigid.linearVelocityY > 0.1f) // ↓ジャンプor落下アニメ切り替え
         {
-            animator.SetBool("Jump", true);
+            animator.SetBool("isJump", true);
         }
-        else if (PlayerRigid.linearVelocityY <-0.1f)
+        else if (PlayerRigid.linearVelocityY < -0.1f)
         {
-            animator.SetBool("Fall", true);
+            animator.SetBool("isFall", true);
         }
         else
         {
-            animator.SetBool("Jump", false);
-            animator.SetBool("Fall", false);
+            animator.SetBool("isJump", false);
+            animator.SetBool("isFall", false);
+        }
+
+        if (isKnockBack)
+        {
+            animator.SetBool("isHit", true);
+        }
+        else
+        {
+            animator.SetBool("isHit", false);
+        }
+
+        if (gameover)
+        {
+            animator.SetBool("isDead", true);
+        }
+        else
+        {
+            animator.SetBool("isDead", false);
+        }
+
+        if (isAttacking)
+        {
+            animator.SetBool("isattacking1", true);
+        }
+        else
+        {
+            animator.SetBool("isattacking1", false);
         }
     }
 }
