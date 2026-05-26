@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tuibikyara : MonoBehaviour
+public class EnemyChase : MonoBehaviour
 {
 
     // プレイヤー
