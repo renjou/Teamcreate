@@ -25,7 +25,7 @@ public class Boss : MonoBehaviour
     private float dashDir;
     private float chargeTime = 1f;
     private float chargeTimer;
-    public int attackPower = 1;
+    private Animator anim;
 
     // プレイヤー発見距離
     public float detectRange = 10f;
@@ -35,6 +35,8 @@ public class Boss : MonoBehaviour
         state = State.Idle;
        
         sr = GetComponent<SpriteRenderer>();
+
+        anim = GetComponent<Animator>();
 
         CooldownTimer = 0f;
 
