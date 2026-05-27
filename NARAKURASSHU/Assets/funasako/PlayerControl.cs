@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
-    public BoxCollider2D NormalAttack;
-    Rigidbody2D PlayerRigid;
+    //public NormalAttack normalAttack;
+    public Collider2D normalAttack;
+    Rigidbody2D playerRigid;
     float jumpforce = 1000;
     float speed = 5.0f; // 移動速度
     public float playerDirection = 1; // 自機の向き　　1で右向き
@@ -26,10 +27,10 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(NormalAttack);
         hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
-        this.PlayerRigid = GetComponent<Rigidbody2D>();
+        //normalAttack = GetComponent<NormalAttack>();
+        this.playerRigid = GetComponent<Rigidbody2D>();
         reborn = FindFirstObjectByType<RespawnManager>();
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
@@ -41,19 +42,19 @@ public class PlayerControl : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             PlayerDamage();
-            knockBack(collision.transform.position);
+            KnockBack(collision.transform.position);
         }
     }
     void Update()
     {
-        playerAnime();
+        PlayerAnime();
         if (playerHP == 0 && !gameover) // 死亡
         {
             Debug.Log("gameover");
             gameover = true;
             isDameging = false;
             isKnockBack = false;
-            PlayerRigid.linearVelocity = Vector3.zero;
+            playerRigid.linearVelocity = Vector3.zero;
             Invoke(nameof(RespawanCall), 2f);
         }
         if (gameover) return;
@@ -74,9 +75,9 @@ public class PlayerControl : MonoBehaviour
 
     void jump() // ジャンプ
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && this.PlayerRigid.linearVelocityY == 0)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && this.playerRigid.linearVelocityY == 0)
         {
-            this.PlayerRigid.AddForce(transform.up * this.jumpforce);
+            this.playerRigid.AddForce(transform.up * this.jumpforce);
         }
     }
     void move() // 左右移動
@@ -97,7 +98,7 @@ public class PlayerControl : MonoBehaviour
             sprite.localScale = new Vector3(-1, 1, 1);
         }
         //transform.Translate(this.speed * move * Time.deltaTime, 0, 0);
-        PlayerRigid.linearVelocity = new Vector2(move * speed, PlayerRigid.linearVelocity.y);
+        playerRigid.linearVelocity = new Vector2(move * speed, playerRigid.linearVelocity.y);
         if (move == 0)
         {
             animator.SetBool("isRun", false);
@@ -115,15 +116,16 @@ public class PlayerControl : MonoBehaviour
         // 通常攻撃
         if (playerDirection == 1)
         {
-            PlayerRigid.linearVelocityX = 0;
+            playerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1右");
-            NormalAttack.enabled = true;
+            normalAttack.enabled = true;
         }
         else 
         {
-            PlayerRigid.linearVelocityX = 0;
+            playerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1左");
-            NormalAttack.enabled = true;
+            //normalAttack.AttackOn();
+            normalAttack.enabled = true;
         }
         Invoke(nameof(endAttack), 0.6f);
     }
@@ -135,7 +137,7 @@ public class PlayerControl : MonoBehaviour
         // 強攻撃
         if (playerDirection == 1)
         {
-             PlayerRigid.linearVelocityX = 0;
+             playerRigid.linearVelocityX = 0;
              Debug.Log("攻撃2右");
              GameObject attack = Instantiate(attack2Prefab,
              circle.position,
@@ -144,7 +146,7 @@ public class PlayerControl : MonoBehaviour
         }
         else 
         {
-            PlayerRigid.linearVelocityX = 0;
+            playerRigid.linearVelocityX = 0;
             GameObject attack = Instantiate(attack2Prefab,
              circle.position,
              Quaternion.identity);
@@ -160,7 +162,8 @@ public class PlayerControl : MonoBehaviour
         isAttacking = false;
         isAttacking1 = false;
         isAttacking2 = false;
-        NormalAttack.enabled = false;
+        normalAttack.enabled = false;
+        //normalAttack.AttackOff();
     }
 
     public void PlayerDamage()　// ダメージ処理
@@ -175,20 +178,20 @@ public class PlayerControl : MonoBehaviour
         hpUI.UpdateHP(playerHP);
     }
 
-    void knockBack(Vector3 enemyPos) // 被弾時ノックバック
+    void KnockBack(Vector3 enemyPos) // 被弾時ノックバック
     {
         Debug.Log("痛み");
         isKnockBack = true;
         Vector2 direction = (transform.position - enemyPos).normalized;
         direction.x *= 0.5f;
         direction.y = 0.5f;
-        PlayerRigid.linearVelocity = Vector2.zero;
-        PlayerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
-        Invoke(nameof(endKnockBack), 0.3f);
-        Invoke(nameof(endInvincible), 1f);
+        playerRigid.linearVelocity = Vector2.zero;
+        playerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
+        Invoke(nameof(EndKnockBack), 0.3f);
+        Invoke(nameof(EndInvincible), 1f);
     }
 
-    void endKnockBack()
+    void EndKnockBack()
     {
         isKnockBack = false;
     }
@@ -201,18 +204,18 @@ public class PlayerControl : MonoBehaviour
         gameover = false;
     }
 
-    void endInvincible()
+    void EndInvincible()
     {
         isDameging = false;
     }
 
-    void playerAnime()
+    void PlayerAnime()
     {
-        if (PlayerRigid.linearVelocityY > 0.1f) // ↓ジャンプor落下アニメ切り替え
+        if (playerRigid.linearVelocityY > 0.1f) // ↓ジャンプor落下アニメ切り替え
         {
             animator.SetBool("isJump", true);
         }
-        else if (PlayerRigid.linearVelocityY < -0.1f)
+        else if (playerRigid.linearVelocityY < -0.1f)
         {
             animator.SetBool("isFall", true);
         }
