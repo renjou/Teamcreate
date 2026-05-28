@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DarkWolf_2d_Death Animation
+  m_Name: Boss_Die
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -30,7 +30,7 @@ AnimationClip:
       value: {fileID: 21300000, guid: 14a83dbd854eabd4b992e54752a8e6ef, type: 3}
     - time: 0.33333334
       value: {fileID: 21300000, guid: adef76f7204be394391ac969837ab0fc, type: 3}
-    - time: 0.6666667
+    - time: 3.35
       value: {fileID: 21300000, guid: adef76f7204be394391ac969837ab0fc, type: 3}
     attribute: m_Sprite
     path: 
@@ -65,7 +65,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 3.3666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

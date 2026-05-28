@@ -38,6 +38,8 @@ public class Boss : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
+        anim.Play("Boss_Idle");
+
         CooldownTimer = 0f;
 
         dashTimer = dashTime;
@@ -67,7 +69,7 @@ public class Boss : MonoBehaviour
         // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
-            TakeDamage(4);
+            TakeDamage(10);
         }
 
         switch (state)
@@ -182,6 +184,8 @@ public class Boss : MonoBehaviour
 
         // 色戻す
         sr.color = Color.white;
+
+        anim.SetTrigger("Dash");
     }
 
     // ダッシュ
@@ -206,6 +210,8 @@ public class Boss : MonoBehaviour
         state = State.Idle;
 
         CooldownTimer = dashCooldown;
+
+        anim.Play("Boss_Idle");
     }
 
     // ダメージ
@@ -214,7 +220,7 @@ public class Boss : MonoBehaviour
         hp -= damage;
 
         Debug.Log("Boss HP: " + hp);
-
+        anim.Play("Boss_Damage");
         if (hp <= 0)
         {
             Die();
@@ -225,8 +231,11 @@ public class Boss : MonoBehaviour
     void Die()
     {
         Debug.Log("Boss dead");
-        // ボスが死んだときの処理
-        Destroy(gameObject);
+        
+        anim.Play("Boss_Die");
+
+        // 1.5秒後に削除
+        Destroy(gameObject, 1.5f);
     }
 
     //予備動作
