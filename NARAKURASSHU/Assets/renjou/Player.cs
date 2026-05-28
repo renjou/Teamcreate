@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
         // キャラクターを移動させる
         transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
-
+        
 
 
         // 【修正例】移動している方向にキャラクターを向かせる
@@ -52,6 +52,19 @@ public class Player : MonoBehaviour
             // 上方向に向けて一瞬だけ力を加える（Impulse）
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+        if (Keyboard.current != null && Keyboard.current.wKey.wasPressedThisFrame)
+        {
+            // 上方向に向けて一瞬だけ力を加える（Impulse）
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        if (Keyboard.current != null && Keyboard.current.upArrowKey.wasPressedThisFrame)
+        {
+            // 上方向に向けて一瞬だけ力を加える（Impulse）
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+
+
         if (moveDirection.y > 0)
         {
             transform.localScale = new Vector3(0.5f, 0.5f, 1f); // 上向き
