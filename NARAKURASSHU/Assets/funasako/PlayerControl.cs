@@ -1,13 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
     //public NormalAttack normalAttack;
-    public Collider2D normalAttack;
     Rigidbody2D playerRigid;
     float jumpforce = 1000;
     float speed = 5.0f; // 移動速度
+    public float speGauge = 0;
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
     public float knockBackPower = 10f;
@@ -17,11 +18,14 @@ public class PlayerControl : MonoBehaviour
     bool isKnockBack = false;
     bool isDameging = false;
     public bool gameover = false;
+    public Collider2D normalAttack;
+    public SpriteRenderer circleSp;
     public Transform sprite;
     public Transform circle;
     public HPUI hpUI;
     // public GameObject attack1Prefab;
     public GameObject attack2Prefab;
+    public GameObject specialPrefab;
     Animator animator;
     RespawnManager reborn;
 
@@ -64,13 +68,18 @@ public class PlayerControl : MonoBehaviour
         {
             PlayerDamage();
         }
+        if (Keyboard.current.aKey.wasPressedThisFrame) speGauge++;
         if (isKnockBack) return; // ノックバック中は操作無効
         if (isAttacking) return; // 攻撃中は別の攻撃は不可
         move();
         jump();
         if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
         else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
-           
+        else if (Keyboard.current.wKey.wasPressedThisFrame && speGauge >= 5)
+        {
+            SpecialAttack();
+        }
+
     }
 
 
@@ -121,7 +130,7 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("攻撃1右");
             normalAttack.enabled = true;
         }
-        else 
+        else
         {
             playerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1左");
@@ -131,32 +140,41 @@ public class PlayerControl : MonoBehaviour
         Invoke(nameof(endAttack), 0.6f);
     }
 
-    void attack2()
+
+    void attack2() // 強攻撃
     {
         isAttacking = true;
         isAttacking2 = true;
-        // 強攻撃
-        if (playerDirection == 1)
-        {
-             playerRigid.linearVelocityX = 0;
-             Debug.Log("攻撃2右");
-             GameObject attack = Instantiate(attack2Prefab,
-             circle.position,
-             Quaternion.identity);
-             attack.GetComponent<AttackObject1>().direction = playerDirection;
-        }
-        else 
-        {
-            playerRigid.linearVelocityX = 0;
-            GameObject attack = Instantiate(attack2Prefab,
-             circle.position,
-             Quaternion.identity);
-             Debug.Log("攻撃2左");
-             attack.GetComponent<AttackObject1>().direction = playerDirection;
-        }
+        playerRigid.linearVelocityX = 0;
+        Debug.Log("攻撃2右");
+        StartCoroutine(attack2Instantlate());
         Invoke(nameof(endAttack), 0.6f);
-        
     }
+
+    IEnumerator attack2Instantlate()
+    {
+        yield return new WaitForSeconds(0.2f);
+        circleSp.enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        GameObject attack = Instantiate(attack2Prefab,
+            circle.position,
+            Quaternion.identity);
+        attack.GetComponent<AttackObject1>().direction = playerDirection;
+        yield return new WaitForSeconds(0.7f);
+        circleSp.enabled = false;
+    }
+
+    void SpecialAttack()
+    {
+        circleSp.enabled = true;
+        GameObject attack = Instantiate(specialPrefab,
+            circle.position,
+            Quaternion.identity);
+        attack.GetComponent<AttackObject1>().direction = playerDirection;
+        speGauge = 0;
+        circleSp.enabled = false;
+    }
+
 
     void endAttack()
     {
@@ -209,6 +227,9 @@ public class PlayerControl : MonoBehaviour
     {
         isDameging = false;
     }
+
+   
+
 
     void PlayerAnime()
     {
