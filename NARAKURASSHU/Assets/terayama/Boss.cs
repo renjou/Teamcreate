@@ -26,6 +26,7 @@ public class Boss : MonoBehaviour
     private float chargeTime = 1f;
     private float chargeTimer;
     private Animator anim;
+    private Vector3 baseScale;
 
     // プレイヤー発見距離
     public float detectRange = 10f;
@@ -45,6 +46,8 @@ public class Boss : MonoBehaviour
         dashTimer = dashTime;
 
         currentDashSpeed = dashSpeed;
+
+        baseScale = transform.localScale;
 
 
 
@@ -157,12 +160,12 @@ public class Boss : MonoBehaviour
         // プレイヤーが右
         if (distanceX > 0.3f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);
         }
         // プレイヤーが左
         else if (distanceX < -0.3f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
 
         }
     }
