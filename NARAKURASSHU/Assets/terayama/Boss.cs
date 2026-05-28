@@ -5,7 +5,8 @@ public class Boss : MonoBehaviour
 {
     enum State
     {
-        Move,
+        Idle,
+        Charge,
         Dash
     }
 
@@ -14,30 +15,52 @@ public class Boss : MonoBehaviour
     public int hp = 40;
     public Transform player;
     public float dashCooldown = 3f;
-    private float CooldownTimer;
-
-
+    public float CooldownTimer;
+    private float currentDashSpeed;
+    private SpriteRenderer sr;
     // ボスの移動速度
-    public float moveSpeed = 2f;
-    public float dashSpeed = 5f;
-    private float dashTime = 0.5f;
+    public float dashSpeed = 6f;
+    private float dashTime = 01f;
     private float dashTimer;
     private float dashDir;
+    private float chargeTime = 1f;
+    private float chargeTimer;
+    private Animator anim;
+    private Vector3 baseScale;
 
-    public float detectRange = 2.5f;
-
-    private Vector2 moveDir = Vector2.right;
+    // プレイヤー発見距離
+    public float detectRange = 10f;
 
     void Start()
     {
-        state = State.Move;
+        state = State.Idle;
+       
+        sr = GetComponent<SpriteRenderer>();
+
+        anim = GetComponent<Animator>();
+
+        anim.Play("Boss_Idle");
+
+        CooldownTimer = 0f;
+
         dashTimer = dashTime;
+
+        currentDashSpeed = dashSpeed;
+
+        baseScale = transform.localScale;
+
+
 
         GameObject p = GameObject.FindWithTag("Player");
 
         if (p != null)
         {
             player = p.transform;
+            Debug.Log("found");
+        }
+        else
+        {
+            Debug.Log("Not Found");
         }
     }
 
@@ -46,33 +69,72 @@ public class Boss : MonoBehaviour
     {
         CooldownTimer -= Time.deltaTime;
 
+        // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
-            TakeDamage(4);
+            TakeDamage(10);
         }
-        Debug.Log(state);
+
         switch (state)
         {
-            case State.Move:
-                Move();
+            // 待機状態
+            case State.Idle:
+
+                LookPlayer();
 
                 // プレイヤー発見
                 if (player != null)
                 {
                     float distance = Vector2.Distance(transform.position, player.position);
 
-                    float dirToPlayer = Mathf.Sign(player.position.x - transform.position.x);
+                    float distanceX = player.position.x - transform.position.x;
 
-                    // 向いている方向にプレイヤーがいるか
-                    bool facingPlayer = dirToPlayer == moveDir.x;
+                    float dirToPlayer;
 
-                    if (CooldownTimer <= 0f && distance <= detectRange && facingPlayer)
+                    if (distanceX >= 0)
                     {
-                        StartDash(dirToPlayer);
+                        dirToPlayer = 1;
+                    }
+                    else
+                    {
+                        dirToPlayer = -1;
+                    }
+                    //   float dirToPlayer = Mathf.Sign(player.position.x - transform.position.x);
+
+                    Debug.Log(distance);
+                    Debug.Log(detectRange);
+                    Debug.Log(CooldownTimer);
+
+                    // 発見したら突進
+                    if (CooldownTimer <= 0 && distance <= detectRange)
+                    {
+                        StartCharge(dirToPlayer);
                     }
                 }
+
                 break;
 
+            // 予備動作
+            case State.Charge:
+
+                chargeTimer -= Time.deltaTime;
+
+                // 点滅
+                sr.color = Color.Lerp(
+                    Color.white,
+                    Color.red,
+                    Mathf.PingPong(
+                        Time.time * 8f,
+                        1f));
+
+                if (chargeTimer <= 0)
+                {
+                    StartDash(dashDir);
+                }
+
+                break;
+
+            // ダッシュ状態
             case State.Dash:
 
                 Dash();
@@ -84,80 +146,111 @@ public class Boss : MonoBehaviour
                     EndDash();
                 }
 
-                // プレイヤーが一定距離以上離れたら移動状態に戻る
-                if (player != null)
-                {
-                    float distance = Vector2.Distance(transform.position, player.position);
-                }
                 break;
-
         }
     }
 
-    // ボス移動
-    void Move()
+    // プレイヤーの方向を見る
+    void LookPlayer()
     {
-        if (player != null)
+        if (player == null) return;
+
+        float distanceX = player.position.x - transform.position.x;
+
+        // プレイヤーが右
+        if (distanceX > 0.3f)
         {
-            float distanceX =
-                player.position.x - transform.position.x;
-
-            // プレイヤーが右にいる
-            if (distanceX > 0.3f)
-            {
-                moveDir = Vector2.right;
-
-                transform.localScale =
-                    new Vector3(1, 1, 1);
-            }
-
-            // プレイヤーが左にいる
-            else if (distanceX < -0.3f)
-            {
-                moveDir = Vector2.left;
-
-                transform.localScale =
-                    new Vector3(-1, 1, 1);
-            }
+            transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);
         }
+        // プレイヤーが左
+        else if (distanceX < -0.3f)
+        {
+            transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
 
-        transform.Translate(
-            moveDir * moveSpeed * Time.deltaTime);
+        }
     }
+
+    // ダッシュ開始
+    void StartDash(float dir)
+    {
+        Debug.Log("Dash Start");
+
+        state = State.Dash;
+
+        dashDir = dir;
+
+        currentDashSpeed = dashSpeed;
+
+        Debug.Log(dashDir);
+
+        dashTimer = dashTime;
+
+        // 色戻す
+        sr.color = Color.white;
+
+        anim.SetTrigger("Dash");
+    }
+
+    // ダッシュ
     void Dash()
     {
-        transform.Translate(Vector2.right * dashDir * dashSpeed * Time.deltaTime);
+        Debug.Log("Dashing");
+        transform.Translate(Vector2.right * dashDir * currentDashSpeed * Time.deltaTime);
+
+        // 徐々に減速
+        currentDashSpeed -= 5f * Time.deltaTime;
+
+        // 0以下防止
+        if (currentDashSpeed < 0)
+        {
+            currentDashSpeed = 0;
+        }
     }
 
+    // ダッシュ終了
+    void EndDash()
+    {
+        state = State.Idle;
+
+        CooldownTimer = dashCooldown;
+
+        anim.Play("Boss_Idle");
+    }
+
+    // ダメージ
     public void TakeDamage(int damage)
     {
         hp -= damage;
 
         Debug.Log("Boss HP: " + hp);
-
+        anim.Play("Boss_Damage");
         if (hp <= 0)
         {
             Die();
         }
     }
 
+    // 死亡
     void Die()
     {
         Debug.Log("Boss dead");
-        // ボスが死んだときの処理
-        Destroy(gameObject);
+        
+        anim.Play("Boss_Die");
+
+        // 1.5秒後に削除
+        Destroy(gameObject, 1.5f);
     }
-    void StartDash(float dir)
+
+    //予備動作
+    void StartCharge(float dir)
     {
-        state = State.Dash;
+        state = State.Charge;
+
         dashDir = dir;
-        dashTimer = dashTime;
-    }
 
-    void EndDash()
-    {
-        state = State.Move;
-        CooldownTimer = dashCooldown;
-    }
+        chargeTimer = chargeTime;
 
+        // 赤くする
+        sr.color = Color.red;
+    }
 }

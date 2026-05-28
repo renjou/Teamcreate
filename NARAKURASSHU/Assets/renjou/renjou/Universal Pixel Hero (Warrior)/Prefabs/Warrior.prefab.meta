@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1344ce320807d264bb5aeae0a4728e29
+timeCreated: 1512804520
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 106811
+  packageName: Pixel Hero Warrior 16x16
+  packageVersion: 1.1
+  assetPath: Assets/Universal Pixel Hero (Warrior)/Prefabs/Warrior.prefab
+  uploadId: 223584
