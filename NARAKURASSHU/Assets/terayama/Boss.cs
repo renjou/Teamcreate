@@ -7,7 +7,8 @@ public class Boss : MonoBehaviour
     {
         Idle,
         Charge,
-        Dash
+        Dash,
+        Attack
     }
 
     State state;
@@ -27,30 +28,40 @@ public class Boss : MonoBehaviour
     private float chargeTimer;
     private Animator anim;
     private Vector3 baseScale;
+    bool isDead = false;
+    public float attackRange = 2f;
+
+    private float attackTime = 0.7f;
+    private float attackTimer;
+    public float attackCooldown = 2f;
+    private float attackCooldownTimer;
 
     // プレイヤー発見距離
     public float detectRange = 10f;
 
     void Start()
     {
+        // 初期状態
         state = State.Idle;
-       
-        sr = GetComponent<SpriteRenderer>();
 
+        // コンポーネント取得
+        sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
+        // 初期アニメ
         anim.Play("Boss_Idle");
 
+        // タイマー初期化
         CooldownTimer = 0f;
 
         dashTimer = dashTime;
 
         currentDashSpeed = dashSpeed;
 
+        // 元のサイズ保存
         baseScale = transform.localScale;
 
-
-
+        // プレイヤーを探す
         GameObject p = GameObject.FindWithTag("Player");
 
         if (p != null)
@@ -67,7 +78,10 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDead) return;
+
         CooldownTimer -= Time.deltaTime;
+        attackCooldownTimer -= Time.deltaTime;
 
         // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
@@ -105,8 +119,13 @@ public class Boss : MonoBehaviour
                     Debug.Log(detectRange);
                     Debug.Log(CooldownTimer);
 
-                    // 発見したら突進
-                    if (CooldownTimer <= 0 && distance <= detectRange)
+                    // 近距離なら攻撃
+                    if (state == State.Idle && attackCooldownTimer <= 0 && distance <= attackRange)
+                    {
+                        StartAttack();
+                    }
+                    // 中距離なら突進
+                    else if (state == State.Idle && CooldownTimer <= 0 && distance <= detectRange)
                     {
                         StartCharge(dirToPlayer);
                     }
@@ -144,6 +163,19 @@ public class Boss : MonoBehaviour
                 if (dashTimer <= 0)
                 {
                     EndDash();
+                }
+
+                break;
+
+            // 攻撃状態
+            case State.Attack:
+
+                attackTimer -= Time.deltaTime;
+
+                if (attackTimer <= 0)
+                {
+                    state = State.Idle;
+                    anim.Play("Boss_Idle");
                 }
 
                 break;
@@ -220,6 +252,21 @@ public class Boss : MonoBehaviour
     // ダメージ
     public void TakeDamage(int damage)
     {
+        if (isDead) return;
+
+        // 状態リセット
+        state = State.Idle;
+
+        // ダッシュ停止
+        currentDashSpeed = 0f;
+        dashTimer = 0f;
+
+        // 予備動作停止
+        chargeTimer = 0f;
+
+        // 色を戻す
+        sr.color = Color.white;
+
         hp -= damage;
 
         Debug.Log("Boss HP: " + hp);
@@ -233,8 +280,10 @@ public class Boss : MonoBehaviour
     // 死亡
     void Die()
     {
+        isDead = true;
+
         Debug.Log("Boss dead");
-        
+
         anim.Play("Boss_Die");
 
         // 1.5秒後に削除
@@ -252,5 +301,36 @@ public class Boss : MonoBehaviour
 
         // 赤くする
         sr.color = Color.red;
+    }
+
+    //近接
+    void StartAttack()
+    {
+        state = State.Attack;
+
+        // ダッシュ停止
+        currentDashSpeed = 0;
+        dashTimer = 0;
+
+        attackTimer = attackTime;
+
+        attackCooldownTimer = attackCooldown;
+
+        anim.Play("Boss_Attack");
+
+        Debug.Log("Attack");
+    }
+
+    // プレイヤーにぶつかった
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (state != State.Attack) return;
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+//            collision.gameObject.GetComponent<Player>().TakeDamage(10);
+
+            state = State.Idle;
+        }
     }
 }
