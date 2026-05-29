@@ -1468,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5993630221986629919, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
       propertyPath: m_Name
-      value: Player 1 2
+      value: Player_r
       objectReference: {fileID: 0}
     - target: {fileID: 7903969866722816495, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
       propertyPath: m_SortingOrder
@@ -3465,7 +3465,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b2c0354c8fa9ae49962f3dc5e2281a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4af0ded01eaec5f4ca1c8471a3d02035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cf
   target: {fileID: 160658208}
