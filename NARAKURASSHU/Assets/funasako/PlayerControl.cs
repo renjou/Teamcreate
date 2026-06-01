@@ -128,7 +128,7 @@ public class PlayerControl : MonoBehaviour
         {
             playerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1右");
-            normalAttack.enabled = true;
+            Invoke(nameof(Delay), 0.3f);
         }
         else
         {
@@ -228,8 +228,15 @@ public class PlayerControl : MonoBehaviour
         isDameging = false;
     }
 
-   
+   void SpeGaugeIncrease()
+    {
+        speGauge++;
+    }
 
+    void Delay()
+    {
+        normalAttack.enabled = true;
+    }
 
     void PlayerAnime()
     {
