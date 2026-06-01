@@ -992,6 +992,10 @@ PrefabInstance:
       propertyPath: AttackArea
       value: 
       objectReference: {fileID: 1320593695}
+    - target: {fileID: 222591334642144365, guid: 4696b79478f16ed4b819959813e7673b, type: 3}
+      propertyPath: attackCooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 898530376494698598, guid: 4696b79478f16ed4b819959813e7673b, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -1002,11 +1006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898530376494698598, guid: 4696b79478f16ed4b819959813e7673b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.88
+      value: 7.78
       objectReference: {fileID: 0}
     - target: {fileID: 898530376494698598, guid: 4696b79478f16ed4b819959813e7673b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.86
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 898530376494698598, guid: 4696b79478f16ed4b819959813e7673b, type: 3}
       propertyPath: m_LocalPosition.z
