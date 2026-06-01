@@ -343,7 +343,8 @@ public class Boss : MonoBehaviour
         // ダッシュ中にぶつかった
         if (state == State.Dash)
         {
-         //   collision.gameObject.GetComponent<Player>()?.TakeDamage(20);
+            collision.gameObject.GetComponent<PlayerControl>()?.PlayerDamage();
+
 
             Debug.Log("Dash Hit");
 

@@ -8,7 +8,7 @@ public class BossAttack : MonoBehaviour
         {
  //           Debug.Log("プレイヤーにヒット");
 
-//            other.GetComponent<Player>().TakeDamage(10);
+            other.GetComponent<PlayerControl>()?.PlayerDamage();
         }
     }
 }
