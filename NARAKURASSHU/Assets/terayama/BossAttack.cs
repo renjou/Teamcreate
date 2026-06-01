@@ -6,7 +6,7 @@ public class BossAttack : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("プレイヤーにヒット");
+ //           Debug.Log("プレイヤーにヒット");
 
 //            other.GetComponent<Player>().TakeDamage(10);
         }
