@@ -1420,11 +1420,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4980385752064423809, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
       propertyPath: jumpForce
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4980385752064423809, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
       propertyPath: moveSpeed
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5258072146836737277, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1481,7 +1481,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5993630221986629919, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1017225304}
   m_SourcePrefab: {fileID: 100100000, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
 --- !u!1 &284526690
 GameObject:
@@ -6353,6 +6356,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.467}
+--- !u!1 &1017225298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5993630221986629919, guid: 7a3d5e9c252520a458bd82ca5e0e0ccd, type: 3}
+  m_PrefabInstance: {fileID: 273447303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1017225304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017225298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce555f27aad7e14c92eb44f3d9545a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveSpeed: 30
+  jumpForce: 20
 --- !u!1 &1017253937
 GameObject:
   m_ObjectHideFlags: 0
