@@ -2,11 +2,30 @@ using UnityEngine;
 
 public class AttackObject1 : MonoBehaviour
 {
+    Collider2D collider2d;
+    PlayerControl player;
+    Boss boss;
+
     public float direction = 1;
     float speed = 50;
     void Start()
     {
         Destroy(gameObject, 1f);
+        collider2d = GetComponent<Collider2D>();
+        player = FindFirstObjectByType<PlayerControl>();
+        boss = FindFirstObjectByType<Boss>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("enemy"))
+        {
+            Debug.Log("ヒット");
+            player.SpeGaugeIncrease();
+            Destroy(gameObject);
+            boss.TakeDamage(20);
+        }
+;
     }
 
     void Update()

@@ -47,6 +47,7 @@ public class PlayerControl : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             PlayerDamage();
+            SpeGaugeIncrease();
             KnockBack(collision.transform.position);
         }
     }
@@ -160,7 +161,7 @@ public class PlayerControl : MonoBehaviour
             circle.position,
             Quaternion.identity);
         attack.GetComponent<AttackObject1>().direction = playerDirection;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.1f);
         circleSp.enabled = false;
     }
 
@@ -228,7 +229,7 @@ public class PlayerControl : MonoBehaviour
         isDameging = false;
     }
 
-   void SpeGaugeIncrease()
+    public void SpeGaugeIncrease()
     {
         speGauge++;
     }
