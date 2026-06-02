@@ -822,6 +822,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5436046901550750723, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5566086580339734660, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
       propertyPath: m_Name
       value: Boss
