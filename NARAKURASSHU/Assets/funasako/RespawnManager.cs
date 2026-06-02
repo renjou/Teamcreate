@@ -9,7 +9,7 @@ public class RespawnManager : MonoBehaviour
     // オブジェクト位置を登録
     public void Register(Transform obj)
     {
-        Debug.Log("regCall");
+        Debug.Log("REBORN");
         if (!respawnPoints.ContainsKey(obj))
         {
             respawnPoints.Add(obj, obj.position);
