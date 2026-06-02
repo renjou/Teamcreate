@@ -304,6 +304,8 @@ public class Boss : MonoBehaviour
     // ダメージ
     public void TakeDamage(int damage)
     {
+        Debug.Log("Damage");
+
         // 死亡してたら無効
         if (isDead) return;
 
