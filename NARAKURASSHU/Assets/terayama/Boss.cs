@@ -8,7 +8,8 @@ public class Boss : MonoBehaviour
         Idle,
         Charge,
         Dash,
-        Attack
+        Attack,
+        Stun
     }
 
     State state;
@@ -21,7 +22,7 @@ public class Boss : MonoBehaviour
     private SpriteRenderer sr;
     // ボスの移動速度
     public float dashSpeed = 6f;
-    private float dashTime = 01f;
+    private float dashTime = 1f;
     private float dashTimer;
     private float dashDir;
     // ボスの予備動作時間
@@ -40,14 +41,29 @@ public class Boss : MonoBehaviour
     private float attackTimer;
     public float attackCooldown = 2f;
     private float attackCooldownTimer;
-
+    // 無敵フラグ
+    private bool isInvincible = false;
+    // 無敵時間
+    public float invincibleTime = 0.2f;
+    // 攻撃エリア
     [SerializeField] private GameObject AttackArea;
+    // スタン時間
+    public float stunTime = 2f;
+    // スタンタイマー
+    private float stunTimer;
 
     // プレイヤー発見距離
     public float detectRange = 5f;
 
+    // 突進開始位置
+    private Vector3 chargePos;
+
+    private Rigidbody2D rd;
+
     void Start()
     {
+        rd = GetComponent<Rigidbody2D>();
+
         AttackArea.SetActive(false);
 
         // 初期状態
@@ -146,6 +162,9 @@ public class Boss : MonoBehaviour
 
                 chargeTimer -= Time.deltaTime;
 
+                // 小刻みに震える
+                transform.position = chargePos + new Vector3( Mathf.Sin(Time.time * 50f) * 0.03f, 0, 0);
+
                 // 点滅
                 sr.color = Color.Lerp(
                     Color.white,
@@ -188,6 +207,23 @@ public class Boss : MonoBehaviour
                 }
 
                 break;
+
+            // スタン状態
+            case State.Stun:
+
+                sr.color = Color.Lerp(Color.white,Color.yellow,Mathf.PingPong(Time.time * 8f, 1f));
+
+                stunTimer -= Time.deltaTime;
+
+                if (stunTimer <= 0)
+                {
+                    sr.color = Color.white;
+
+                    state = State.Idle;
+                    anim.Play("Boss_Idle");
+                }
+
+                break;
         }
     }
 
@@ -216,6 +252,8 @@ public class Boss : MonoBehaviour
     {
         //  Debug.Log("Dash Start");
 
+        transform.position = chargePos;
+
         state = State.Dash;
 
         dashDir = dir;
@@ -236,7 +274,7 @@ public class Boss : MonoBehaviour
     void Dash()
     {
         //   Debug.Log("Dashing");
-        transform.Translate(Vector2.right * dashDir * currentDashSpeed * Time.deltaTime);
+        rd.linearVelocity = new Vector2( dashDir * currentDashSpeed, rd.linearVelocity.y);
 
         // 徐々に減速
         currentDashSpeed -= 5f * Time.deltaTime;
@@ -251,9 +289,14 @@ public class Boss : MonoBehaviour
     // ダッシュ終了
     void EndDash()
     {
+        rd.linearVelocity = Vector2.zero;
+
         state = State.Idle;
 
         CooldownTimer = dashCooldown;
+        
+        // 1秒は通常攻撃禁止
+        attackCooldownTimer = 1f; 
 
         anim.Play("Boss_Idle");
     }
@@ -261,17 +304,28 @@ public class Boss : MonoBehaviour
     // ダメージ
     public void TakeDamage(int damage)
     {
+        // 死亡してたら無効
         if (isDead) return;
 
-        // 状態リセット
-        state = State.Idle;
+        // 無敵中は無効
+        if (isInvincible) return;
 
-        // ダッシュ停止
-        currentDashSpeed = 0f;
-        dashTimer = 0f;
+        // ダメージ受けたら少しの間無敵
+        isInvincible = true;
 
-        // 予備動作停止
-        chargeTimer = 0f;
+        Invoke(nameof(EndInvincible), invincibleTime);
+
+        // スタン中以外だけ停止
+        if (state != State.Stun)
+        {
+            state = State.Idle;
+
+            currentDashSpeed = 0f;
+            dashTimer = 0f;
+            chargeTimer = 0f;
+
+            rd.linearVelocity = Vector2.zero;
+        }
 
         // 色を戻す
         sr.color = Color.white;
@@ -308,6 +362,9 @@ public class Boss : MonoBehaviour
 
         chargeTimer = chargeTime;
 
+        // 現在位置保存
+        chargePos = transform.position;
+
         // 赤くする
         sr.color = Color.red;
     }
@@ -334,21 +391,53 @@ public class Boss : MonoBehaviour
         //    Debug.Log("Attack");
     }
 
+    // 無敵終了
+    void EndInvincible()
+    {
+        isInvincible = false;
+    }
+
     // プレイヤーにぶつかった
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player"))
+       // Debug.Log("ぶつかった: " + collision.gameObject.name);
+
+        // ダッシュ中のみ判定
+        if (state != State.Dash)
             return;
 
-        // ダッシュ中にぶつかった
-        if (state == State.Dash)
+        // 壁に当たった
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+         //   Debug.Log("Wall Hit");
+
+            StartStun();
+
+            return;
+        }
+
+        // プレイヤーに当たった
+        if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerControl>()?.PlayerDamage();
 
+       //     Debug.Log("Dash Hit");
 
-            Debug.Log("Dash Hit");
-
-            EndDash(); // 当たったら突進終了
+            EndDash();
         }
+    }
+
+    // スタン開始
+    void StartStun()
+    {
+        state = State.Stun;
+
+        stunTimer = stunTime;
+
+        currentDashSpeed = 0;
+
+        rd.linearVelocity = Vector2.zero;
+
+        anim.Play("Boss_Damage");
     }
 }
