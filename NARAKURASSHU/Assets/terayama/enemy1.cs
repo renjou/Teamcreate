@@ -22,8 +22,9 @@ public class enemy1 : MonoBehaviour
 
     private Vector3 baseScale;
 
+   
     void Start()
-    {
+    { 
         startpos = transform.position;
 
         baseScale = transform.localScale;
@@ -96,7 +97,7 @@ public class enemy1 : MonoBehaviour
         if (boss != null)
         {
             Debug.Log("Boss Spawn");
-            boss.SetActive(true);
+        //    boss.SetActive(true);
         }
         else
         {
