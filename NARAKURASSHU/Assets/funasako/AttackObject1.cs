@@ -4,6 +4,7 @@ public class AttackObject1 : MonoBehaviour
 {
     Collider2D collider2d;
     PlayerControl player;
+    enemy1 enemy;
     Boss boss;
 
     public float direction = 1;
@@ -14,6 +15,7 @@ public class AttackObject1 : MonoBehaviour
         collider2d = GetComponent<Collider2D>();
         player = FindFirstObjectByType<PlayerControl>();
         boss = FindFirstObjectByType<Boss>();
+        enemy = FindFirstObjectByType<enemy1>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +25,8 @@ public class AttackObject1 : MonoBehaviour
             Debug.Log("ヒット");
             player.SpeGaugeIncrease();
             Destroy(gameObject);
-            boss.TakeDamage(20);
+            //boss.TakeDamage(20);
+            enemy.TakeDamage(20);
         }
 
     }
