@@ -31,6 +31,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Player Start");
         hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
         //normalAttack = GetComponent<NormalAttack>();
@@ -54,6 +55,7 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log("Player Update");
         PlayerAnime();
         if (playerHP == 0 && !gameover) // 死亡
         {
