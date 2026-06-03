@@ -188,6 +188,7 @@ public class PlayerControl : MonoBehaviour
 
     public void PlayerDamage()　// ダメージ処理
     {
+        Debug.Log("攻撃を受けた");
         isDameging = true;
         playerHP--;
         if (playerHP < 0)
@@ -198,9 +199,9 @@ public class PlayerControl : MonoBehaviour
         hpUI.UpdateHP(playerHP);
     }
 
-    void KnockBack(Vector3 enemyPos) // 被弾時ノックバック
+    public void KnockBack(Vector3 enemyPos) // 被弾時ノックバック
     {
-        Debug.Log("痛み");
+        Debug.Log("ノックバック発生");
         isKnockBack = true;
         Vector2 direction = (transform.position - enemyPos).normalized;
         direction.x *= 0.5f;
@@ -231,6 +232,7 @@ public class PlayerControl : MonoBehaviour
 
     public void SpeGaugeIncrease()
     {
+        Debug.Log("ゲージ増加");
         speGauge++;
     }
 

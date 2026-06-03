@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collison)
     {
-        if (other.CompareTag("Player"))
+        if (collison.CompareTag("Player"))
         {
- //           Debug.Log("プレイヤーにヒット");
+            Debug.Log("プレイヤーにヒット");
 
-            other.GetComponent<PlayerControl>()?.PlayerDamage();
+            PlayerControl player = FindFirstObjectByType<PlayerControl>();
+            player.PlayerDamage();
+            player.SpeGaugeIncrease();
+            player.KnockBack(transform.position);
         }
     }
 }
