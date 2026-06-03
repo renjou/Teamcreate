@@ -16,13 +16,19 @@ public class enemy1 : MonoBehaviour
     private Vector3 startpos;
 
     // 移動方向
-    private int direction = 1;
+    private int direction = -1;
+
+    private Animator anim;
+
+    private Vector3 baseScale;
 
     void Start()
     {
         startpos = transform.position;
 
-        Debug.Log("Enemy Start");
+        baseScale = transform.localScale;
+
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,12 +47,28 @@ public class enemy1 : MonoBehaviour
         if (Mathf.Abs(transform.position.x - startpos.x) > Brange)
         {
             direction *= -1;
+
+            if (direction > 0)
+            {
+                transform.localScale =
+                    new Vector3(-baseScale.x, baseScale.y, baseScale.z);
+            }
+            else
+            {
+                transform.localScale =
+                    new Vector3(baseScale.x, baseScale.y, baseScale.z);
+            }
         }
+
+        anim.SetBool("Run", true);
     }
 
     // ダメージ
     public void TakeDamage(int damage)
     {
+        // ダメージアニメーション
+        anim.SetTrigger("Damage");
+
         EnemyHp -= damage;
 
         Debug.Log("Enemy HP : " + EnemyHp);
@@ -62,6 +84,15 @@ public class enemy1 : MonoBehaviour
     {
         Debug.Log("Enemy Dead");
 
+        // Dieアニメーション再生
+        anim.SetTrigger("Die");
+
+        // 当たり判定を消す
+        GetComponent<Collider2D>().enabled = false;
+
+        // スクリプト停止
+        enabled = false;
+
         if (boss != null)
         {
             Debug.Log("Boss Spawn");
@@ -72,16 +103,7 @@ public class enemy1 : MonoBehaviour
             Debug.Log("Boss が設定されていません");
         }
 
-        Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            //           Debug.Log("プレイヤーにヒット");
-
-            other.GetComponent<PlayerControl>()?.PlayerDamage();
-        }
+        // 1秒後に削除
+        Destroy(gameObject, 0.5f);
     }
 }
