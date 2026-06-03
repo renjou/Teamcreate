@@ -336,8 +336,6 @@ public class Boss : MonoBehaviour
             dashTimer = 0f;
             chargeTimer = 0f;
 
-            transform.position = chargePos;
-
             rd.linearVelocity = Vector2.zero;
         }
 
