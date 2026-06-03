@@ -25,7 +25,7 @@ public class AttackObject1 : MonoBehaviour
             Destroy(gameObject);
             boss.TakeDamage(20);
         }
-;
+
     }
 
     void Update()

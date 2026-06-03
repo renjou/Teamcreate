@@ -5,21 +5,31 @@ public class NormalAttack : MonoBehaviour
     public Transform player;
     public Transform attackPoint;
     PlayerControl playerControl;
+    Boss boss;
 
     BoxCollider2D attackCollider;
 
     void Start()
     {
+        Debug.Log("NormalAttack Start");
         attackCollider = GetComponent<BoxCollider2D>();
-        playerControl = GetComponent<PlayerControl>();
-
+        playerControl = FindFirstObjectByType<PlayerControl>();
+        boss = FindFirstObjectByType<Boss>();
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.position = attackPoint.position;
-        Debug.Log(transform.position);
+        Debug.Log(playerControl);
+        Debug.Log(boss);
+        if (collision.CompareTag("enemy"))
+        {
+            Debug.Log("ヒット");
+            playerControl.SpeGaugeIncrease();
+            boss.TakeDamage(10);
+        }
+
     }
+     
 
     public void AttackOn()
     {

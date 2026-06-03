@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 1478246329}
     - target: {fileID: -3074590000787805988, guid: 965258034071bb64db76585182ea3ec1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3074590000787805988, guid: 965258034071bb64db76585182ea3ec1, type: 3}
       propertyPath: attackPoint
