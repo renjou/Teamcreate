@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1684479901305427894}
   - component: {fileID: 2901721412531354608}
-  - component: {fileID: 8210172991436326883}
   - component: {fileID: -5493228097591927357}
+  - component: {fileID: 129335484456616405}
   m_Layer: 0
   m_Name: SpecialAttack
   m_TagString: Untagged
@@ -93,19 +93,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &8210172991436326883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7614671669860467306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f645bebb12216488269b5672ad9dbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttackObject1
-  direction: 1
 --- !u!61 &-5493228097591927357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +139,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 27.790148, y: 29.4}
   m_EdgeRadius: 0
+--- !u!114 &129335484456616405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614671669860467306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8879b0c0cea08db438b7fd623ead163b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialAttack
+  player: {fileID: 0}
+  attackPoint: {fileID: 0}
