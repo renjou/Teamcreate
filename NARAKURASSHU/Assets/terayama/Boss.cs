@@ -60,6 +60,9 @@ public class Boss : MonoBehaviour
 
     private Rigidbody2D rd;
 
+    // ノックバック距離
+    public float knockBackDistance = 0.8f;
+
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
@@ -306,6 +309,13 @@ public class Boss : MonoBehaviour
     {
         Debug.Log("Damage");
 
+        // 攻撃エリア無効
+        if (AttackArea != null)
+        {
+            AttackArea.SetActive(false);
+        }
+
+
         // 死亡してたら無効
         if (isDead) return;
 
@@ -325,6 +335,8 @@ public class Boss : MonoBehaviour
             currentDashSpeed = 0f;
             dashTimer = 0f;
             chargeTimer = 0f;
+
+            transform.position = chargePos;
 
             rd.linearVelocity = Vector2.zero;
         }
@@ -439,6 +451,9 @@ public class Boss : MonoBehaviour
         currentDashSpeed = 0;
 
         rd.linearVelocity = Vector2.zero;
+
+        // 壁と反対方向へ少し下がる
+        transform.position += Vector3.left * dashDir * knockBackDistance;
 
         anim.Play("Boss_Damage");
     }
