@@ -44,7 +44,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (isDameging) return;
         if (normalAttack.enabled && isAttacking1) return; // 合体時は削除すること！
-        if (collision.CompareTag("enemy"))
+        if (collision.CompareTag("enemy") ||
+            collision.CompareTag("boss"))
         {
             PlayerDamage();
             SpeGaugeIncrease();

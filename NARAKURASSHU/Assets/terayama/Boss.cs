@@ -305,7 +305,7 @@ public class Boss : MonoBehaviour
     }
 
     // ダメージ
-    public void TakeDamage(int damage)
+    public void BossDamage(int damage)
     {
         Debug.Log("Damage");
 

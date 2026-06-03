@@ -36,7 +36,7 @@ public class enemy1 : MonoBehaviour
         // Pキーでダメージ
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
-            TakeDamage(1);
+            EnemyDamage(1);
         }
 
         // 左右移動
@@ -64,7 +64,7 @@ public class enemy1 : MonoBehaviour
     }
 
     // ダメージ
-    public void TakeDamage(int damage)
+    public void EnemyDamage(int damage)
     {
         // ダメージアニメーション
         anim.SetTrigger("Damage");

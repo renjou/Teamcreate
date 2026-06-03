@@ -638,6 +638,10 @@ PrefabInstance:
       value: Mushroom-Idle_0
       objectReference: {fileID: 0}
     - target: {fileID: 3011417698600495844, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011417698600495844, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
@@ -688,7 +692,7 @@ PrefabInstance:
     - target: {fileID: 7742925626124705137, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: boss
       value: 
-      objectReference: {fileID: 1702391719}
+      objectReference: {fileID: 0}
     - target: {fileID: 9102522816576108520, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -990,11 +994,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1702391719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5566086580339734660, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
-  m_PrefabInstance: {fileID: 1719869463}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1714067713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1166,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566086580339734660, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
       propertyPath: m_TagString
-      value: enemy
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 5806821707653896771, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1213,7 +1212,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 428898584895740301, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61079798ea1abfb4696511b8eb4ab33e, type: 3}

@@ -20,15 +20,23 @@ public class AttackObject1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(player);
+        Debug.Log(boss);
         if (collision.CompareTag("enemy"))
         {
             Debug.Log("ヒット");
             player.SpeGaugeIncrease();
             Destroy(gameObject);
-            //boss.TakeDamage(20);
-            enemy.TakeDamage(20);
+            enemy.EnemyDamage(20);
         }
 
+        if (collision.CompareTag("boss"))
+        {
+            Debug.Log("ボスヒット");
+            player.SpeGaugeIncrease();
+            Destroy(gameObject);
+            boss.BossDamage(20);
+        }
     }
 
     void Update()
