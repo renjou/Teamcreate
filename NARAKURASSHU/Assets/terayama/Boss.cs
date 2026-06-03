@@ -433,9 +433,9 @@ public class Boss : MonoBehaviour
         // プレイヤーに当たった
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerControl>()?.PlayerDamage();
+            //collision.gameObject.GetComponent<PlayerControl>()?.PlayerDamage();
 
-       //     Debug.Log("Dash Hit");
+            Debug.Log("Dash Hit");
 
             EndDash();
         }
