@@ -35,7 +35,7 @@ public class AttackObject1 : MonoBehaviour
             Debug.Log("ボスヒット");
             player.SpeGaugeIncrease();
             Destroy(gameObject);
-            boss.BossDamage(20);
+            boss.BossDamage(10);
         }
     }
 

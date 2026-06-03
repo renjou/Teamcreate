@@ -33,7 +33,7 @@ public class NormalAttack : MonoBehaviour
         {
             Debug.Log("ヒット");
             playerControl.SpeGaugeIncrease();
-            boss.BossDamage(20);
+            boss.BossDamage(5);
         }
     }
 
