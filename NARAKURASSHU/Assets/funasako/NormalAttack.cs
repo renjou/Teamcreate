@@ -25,7 +25,7 @@ public class NormalAttack : MonoBehaviour
         {
             Debug.Log("ヒット");
             playerControl.SpeGaugeIncrease();
-            boss.TakeDamage(10);
+            boss.TakeDamage(5);
         }
 
     }
