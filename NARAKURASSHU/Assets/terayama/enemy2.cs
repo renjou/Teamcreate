@@ -14,6 +14,8 @@ public class enemy2 : MonoBehaviour
     private float shotTimer;
 
     public Transform player;
+
+    public float attackRange = 8f;
     void Start()
     {
         GameObject p = GameObject.FindWithTag("Player");
@@ -35,12 +37,20 @@ public class enemy2 : MonoBehaviour
     {
         LookPlayer();
 
-        shotTimer -= Time.deltaTime;
+        if (player == null) return;
 
-        if (shotTimer <= 0)
+        float distance =
+            Vector2.Distance(transform.position, player.position);
+
+        if (distance <= attackRange)
         {
-            Shoot();
-            shotTimer = shotInterval;
+            shotTimer -= Time.deltaTime;
+
+            if (shotTimer <= 0)
+            {
+                Shoot();
+                shotTimer = shotInterval;
+            }
         }
     }
 
@@ -70,28 +80,14 @@ public class enemy2 : MonoBehaviour
 
     void CreateBullet()
     {
-        GameObject bullet = Instantiate(
-            bulletPrefab,
-            firePoint.position,
-            Quaternion.identity
-        );
+        if (player == null) return;
+
+        GameObject bullet = Instantiate( bulletPrefab, firePoint.position, Quaternion.identity);
 
         Vector2 dir = (player.position - firePoint.position).normalized;
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-        rb.linearVelocity = dir * 5f; // 5は弾速
-    }
-    private void OnTriggerEnter2D(Collider2D collison)
-    {
-        if (collison.CompareTag("Player"))
-        {
-            Debug.Log("プレイヤーにヒット");
-
-            PlayerControl player = FindFirstObjectByType<PlayerControl>();
-            player.PlayerDamage();
-            player.SpeGaugeIncrease();
-            player.KnockBack(transform.position);
-        }
+        rb.linearVelocity = dir * 5f;
     }
 }
