@@ -544,10 +544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbf422e66c764e45b1fefc5311290d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemy2
+  EnemyHp: 3
   bulletPrefab: {fileID: 3470115458230528363, guid: 54ed4ccdd83fafd46bf32fa3a072a022, type: 3}
   firePoint: {fileID: 1068649623}
   shotInterval: 2
   player: {fileID: 944981054}
+  attackRange: 8
 --- !u!4 &1182588968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
@@ -848,15 +850,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4044247
+      value: -4.46
       objectReference: {fileID: 0}
     - target: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.126506
+      value: -2.74
       objectReference: {fileID: 0}
     - target: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -943,11 +945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8461024100371591774, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.85
+      value: 4.36
       objectReference: {fileID: 0}
     - target: {fileID: 8461024100371591774, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 8461024100371591774, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
       propertyPath: m_LocalPosition.z
