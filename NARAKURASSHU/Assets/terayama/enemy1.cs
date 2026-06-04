@@ -107,4 +107,16 @@ public class enemy1 : MonoBehaviour
         // 1秒後に削除
         Destroy(gameObject, 0.5f);
     }
+    private void OnTriggerEnter2D(Collider2D collison)
+    {
+        if (collison.CompareTag("Player"))
+        {
+            Debug.Log("プレイヤーにヒット");
+
+            PlayerControl player = FindFirstObjectByType<PlayerControl>();
+            player.PlayerDamage();
+            player.SpeGaugeIncrease();
+            player.KnockBack(transform.position);
+        }
+    }
 }
