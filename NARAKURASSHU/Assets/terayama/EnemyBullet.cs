@@ -22,5 +22,14 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("プレイヤーにヒット");
+
+            PlayerControl player = FindFirstObjectByType<PlayerControl>();
+            player.PlayerDamage();
+            player.SpeGaugeIncrease();
+            player.KnockBack(transform.position);
+        }
     }
 }
