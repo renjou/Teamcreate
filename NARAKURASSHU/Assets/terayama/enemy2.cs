@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class enemy2 : MonoBehaviour
 {
+    public int EnemyHp = 3;
+
     private Animator anim;
 
     private Vector3 baseScale;
@@ -16,6 +19,21 @@ public class enemy2 : MonoBehaviour
     public Transform player;
 
     public float attackRange = 8f;
+
+    public void EnemyDamage(int damage)
+    {
+        EnemyHp -= damage;
+
+        anim.SetTrigger("Damage");
+
+        Debug.Log("Enemy HP : " + EnemyHp);
+
+        if (EnemyHp <= 0)
+        {
+            Die();
+        }
+    }
+
     void Start()
     {
         GameObject p = GameObject.FindWithTag("Player");
@@ -35,12 +53,16 @@ public class enemy2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            EnemyDamage(1);
+        }
+
         LookPlayer();
 
         if (player == null) return;
 
-        float distance =
-            Vector2.Distance(transform.position, player.position);
+        float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance <= attackRange)
         {
@@ -89,5 +111,16 @@ public class enemy2 : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         rb.linearVelocity = dir * 5f;
+    }
+
+    void Die()
+    {
+        anim.SetTrigger("Die");
+
+        GetComponent<Collider2D>().enabled = false;
+
+        enabled = false;
+
+        Destroy(gameObject, 0.01f);
     }
 }
