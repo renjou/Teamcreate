@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bulet
   speed: 5
-  lifeTime: 1
+  lifeTime: 2
 --- !u!58 &-7473042059430477510
 CircleCollider2D:
   m_ObjectHideFlags: 0
