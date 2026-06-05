@@ -55,7 +55,7 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("Player Update");
+        //Debug.Log("Player Update");
         PlayerAnime();
         if (playerHP == 0 && !gameover) // 死亡
         {
