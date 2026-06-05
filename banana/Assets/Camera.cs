@@ -1,51 +1,55 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Camera : MonoBehaviour
 {
-    GameObject _plyaer;
-    Vector3 _delPlayer;
-    Vector3 _delPlayerNomal;
-    Vector3 _setDel;
-    [SerializeField] float distance = 4.0f;
+    GameObject _player; // Player所得用
+    Vector3 _playerDir; // Playerの正面ベクトル
+    Vector3 _playerToCamera; // Playerからカメラへのベクトル
+    Vector3 _playerToCameraInit; // Playerからカメラの初期ベクトル
+    Vector3 _playerToCameraXZInit; // PlayerからカメラのXZ空間での初期ベクトル
+    float _delPlayerToCamera; // Playerからラメラへの距離
+    float _delXZ; // XZ空間での距離
+    float _delY;
     Quaternion _rot;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // プレイヤーのオブジェクトを取得する
-        _plyaer = GameObject.Find("Player");
-
-        // 初期位置を正しい位置にする
-        // プレイヤーとの距離を計算する
-        // 目標の位置 - 現在の自分の位置
-        // 自分からプレイヤーまで伸ばしたベクトル
-        _delPlayer = _plyaer.transform.position - transform.position;
-
-        // 正規化する
-        // 自分からプレイヤー方向の単位ベクトルを作る
-        _delPlayerNomal = _delPlayer.normalized;
-
-        // プレイヤー方向の単位ベクトルに距離を掛ける
-        // プレイヤーからカメラまでの相対ベクトルを作る
-        _setDel = _delPlayer.normalized * distance;
-        transform.position = _plyaer.transform.position - _setDel;
+        // Playerオブジェクトの取得
+        _player = GameObject.FindGameObjectWithTag("Player");
+        // Playerからカメラへの初期ベクトル
+        _playerToCameraInit = transform.position -_player.transform.localPosition;
+        // XYZ空間の距離
+        _delPlayerToCamera = _playerToCameraInit.magnitude;
+        // PlayerからカメラへのXZ空間での初期ベクトル
+        _playerToCameraXZInit = new Vector3(_playerToCameraInit.x,0, _playerToCameraInit.z);
+        // XZ空間での距離
+        _delXZ = _playerToCameraXZInit.magnitude;
+        // playerとカメラのY方向の距離
+        _delY = _playerToCameraInit.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // プレイヤーの位置から相対ベクトルを引いて、
-        // カメラの現在地を出す
-        transform.position = _plyaer.transform.position - _setDel;
+        // Playerの正面ベクトル取得
+        _playerDir = _player.transform.forward;
+        _playerDir = _playerDir.normalized; // 正規化して大きさ1にする。
 
-        // カメラの正面をプレイヤーとの相対ベクトルにする
-        _rot = Quaternion.LookRotation(_delPlayerNomal, Vector3.up);
+        // 方向をかける、距離で、Playerとカメラのベクトルを作成
+        _playerToCamera = _playerDir * _delXZ;
 
-        // 移動方向に回転
-        transform.rotation = _rot;
+        // それにY成分を足してXYZ空間のベクトルに戻す
+        _CameraToPlayer = _playerToCameraXZ - _delY * Vector3.up;
+
+        // XZ空間でのカメラの位置を計算する
+        transform.position = _player.transform.position - _CameraToPlayer;
+
+        // カメラをプレイヤーの方向に回転させる
+        _rot = Quaternion.LookRotation();
+        transform.position = _rot;
+
+
 
     }
 
