@@ -11,7 +11,7 @@ public class Player_z : MonoBehaviour
     void Start()
     {
         // 自分のオブジェクトからSpriteRendererを取得
-        spriteRenderer = GetComponent<SpriteRenderer>();
+       
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()

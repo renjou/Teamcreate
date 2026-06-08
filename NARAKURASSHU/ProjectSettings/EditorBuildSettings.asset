@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes title/GameStage.unity
+    guid: 16c1364f414ca7f46b903bfb5c0da3f7
+  - enabled: 1
     path: Assets/renjou/tyu-toriaru.unity
-    guid: d71977d91a43e4d4f912c2bc8bf72c8b
+    guid: 17475910d525fe1479dd997ccaf03a78
   - enabled: 1
     path: Assets/renjou/ki.unity
-    guid: 7286463c35b219f4e9ecc588ce838551
+    guid: 0879943b99e98254e9c62407fa631bb5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

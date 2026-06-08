@@ -22,8 +22,7 @@ public class Player : MonoBehaviour
         if (Keyboard.current != null)
         {
             // WASD ‚â –îˆóƒL[ ‚Ì“ü—Í‚ğ©“®‚Å”»•Ê‚µ‚Ä‚­‚ê‚Ü‚·
-            if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) inputVector.y = 1f;
-            if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) inputVector.y = -1f;
+            
             if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) inputVector.x = -1f;
             if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) inputVector.x = 1f;
         }
