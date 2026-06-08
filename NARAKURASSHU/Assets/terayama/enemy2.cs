@@ -52,12 +52,12 @@ public class enemy2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-
+        */
         LookPlayer();
 
         if (player == null) return;
@@ -92,11 +92,11 @@ public class enemy2 : MonoBehaviour
 
         if (dx > 0)
         {
-            transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);
+            transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
         }
         else
         {
-            transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
+            transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);
         }
     }
 

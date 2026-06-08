@@ -33,13 +33,13 @@ public class enemy1 : MonoBehaviour
     }
 
     void Update()
-    {
+    {/*
         // Pキーでダメージ
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-
+        */
         // 左右移動
         transform.Translate(
             Vector2.right * direction * Bspeed * Time.deltaTime);

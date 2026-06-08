@@ -63,6 +63,8 @@ public class Boss : MonoBehaviour
     // ノックバック距離
     public float knockBackDistance = 0.8f;
 
+    public GameObject clearUI;
+
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
@@ -110,13 +112,13 @@ public class Boss : MonoBehaviour
 
         CooldownTimer -= Time.deltaTime;
         attackCooldownTimer -= Time.deltaTime;
-        /*
+        
         // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
-            TakeDamage(10);
+            BossDamage(40);
         }
-        */
+        
         switch (state)
         {
             // 待機状態
@@ -362,7 +364,7 @@ public class Boss : MonoBehaviour
         anim.Play("Boss_Die");
 
         // 1.5秒後に削除
-        Destroy(gameObject, 1.5f);
+        Invoke(nameof(ShowClear), 1.5f);
     }
 
     //予備動作
@@ -454,5 +456,17 @@ public class Boss : MonoBehaviour
         transform.position += Vector3.left * dashDir * knockBackDistance;
 
         anim.Play("Boss_Damage");
+    }
+
+    void ShowClear()
+    {
+        if (clearUI != null)
+        {
+            clearUI.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+
+        Destroy(gameObject);
     }
 }
