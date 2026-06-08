@@ -52,12 +52,12 @@ public class enemy2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-
+        */
         LookPlayer();
 
         if (player == null) return;

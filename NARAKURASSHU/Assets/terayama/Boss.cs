@@ -112,13 +112,13 @@ public class Boss : MonoBehaviour
 
         CooldownTimer -= Time.deltaTime;
         attackCooldownTimer -= Time.deltaTime;
-        /*
+        
         // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
-            TakeDamage(10);
+            BossDamage(40);
         }
-        */
+        
         switch (state)
         {
             // 待機状態
