@@ -15,7 +15,6 @@ public class AttackObject1 : MonoBehaviour
         collider2d = GetComponent<Collider2D>();
         player = FindFirstObjectByType<PlayerControl>();
         boss = FindFirstObjectByType<Boss>();
-        enemy = FindFirstObjectByType<enemy1>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +25,11 @@ public class AttackObject1 : MonoBehaviour
         {
             Debug.Log("ヒット");
             player.SpeGaugeIncrease();
-            Destroy(gameObject);
-            enemy.EnemyDamage(20);
+            if (collision.TryGetComponent<enemy1>(out enemy1 enemy))
+            {
+                Destroy(gameObject);
+                enemy.EnemyDamage(20);
+            }
         }
 
         if (collision.CompareTag("boss"))

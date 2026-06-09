@@ -27,6 +27,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject attack2Prefab;
     public GameObject specialPrefab;
     Animator animator;
+    public AudioClip jumpSE;
+    public AudioClip knokBackSE;
     RespawnManager reborn;
 
     void Start()
@@ -191,8 +193,8 @@ public class PlayerControl : MonoBehaviour
 
     public void PlayerDamage()　// ダメージ処理
     {
-        Debug.Log("攻撃を受けた");
         isDameging = true;
+        Debug.Log("攻撃を受けた");
         playerHP--;
         if (playerHP < 0)
         {
@@ -211,8 +213,8 @@ public class PlayerControl : MonoBehaviour
         direction.y = 0.5f;
         playerRigid.linearVelocity = Vector2.zero;
         playerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
-        Invoke(nameof(EndKnockBack), 0.3f);
-        Invoke(nameof(EndInvincible), 1f);
+        Invoke(nameof(EndKnockBack), 0.5f);
+        Invoke(nameof(EndInvincible), 2f);
     }
 
     void EndKnockBack()
