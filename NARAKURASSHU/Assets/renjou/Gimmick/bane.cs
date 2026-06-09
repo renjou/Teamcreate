@@ -2,35 +2,29 @@ using UnityEngine;
 
 public class bane : MonoBehaviour
 {
-    [Header("ばねの設定")]
-    public Vector3 targetPosition;  // 目標地点（ばねの根元）
-    public float stiffness = 100f;  // ばねの硬さ（戻る力）
-    public float damping = 10f;     // 減衰（ブレーキの強さ）
+    [Header("ばねの跳ね返す力")]
+    public float bounceForce = 15f;
 
-    private Vector3 velocity = Vector3.zero;
-
-    void Start()
+    // 2D用のトリガー判定
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        // 初期位置を目標地点に設定
-        targetPosition = transform.position;
-    }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // 2D用のRigidbody2Dを取得する
+            Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-    void FixedUpdate()
-    {
-        // 1. 現在の位置から目標地点への変位（ズレ）を計算
-        Vector3 displacement = targetPosition - transform.position;
+            if (playerRb != null)
+            {
+                // 2Dでの速度リセット（Unity 2025以降は linearVelocity、古いバージョンは velocity）
+                Vector2 currentVelocity = playerRb.linearVelocity;
+                currentVelocity.y = 0;
+                playerRb.linearVelocity = currentVelocity;
 
-        // 2. フックの法則（F = kx）に基づき、復元力を計算
-        Vector3 springForce = displacement * stiffness;
+                // 2Dの上方向に向かって力を加える
+                playerRb.AddForce(transform.up * bounceForce, ForceMode2D.Impulse);
 
-        // 3. 速度に対する減衰力（摩擦）を計算
-        Vector3 dampingForce = velocity * damping;
-
-        // 4. 合計の加速度を計算（簡易的に質量 m = 1 とする）
-        Vector3 acceleration = springForce - dampingForce;
-
-        // 5. 速度と位置を更新
-        velocity += acceleration * Time.fixedDeltaTime;
-        transform.position += velocity * Time.fixedDeltaTime;
+                Debug.Log("2Dプレイヤーが跳ねました！");
+            }
+        }
     }
 }
