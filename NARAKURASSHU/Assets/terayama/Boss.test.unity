@@ -1077,6 +1077,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 845ffbb927e69214ea2733419c597640, type: 2}
     - target: {fileID: 4551689740964680587, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5355810337043545223, guid: 845ffbb927e69214ea2733419c597640, type: 2}
+    - target: {fileID: 4551689740964680587, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
@@ -1084,10 +1088,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 5244123971778851679, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8561932630526401283, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 845ffbb927e69214ea2733419c597640, type: 2}
+    - target: {fileID: 8561932630526401283, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5355810337043545223, guid: 845ffbb927e69214ea2733419c597640, type: 2}
     - target: {fileID: 8561932630526401283, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
@@ -1096,6 +1108,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 845ffbb927e69214ea2733419c597640, type: 2}
+    - target: {fileID: 8769967288634407959, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5355810337043545223, guid: 845ffbb927e69214ea2733419c597640, type: 2}
     - target: {fileID: 8769967288634407959, guid: ff724b62bf7ba564ca6877e6acb1018f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
