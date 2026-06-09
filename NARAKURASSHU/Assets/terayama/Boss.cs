@@ -116,6 +116,7 @@ public class Boss : MonoBehaviour
         // テスト用ダメージ
         if (Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
+            Debug.Log("Space");
             BossDamage(40);
         }
         
@@ -359,6 +360,8 @@ public class Boss : MonoBehaviour
     {
         isDead = true;
 
+        GetComponent<Collider2D>().enabled = false;
+
         //    Debug.Log("Boss dead");
 
         anim.Play("Boss_Die");
@@ -393,6 +396,7 @@ public class Boss : MonoBehaviour
         // ダッシュ停止
         currentDashSpeed = 0;
         dashTimer = 0;
+        rd.linearVelocity = Vector2.zero;
 
         attackTimer = attackTime;
 
