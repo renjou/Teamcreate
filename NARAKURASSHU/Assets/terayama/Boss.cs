@@ -114,7 +114,7 @@ public class Boss : MonoBehaviour
         attackCooldownTimer -= Time.deltaTime;
         
         // テスト用ダメージ
-        if (Keyboard.current.spaceKey.wasReleasedThisFrame)
+        if (Keyboard.current.pKey.wasReleasedThisFrame)
         {
             Debug.Log("Space");
             BossDamage(40);
