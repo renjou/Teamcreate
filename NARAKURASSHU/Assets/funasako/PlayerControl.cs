@@ -6,8 +6,9 @@ public class PlayerControl : MonoBehaviour
 {
     //public NormalAttack normalAttack;
     Rigidbody2D playerRigid;
-    public float jumpforce = 1000;
-    public float speed = 5.0f; // 移動速度
+    Collider2D playerCollider;
+    float jumpforce = 1000;
+    float speed = 5.0f; // 移動速度
     public float speGauge = 0;
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
@@ -27,6 +28,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject attack2Prefab;
     public GameObject specialPrefab;
     Animator animator;
+    public AudioClip jumpSE;
+    public AudioClip knokBackSE;
     RespawnManager reborn;
 
     void Start()
@@ -36,6 +39,7 @@ public class PlayerControl : MonoBehaviour
         Application.targetFrameRate = 60;
         //normalAttack = GetComponent<NormalAttack>();
         this.playerRigid = GetComponent<Rigidbody2D>();
+        this.playerCollider = GetComponent<Collider2D>();
         reborn = FindFirstObjectByType<RespawnManager>();
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
@@ -191,8 +195,8 @@ public class PlayerControl : MonoBehaviour
 
     public void PlayerDamage()　// ダメージ処理
     {
-        Debug.Log("攻撃を受けた");
         isDameging = true;
+        Debug.Log("攻撃を受けた");
         playerHP--;
         if (playerHP < 0)
         {
@@ -211,8 +215,8 @@ public class PlayerControl : MonoBehaviour
         direction.y = 0.5f;
         playerRigid.linearVelocity = Vector2.zero;
         playerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
-        Invoke(nameof(EndKnockBack), 0.3f);
-        Invoke(nameof(EndInvincible), 1f);
+        Invoke(nameof(EndKnockBack), 0.5f);
+        Invoke(nameof(EndInvincible), 2f);
     }
 
     void EndKnockBack()

@@ -112,14 +112,14 @@ public class Boss : MonoBehaviour
 
         CooldownTimer -= Time.deltaTime;
         attackCooldownTimer -= Time.deltaTime;
-        
+        /*
         // テスト用ダメージ
         if (Keyboard.current.pKey.wasReleasedThisFrame)
         {
             Debug.Log("Space");
             BossDamage(40);
         }
-        
+        */
         switch (state)
         {
             // 待機状態
@@ -310,7 +310,7 @@ public class Boss : MonoBehaviour
     // ダメージ
     public void BossDamage(int damage)
     {
-        Debug.Log("Damage");
+      //  Debug.Log("Damage");
 
         // 攻撃エリア無効
         if (AttackArea != null)

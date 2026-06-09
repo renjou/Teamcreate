@@ -4,7 +4,8 @@ public class AttackObject1 : MonoBehaviour
 {
     Collider2D collider2d;
     PlayerControl player;
-    enemy1 enemy;
+    enemy1 enemy1;
+    enemy2 enemy2;
     Boss boss;
 
     public float direction = 1;
@@ -15,19 +16,26 @@ public class AttackObject1 : MonoBehaviour
         collider2d = GetComponent<Collider2D>();
         player = FindFirstObjectByType<PlayerControl>();
         boss = FindFirstObjectByType<Boss>();
-        enemy = FindFirstObjectByType<enemy1>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(player);
-        Debug.Log(boss);
+        // Debug.Log(player);
+        // Debug.Log(boss);
         if (collision.CompareTag("enemy"))
         {
             Debug.Log("ヒット");
             player.SpeGaugeIncrease();
-            Destroy(gameObject);
-            enemy.EnemyDamage(20);
+            if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
+            {
+                Destroy(gameObject);
+                enemy1.EnemyDamage(20);
+            }
+            if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
+            {
+                Destroy(gameObject);
+                enemy2.EnemyDamage(20);
+            }
         }
 
         if (collision.CompareTag("boss"))

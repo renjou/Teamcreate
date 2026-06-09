@@ -111,10 +111,10 @@ public class enemy1 : MonoBehaviour
     {
         if (collison.CompareTag("Player"))
         {
-            Debug.Log("プレイヤーにヒット");
+          //  Debug.Log("プレイヤーにヒット");
 
             PlayerControl player = FindFirstObjectByType<PlayerControl>();
-            player.PlayerDamage();
+          //  player.PlayerDamage();
             player.SpeGaugeIncrease();
             player.KnockBack(transform.position);
         }
