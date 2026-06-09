@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    public GameObject controlsText;
+    public GameObject controlsPanel;
 
     public void StartGame()
     {
@@ -12,8 +12,7 @@ public class TitleManager : MonoBehaviour
 
     public void ShowControls()
     {
-        controlsText.SetActive(
-            !controlsText.activeSelf);
+        controlsPanel.SetActive(!controlsPanel.activeSelf);
     }
 
     public void ExitGame()
