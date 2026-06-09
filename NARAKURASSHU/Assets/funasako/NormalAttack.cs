@@ -16,7 +16,6 @@ public class NormalAttack : MonoBehaviour
         attackCollider = GetComponent<BoxCollider2D>();
         playerControl = FindFirstObjectByType<PlayerControl>();
         boss = FindFirstObjectByType<Boss>();
-        enemy = FindFirstObjectByType<enemy1>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +26,10 @@ public class NormalAttack : MonoBehaviour
         {
             Debug.Log("ヒット");
             playerControl.SpeGaugeIncrease();
-            enemy.EnemyDamage(20);
+            if (collision.TryGetComponent<enemy1>(out enemy1 enemy))
+            {
+                enemy.EnemyDamage(20);
+            }
         }
         if (collision.CompareTag("boss"))
         {

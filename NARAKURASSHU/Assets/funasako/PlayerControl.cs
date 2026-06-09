@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     //public NormalAttack normalAttack;
     Rigidbody2D playerRigid;
+    Collider2D playerCollider;
     float jumpforce = 1000;
     float speed = 5.0f; // 移動速度
     public float speGauge = 0;
@@ -38,6 +39,7 @@ public class PlayerControl : MonoBehaviour
         Application.targetFrameRate = 60;
         //normalAttack = GetComponent<NormalAttack>();
         this.playerRigid = GetComponent<Rigidbody2D>();
+        this.playerCollider = GetComponent<Collider2D>();
         reborn = FindFirstObjectByType<RespawnManager>();
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
