@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &46601379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1795631775787300126, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
+  m_PrefabInstance: {fileID: 1725647412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &176545140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -494,6 +505,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5719909385002822555, guid: b43518a56a5b89d4c983b5f8c0a41718, type: 3}
   m_PrefabInstance: {fileID: 1162809195}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686403529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5598523688065898524, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
+  m_PrefabInstance: {fileID: 1725647412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!224 &791226875 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2475045245885574790, guid: 0fab62199a4627248aa8009508ad3b0f, type: 3}
@@ -1087,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5604013341436472521, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8433589870055903255, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
       propertyPath: m_Pivot.x
@@ -1185,11 +1207,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &1866908061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866908063}
+  - component: {fileID: 1866908062}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1866908062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866908061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f29cb9de246984fa46aaef363b511f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameClearMenu
+  retryText: {fileID: 1888685635}
+  titleText: {fileID: 46601379}
+  exitText: {fileID: 686403529}
+--- !u!4 &1866908063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866908061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.89488, y: -0.76272, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1866942669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5345735421037207177, guid: 721c0f3a6238e9243ad9cef310a29d21, type: 3}
   m_PrefabInstance: {fileID: 1668895959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888685635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1656488256121879806, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
+  m_PrefabInstance: {fileID: 1725647412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &1994162202 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2346923035994099193, guid: 0fab62199a4627248aa8009508ad3b0f, type: 3}
@@ -1210,3 +1290,4 @@ SceneRoots:
   - {fileID: 547548498}
   - {fileID: 314920457}
   - {fileID: 1725647412}
+  - {fileID: 1866908063}
