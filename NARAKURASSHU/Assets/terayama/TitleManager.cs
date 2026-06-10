@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GameStage");
     }
 
     public void ShowControls()
