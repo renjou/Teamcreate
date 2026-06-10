@@ -7,6 +7,7 @@ public class AttackObject1 : MonoBehaviour
     enemy1 enemy1;
     enemy2 enemy2;
     Boss boss;
+    public AudioClip hit;
 
     public float direction = 1;
     float speed = 50;

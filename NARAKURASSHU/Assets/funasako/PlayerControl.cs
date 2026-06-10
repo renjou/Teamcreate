@@ -31,7 +31,13 @@ public class PlayerControl : MonoBehaviour
     public GameObject specialPrefab;
     Animator animator;
     public AudioClip jumpSE;
+    public AudioClip landingSE;
     public AudioClip knokBackSE;
+    public AudioClip dethSE;
+    public AudioClip attack1SE;
+    public AudioClip attack2SE;
+    public AudioClip specialSE;
+    AudioSource audioSource;
     RespawnManager reborn;
 
     void Start()
@@ -46,6 +52,7 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
         specialUI = FindFirstObjectByType<SpecialUI>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ

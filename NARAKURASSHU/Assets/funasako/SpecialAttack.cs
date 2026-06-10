@@ -6,6 +6,7 @@ public class SpecialAttack : MonoBehaviour
     PlayerControl player;
     enemy1 enemy;
     Boss boss;
+    public AudioClip sHit;
 
     public float direction = 1;
     float speed = 50;

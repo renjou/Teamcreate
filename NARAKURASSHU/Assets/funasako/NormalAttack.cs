@@ -8,6 +8,7 @@ public class NormalAttack : MonoBehaviour
     Boss boss;
     enemy1 enemy1;
     enemy2 enemy2;
+    public AudioClip nHit;
 
     BoxCollider2D attackCollider;
 
