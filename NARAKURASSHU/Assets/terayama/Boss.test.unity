@@ -1198,6 +1198,10 @@ PrefabInstance:
       propertyPath: clearUI
       value: 
       objectReference: {fileID: 4838129616283383900}
+    - target: {fileID: 4702715217199322353, guid: 15396ce6fdb5244439a3096062a2791f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7407430536399631951, guid: 15396ce6fdb5244439a3096062a2791f, type: 3}
       propertyPath: m_Name
       value: 'Boss '
