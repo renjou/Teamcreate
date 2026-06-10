@@ -111,7 +111,12 @@ public class enemy2 : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         rb.linearVelocity = dir * 5f;
+
+        // 弾の向きをプレイヤー方向にする
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+
 
     void Die()
     {
