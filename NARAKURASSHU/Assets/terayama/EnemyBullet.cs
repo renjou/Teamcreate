@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
 
             PlayerControl player = FindFirstObjectByType<PlayerControl>();
          //   player.PlayerDamage();
-            player.SpeGaugeIncrease();
+         //   player.SpeGaugeIncrease();
             player.KnockBack(transform.position);
         }
     }

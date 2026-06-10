@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8879b0c0cea08db438b7fd623ead163b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpecialAttack
-  player: {fileID: 0}
-  attackPoint: {fileID: 0}
+  sHit: {fileID: 8300000, guid: 74566ae5bfb75fd48b0024ed7273ddd8, type: 3}
+  direction: 1

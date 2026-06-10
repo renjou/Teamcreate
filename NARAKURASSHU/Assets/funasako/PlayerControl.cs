@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Layouts;
 
 public class PlayerControl : MonoBehaviour
 {
     //public NormalAttack normalAttack;
     Rigidbody2D playerRigid;
     Collider2D playerCollider;
-    public float jumpforce = 1000;
-    public float speed = 5.0f; // 移動速度
+    SpecialUI specialUI;
+    float jumpforce = 1000;
+    float speed = 5.0f; // 移動速度
     public float speGauge = 0;
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
@@ -29,7 +31,13 @@ public class PlayerControl : MonoBehaviour
     public GameObject specialPrefab;
     Animator animator;
     public AudioClip jumpSE;
+    public AudioClip landingSE;
     public AudioClip knokBackSE;
+    public AudioClip dethSE;
+    public AudioClip attack1SE;
+    public AudioClip attack2SE;
+    public AudioClip specialSE;
+    AudioSource audioSource;
     RespawnManager reborn;
 
     void Start()
@@ -43,6 +51,8 @@ public class PlayerControl : MonoBehaviour
         reborn = FindFirstObjectByType<RespawnManager>();
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
+        specialUI = FindFirstObjectByType<SpecialUI>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
@@ -53,7 +63,6 @@ public class PlayerControl : MonoBehaviour
             collision.CompareTag("boss"))
         {
             PlayerDamage();
-            SpeGaugeIncrease();
             KnockBack(collision.transform.position);
         }
     }
@@ -172,14 +181,28 @@ public class PlayerControl : MonoBehaviour
         circleSp.enabled = false;
     }
 
+    IEnumerator specialAttackInstantlate()
+    {
+        yield return new WaitForSeconds(0.2f);
+        circleSp.enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        GameObject attack = Instantiate(specialPrefab,
+            circle.position,
+            Quaternion.identity);
+        attack.GetComponent<AttackObject1>().direction = playerDirection;
+        yield return new WaitForSeconds(0.1f);
+        circleSp.enabled = false;
+    }
+
     void SpecialAttack()
     {
         circleSp.enabled = true;
         GameObject attack = Instantiate(specialPrefab,
             circle.position,
             Quaternion.identity);
-        attack.GetComponent<AttackObject1>().direction = playerDirection;
+        attack.GetComponent<SpecialAttack>().direction = playerDirection;
         speGauge = 0;
+        specialUI.ressetSpeGauge();
         circleSp.enabled = false;
     }
 
@@ -197,12 +220,13 @@ public class PlayerControl : MonoBehaviour
     {
         isDameging = true;
         Debug.Log("攻撃を受けた");
+        speGauge++;
         playerHP--;
         if (playerHP < 0)
         {
             playerHP = 0;
         }
-
+        specialUI.increaseSpeGauge();
         hpUI.UpdateHP(playerHP);
     }
 
@@ -241,6 +265,7 @@ public class PlayerControl : MonoBehaviour
     {
         Debug.Log("ゲージ増加");
         speGauge++;
+        specialUI.increaseSpeGauge();
     }
 
     void Delay()

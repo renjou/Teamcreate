@@ -153,3 +153,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalAttack
   player: {fileID: 0}
   attackPoint: {fileID: 0}
+  nHit: {fileID: 8300000, guid: 74566ae5bfb75fd48b0024ed7273ddd8, type: 3}

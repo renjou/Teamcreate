@@ -115,8 +115,8 @@ public class enemy1 : MonoBehaviour
 
             PlayerControl player = FindFirstObjectByType<PlayerControl>();
           //  player.PlayerDamage();
-            player.SpeGaugeIncrease();
-            player.KnockBack(transform.position);
+          //  player.SpeGaugeIncrease();
+          //  player.KnockBack(transform.position);
         }
     }
 }
