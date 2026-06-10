@@ -9,8 +9,8 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D playerRigid;
     Collider2D playerCollider;
     SpecialUI specialUI;
-    float jumpforce = 1000;
-    float speed = 5.0f; // 移動速度
+    public float jumpforce = 1000;
+    public float speed = 5.0f; // 移動速度
     public float speGauge = 0;
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
