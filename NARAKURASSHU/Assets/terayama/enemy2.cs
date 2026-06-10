@@ -121,6 +121,6 @@ public class enemy2 : MonoBehaviour
 
         enabled = false;
 
-        Destroy(gameObject, 0.01f);
+        Destroy(gameObject, 1f);
     }
 }

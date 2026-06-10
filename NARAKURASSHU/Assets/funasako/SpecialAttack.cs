@@ -20,14 +20,22 @@ public class SpecialAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(player);
-        Debug.Log(boss);
+        // Debug.Log(player);
+        // Debug.Log(boss);
         if (collision.CompareTag("enemy"))
         {
             Debug.Log("ヒット");
             player.SpeGaugeIncrease();
-            Destroy(gameObject);
-            enemy.EnemyDamage(20);
+            if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
+            {
+                Destroy(gameObject);
+                enemy1.EnemyDamage(20);
+            }
+            if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
+            {
+                Destroy(gameObject);
+                enemy2.EnemyDamage(20);
+            }
         }
 
         if (collision.CompareTag("boss"))
@@ -35,7 +43,7 @@ public class SpecialAttack : MonoBehaviour
             Debug.Log("ボスヒット");
             player.SpeGaugeIncrease();
             Destroy(gameObject);
-            boss.BossDamage(20);
+            boss.BossDamage(10);
         }
     }
 
