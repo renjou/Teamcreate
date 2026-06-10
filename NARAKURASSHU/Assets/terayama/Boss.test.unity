@@ -166,6 +166,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &389742855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5672915372400636680, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
+  m_PrefabInstance: {fileID: 1924331880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &389742859
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389742855}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &625310170
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +836,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5672915372400636680, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 389742859}
   m_SourcePrefab: {fileID: 100100000, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
 --- !u!1 &2136139736
 GameObject:
@@ -1055,7 +1090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5604013341436472521, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5713637326136862580, guid: 5ada07ecc9e20ab45988097a4db40949, type: 3}
       propertyPath: m_Color.b
@@ -1202,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Boss '
       objectReference: {fileID: 0}
+    - target: {fileID: 7407430536399631951, guid: 15396ce6fdb5244439a3096062a2791f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7612759581171003455, guid: 15396ce6fdb5244439a3096062a2791f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.97
@@ -1303,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom-Idle_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6207581431758167546, guid: b81e9011f1c4c0644b6672966221349d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7502417935346297258, guid: b81e9011f1c4c0644b6672966221349d, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -1352,6 +1395,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3902129199296607313, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4738865356646451618, guid: f7be6ea477d65d543aa679f0df2007e4, type: 3}
     - target: {fileID: 5013878295576335254, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
       propertyPath: m_Name
       value: Slim
