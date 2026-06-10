@@ -6,7 +6,8 @@ public class NormalAttack : MonoBehaviour
     public Transform attackPoint;
     PlayerControl playerControl;
     Boss boss;
-    enemy1 enemy;
+    enemy1 enemy1;
+    enemy2 enemy2;
 
     BoxCollider2D attackCollider;
 
@@ -26,9 +27,13 @@ public class NormalAttack : MonoBehaviour
         {
             Debug.Log("ヒット");
             playerControl.SpeGaugeIncrease();
-            if (collision.TryGetComponent<enemy1>(out enemy1 enemy))
+            if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
             {
-                enemy.EnemyDamage(20);
+                enemy1.EnemyDamage(20);
+            }
+            if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
+            {
+                enemy2.EnemyDamage(20);
             }
         }
         if (collision.CompareTag("boss"))
