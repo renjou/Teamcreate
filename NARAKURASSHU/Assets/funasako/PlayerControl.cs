@@ -177,6 +177,12 @@ public class PlayerControl : MonoBehaviour
             circle.position,
             Quaternion.identity);
         attack.GetComponent<AttackObject1>().direction = playerDirection;
+        Vector3 scale = attack.transform.localScale;
+        if (playerDirection == -1)
+        {
+            scale.x *= -1;
+        }
+        attack.transform.localScale = scale;
         yield return new WaitForSeconds(0.1f);
         circleSp.enabled = false;
     }
@@ -201,6 +207,12 @@ public class PlayerControl : MonoBehaviour
             circle.position,
             Quaternion.identity);
         attack.GetComponent<SpecialAttack>().direction = playerDirection;
+        Vector3 scale = attack.transform.localScale;
+        if (playerDirection == -1)
+        {
+            scale.x *= -1;
+        }
+        attack.transform.localScale = scale;
         speGauge = 0;
         specialUI.ressetSpeGauge();
         circleSp.enabled = false;
