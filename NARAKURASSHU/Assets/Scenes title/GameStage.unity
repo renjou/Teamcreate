@@ -28661,6 +28661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "kinoko \u2190"
       objectReference: {fileID: 0}
+    - target: {fileID: 3011417698600495844, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4307175498309081140, guid: 0a583614cd0d80348a821f7cf30b5cae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -457.26
