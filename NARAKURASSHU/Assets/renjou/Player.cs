@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 // 新しい入力システムを使うためにこれを追加
 using UnityEngine.InputSystem;
@@ -70,5 +71,10 @@ public class Player : MonoBehaviour
 
         }
         
+    }
+
+    internal void SetCheckpoint(Vector3 position)
+    {
+        throw new NotImplementedException();
     }
 }
