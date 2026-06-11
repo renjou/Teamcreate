@@ -5249,8 +5249,13 @@ Transform:
   m_GameObject: {fileID: 451799970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream:NARAKURASSHU/Assets/renjou/GameStage.unity
   m_LocalPosition: {x: -1242.2004, y: -1748.2087, z: 0}
   m_LocalScale: {x: 4.733989, y: 4.164948, z: 1}
+=======
+  m_LocalPosition: {x: -438.2745, y: -12.3101, z: 0}
+  m_LocalScale: {x: 10.944799, y: 7.068802, z: 1}
+>>>>>>> Stashed changes:NARAKURASSHU/Assets/renjou/tika stage.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
