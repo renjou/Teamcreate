@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemy2
   EnemyHp: 3
-  bulletPrefab: {fileID: 3470115458230528363, guid: 54ed4ccdd83fafd46bf32fa3a072a022, type: 3}
+  bulletPrefab: {fileID: 4738865356646451618, guid: f7be6ea477d65d543aa679f0df2007e4, type: 3}
   firePoint: {fileID: 1160417397218782551}
   shotInterval: 2
   player: {fileID: 0}
