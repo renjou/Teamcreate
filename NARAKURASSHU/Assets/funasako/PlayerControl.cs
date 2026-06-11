@@ -58,7 +58,7 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
     {
         if (isDameging) return;
-        if (normalAttack.enabled && isAttacking1) return; // 合体時は削除すること！
+        if (normalAttack.enabled && isAttacking1) return; 
         if (collision.CompareTag("enemy") ||
             collision.CompareTag("boss"))
         {
