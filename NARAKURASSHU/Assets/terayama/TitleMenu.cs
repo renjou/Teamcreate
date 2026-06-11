@@ -8,6 +8,7 @@ public class TitleMenu : MonoBehaviour
     public TextMeshProUGUI startText;
     public TextMeshProUGUI controlsText;
     public TextMeshProUGUI exitText;
+    public RectTransform cursor;
 
     private int selected = 0;
 
@@ -46,22 +47,21 @@ public class TitleMenu : MonoBehaviour
 
     void UpdateMenu()
     {
-        startText.text = "START";
-        controlsText.text = "CONTROLS";
-        exitText.text = "EXIT";
-
         switch (selected)
         {
             case 0:
-                startText.text = "▶ START";
+                cursor.position =
+                    startText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
 
             case 1:
-                controlsText.text = "▶ CONTROLS";
+                cursor.position =
+                    controlsText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
 
             case 2:
-                exitText.text = "▶ EXIT";
+                cursor.position =
+                    exitText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
         }
     }

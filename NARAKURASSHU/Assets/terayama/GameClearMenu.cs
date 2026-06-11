@@ -3,11 +3,14 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 public class GameClearMenu : MonoBehaviour
 {
+    public RectTransform cursor;
     public TextMeshProUGUI retryText;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI exitText;
+    
 
     private int selected = 0;
 
@@ -46,22 +49,21 @@ public class GameClearMenu : MonoBehaviour
 
     void UpdateMenu()
     {
-        retryText.text = "RETRY";
-        titleText.text = "TITLE";
-        exitText.text = "EXIT";
-
         switch (selected)
         {
             case 0:
-                retryText.text = "▶ RETRY";
+                cursor.position =
+                    retryText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
 
             case 1:
-                titleText.text = "▶ TITLE";
+                cursor.position =
+                    titleText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
 
             case 2:
-                exitText.text = "▶ EXIT";
+                cursor.position =
+                    exitText.rectTransform.position + new Vector3(-50f, 0f, 0f);
                 break;
         }
     }
