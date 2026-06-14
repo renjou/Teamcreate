@@ -26,7 +26,7 @@ public class SpecialAttack : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             Debug.Log("ヒット");
-            player.SpeGaugeIncrease();
+            //player.SpeGaugeIncrease();
             if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
             {
                 Destroy(gameObject);

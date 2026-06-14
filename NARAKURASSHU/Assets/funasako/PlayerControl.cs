@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     //public NormalAttack normalAttack;
     Rigidbody2D playerRigid;
     Collider2D playerCollider;
+    SpriteRenderer playerSp;
     SpecialUI specialUI;
     public float jumpforce = 1000;
     public float speed = 5.0f; // 移動速度
@@ -24,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     public Collider2D normalAttack;
     public SpriteRenderer circleSp;
     public Transform sprite;
+    public Transform Idle_0;
     public Transform circle;
     public HPUI hpUI;
     // public GameObject attack1Prefab;
@@ -53,6 +55,7 @@ public class PlayerControl : MonoBehaviour
         reborn.Register(transform);
         specialUI = FindFirstObjectByType<SpecialUI>();
         audioSource = GetComponent<AudioSource>();
+        playerSp = Idle_0.GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // エネミーに衝突したらダメージ
@@ -74,6 +77,7 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("gameover");
             gameover = true;
+            audioSource.PlayOneShot(dethSE);
             isDameging = false;
             isKnockBack = false;
             playerRigid.linearVelocity = Vector3.zero;
@@ -105,6 +109,7 @@ public class PlayerControl : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame && this.playerRigid.linearVelocityY == 0)
         {
             this.playerRigid.AddForce(transform.up * this.jumpforce);
+            audioSource.PlayOneShot(jumpSE);
         }
     }
     void move() // 左右移動
@@ -140,6 +145,8 @@ public class PlayerControl : MonoBehaviour
     {
         isAttacking = true;
         isAttacking1 = true;
+        audioSource.PlayOneShot(attack1SE);
+        
         // 通常攻撃
         if (playerDirection == 1)
         {
@@ -162,6 +169,7 @@ public class PlayerControl : MonoBehaviour
     {
         isAttacking = true;
         isAttacking2 = true;
+        audioSource.PlayOneShot(attack2SE);
         playerRigid.linearVelocityX = 0;
         Debug.Log("攻撃2右");
         StartCoroutine(attack2Instantlate());
@@ -203,6 +211,7 @@ public class PlayerControl : MonoBehaviour
     void SpecialAttack()
     {
         circleSp.enabled = true;
+        audioSource.PlayOneShot(specialSE);
         GameObject attack = Instantiate(specialPrefab,
             circle.position,
             Quaternion.identity);
@@ -246,6 +255,8 @@ public class PlayerControl : MonoBehaviour
     {
         Debug.Log("ノックバック発生");
         isKnockBack = true;
+        audioSource.PlayOneShot(knokBackSE);
+        StartCoroutine(DamgagedFlash());
         Vector2 direction = (transform.position - enemyPos).normalized;
         direction.x *= 0.5f;
         direction.y = 0.5f;
@@ -253,6 +264,17 @@ public class PlayerControl : MonoBehaviour
         playerRigid.AddForce(direction * knockBackPower, ForceMode2D.Impulse);
         Invoke(nameof(EndKnockBack), 0.5f);
         Invoke(nameof(EndInvincible), 2f);
+    }
+
+    IEnumerator DamgagedFlash()
+    {
+        playerSp.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerSp.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+        playerSp.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        playerSp.color = Color.white;
     }
 
     void EndKnockBack()
