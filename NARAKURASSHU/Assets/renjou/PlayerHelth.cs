@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 3; // 最大体力
+    public int maxHealth = 5; // 最大体力
     private int currentHealth;
 
     private PlayerRespawn playerRespawn;
