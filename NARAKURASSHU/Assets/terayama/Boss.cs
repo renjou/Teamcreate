@@ -65,8 +65,20 @@ public class Boss : MonoBehaviour
 
     public GameObject clearUI;
 
+    public AudioSource audioSource;
+
+    public AudioClip dashSE;
+    public AudioClip attackSE;
+    public AudioClip damageSE;
+    public AudioClip stunSE;
+    public AudioClip deathSE;
+
+    public GameObject dashDustPrefab;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         rd = GetComponent<Rigidbody2D>();
 
         AttackArea.SetActive(false);
@@ -112,14 +124,14 @@ public class Boss : MonoBehaviour
 
         CooldownTimer -= Time.deltaTime;
         attackCooldownTimer -= Time.deltaTime;
-        /*
+     /*   
         // テスト用ダメージ
         if (Keyboard.current.pKey.wasReleasedThisFrame)
         {
             Debug.Log("Space");
-            BossDamage(40);
+            BossDamage(20);
         }
-        */
+      */  
         switch (state)
         {
             // 待機状態
@@ -258,6 +270,14 @@ public class Boss : MonoBehaviour
     {
         //  Debug.Log("Dash Start");
 
+        audioSource.PlayOneShot(dashSE);
+
+        float angle = dashDir > 0 ? -90f : 90f;
+
+        GameObject dust = Instantiate( dashDustPrefab, transform.position + new Vector3(0.5f, -1.5f, 0), Quaternion.Euler(0, 0, angle) );
+
+        dust.transform.localScale = new Vector3(2f, 2f, 1f);
+
         transform.position = chargePos;
 
         state = State.Dash;
@@ -325,6 +345,8 @@ public class Boss : MonoBehaviour
         // 無敵中は無効
         if (isInvincible) return;
 
+        audioSource.PlayOneShot(damageSE);
+
         // ダメージ受けたら少しの間無敵
         isInvincible = true;
 
@@ -358,6 +380,8 @@ public class Boss : MonoBehaviour
     // 死亡
     void Die()
     {
+        audioSource.PlayOneShot(deathSE);
+
         isDead = true;
 
         GetComponent<Collider2D>().enabled = false;
@@ -389,6 +413,8 @@ public class Boss : MonoBehaviour
     //近接
     void StartAttack()
     {
+        audioSource.PlayOneShot(attackSE);
+
         state = State.Attack;
 
         sr.color = Color.white;
@@ -448,6 +474,8 @@ public class Boss : MonoBehaviour
     // スタン開始
     void StartStun()
     {
+        audioSource.PlayOneShot(stunSE);
+
         state = State.Stun;
 
         stunTimer = stunTime;

@@ -20,8 +20,16 @@ public class enemy2 : MonoBehaviour
 
     public float attackRange = 8f;
 
+    public AudioSource audioSource;
+
+    public AudioClip shotSE;
+    public AudioClip damageSE;
+    public AudioClip deathSE;
+
     public void EnemyDamage(int damage)
     {
+        audioSource.PlayOneShot(damageSE);
+
         EnemyHp -= damage;
 
         anim.SetTrigger("Damage");
@@ -36,6 +44,8 @@ public class enemy2 : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         GameObject p = GameObject.FindWithTag("Player");
 
         if (p != null)
@@ -78,6 +88,8 @@ public class enemy2 : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.PlayOneShot(shotSE);
+
         anim.SetTrigger("Attack");
 
         // 0.3秒後に弾発射
@@ -120,6 +132,8 @@ public class enemy2 : MonoBehaviour
 
     void Die()
     {
+        audioSource.PlayOneShot(deathSE);
+
         anim.SetTrigger("Die");
 
         GetComponent<Collider2D>().enabled = false;
