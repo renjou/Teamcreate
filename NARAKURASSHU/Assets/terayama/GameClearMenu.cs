@@ -8,6 +8,7 @@ public class GameClearMenu : MonoBehaviour
     public TextMeshProUGUI retryText;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI exitText;
+    public RectTransform cursor;
 
     private int selected = 0;
 
@@ -46,22 +47,21 @@ public class GameClearMenu : MonoBehaviour
 
     void UpdateMenu()
     {
-        retryText.text = "RETRY";
-        titleText.text = "TITLE";
-        exitText.text = "EXIT";
-
         switch (selected)
         {
             case 0:
-                retryText.text = "▶ RETRY";
+                cursor.position =
+                    retryText.rectTransform.position + new Vector3(-30f, 0f, 0f);
                 break;
 
             case 1:
-                titleText.text = "▶ TITLE";
+                cursor.position =
+                    titleText.rectTransform.position + new Vector3(-30f, 0f, 0f);
                 break;
 
             case 2:
-                exitText.text = "▶ EXIT";
+                cursor.position =
+                    exitText.rectTransform.position + new Vector3(-30f, 0f, 0f);
                 break;
         }
     }
