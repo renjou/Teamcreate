@@ -5,13 +5,19 @@ public class Checkpoint1 : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool isActivated = false;
 
+    private Color originalColor;
+
     [Header("活性化時の色（オプション）")]
     public Color activatedColor = Color.green;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        if (spriteRenderer != null)
+        {
+            // 初期の色を記憶しておく
+            originalColor = spriteRenderer.color;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,7 +34,7 @@ public class Checkpoint1 : MonoBehaviour
                 isActivated = true; // 位置保存が確実にできる場合のみ起動フラグを立てる
 
                 // PlayerRespawnクラスのSetCheckpoint関数を呼び出す
-                playerRespawn.SetCheckpoint(transform.position);
+                playerRespawn.SetCheckpoint(this);
 
                 // 見た目を変える
                 if (spriteRenderer != null)
@@ -43,6 +49,14 @@ public class Checkpoint1 : MonoBehaviour
                 Debug.LogWarning("プレイヤーに 'PlayerRespawn' スクリプトが見つからないため、位置を保存できませんでした。");
             }
 
+        }
+    }
+    public void ResetCheckpoint()
+    {
+        isActivated = false;
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = originalColor;
         }
     }
 }

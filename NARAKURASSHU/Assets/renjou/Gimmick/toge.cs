@@ -7,7 +7,9 @@ public class toge : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);            
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+           
         }
     }
+
 }
