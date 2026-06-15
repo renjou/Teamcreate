@@ -22,9 +22,13 @@ public class enemy1 : MonoBehaviour
 
     private Vector3 baseScale;
 
-   
+    public AudioSource audioSource;
+    public AudioClip deathSE;
+    public AudioClip damageSE;
     void Start()
-    { 
+    {
+        audioSource = GetComponent<AudioSource>();
+
         startpos = transform.position;
 
         baseScale = transform.localScale;
@@ -44,21 +48,21 @@ public class enemy1 : MonoBehaviour
         transform.Translate(
             Vector2.right * direction * Bspeed * Time.deltaTime);
 
+        
         // 一定距離で反転
-        if (Mathf.Abs(transform.position.x - startpos.x) > Brange)
+        if (transform.position.x > startpos.x + Brange)
         {
-            direction *= -1;
+            direction = -1;
 
-            if (direction > 0)
-            {
-                transform.localScale =
-                    new Vector3(-baseScale.x, baseScale.y, baseScale.z);
-            }
-            else
-            {
-                transform.localScale =
-                    new Vector3(baseScale.x, baseScale.y, baseScale.z);
-            }
+            transform.localScale =
+                new Vector3(baseScale.x, baseScale.y, baseScale.z);
+        }
+        else if (transform.position.x < startpos.x - Brange)
+        {
+            direction = 1;
+
+            transform.localScale =
+                new Vector3(-baseScale.x, baseScale.y, baseScale.z);
         }
 
         anim.SetBool("Run", true);
@@ -67,6 +71,8 @@ public class enemy1 : MonoBehaviour
     // ダメージ
     public void EnemyDamage(int damage)
     {
+        audioSource.PlayOneShot(damageSE);
+
         // ダメージアニメーション
         anim.SetTrigger("Damage");
 
@@ -83,6 +89,8 @@ public class enemy1 : MonoBehaviour
     // 死亡
     void Die()
     {
+        audioSource.PlayOneShot(deathSE);
+
         Debug.Log("Enemy Dead");
 
         // Dieアニメーション再生
