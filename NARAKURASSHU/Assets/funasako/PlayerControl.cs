@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
     public Transform Idle_0;
     public Transform circle;
     public HPUI hpUI;
+    public SpecialGaugeUI spUI;
     // public GameObject attack1Prefab;
     public GameObject attack2Prefab;
     public GameObject specialPrefab;
@@ -53,7 +54,7 @@ public class PlayerControl : MonoBehaviour
         reborn = FindFirstObjectByType<RespawnManager>();
         animator = GetComponentInChildren<Animator>();
         reborn.Register(transform);
-        specialUI = FindFirstObjectByType<SpecialUI>();
+    //  specialUI = FindFirstObjectByType<SpecialUI>();
         audioSource = GetComponent<AudioSource>();
         playerSp = Idle_0.GetComponent<SpriteRenderer>();
     }
@@ -159,7 +160,7 @@ public class PlayerControl : MonoBehaviour
             playerRigid.linearVelocityX = 0;
             Debug.Log("攻撃1左");
             //normalAttack.AttackOn();
-            normalAttack.enabled = true;
+            Invoke(nameof(Delay), 0.3f);
         }
         Invoke(nameof(endAttack), 0.6f);
     }
@@ -223,7 +224,8 @@ public class PlayerControl : MonoBehaviour
         }
         attack.transform.localScale = scale;
         speGauge = 0;
-        specialUI.ressetSpeGauge();
+        //  specialUI.ressetSpeGauge();
+        spUI.SpeGaugeUpdate(speGauge);
         circleSp.enabled = false;
     }
 
@@ -247,7 +249,8 @@ public class PlayerControl : MonoBehaviour
         {
             playerHP = 0;
         }
-        specialUI.increaseSpeGauge();
+        //  specialUI.increaseSpeGauge();
+        spUI.SpeGaugeUpdate(speGauge);
         hpUI.UpdateHP(playerHP);
     }
 
@@ -299,7 +302,8 @@ public class PlayerControl : MonoBehaviour
     {
         Debug.Log("ゲージ増加");
         speGauge++;
-        specialUI.increaseSpeGauge();
+        //  specialUI.increaseSpeGauge();
+        spUI.SpeGaugeUpdate(speGauge);
     }
 
     void Delay()
