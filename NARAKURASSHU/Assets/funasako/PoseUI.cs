@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class PoseUI : MonoBehaviour
 {
     public PlayerControl playerControl;
+    bool poseCoolTime = false;
 
     void Update()
     {
@@ -29,4 +30,6 @@ public class PoseUI : MonoBehaviour
             Debug.Log("ポーズ終了");
         }
     }
+
+
 }
