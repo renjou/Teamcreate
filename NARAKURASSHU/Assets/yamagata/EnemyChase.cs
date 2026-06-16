@@ -1,13 +1,15 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class EnemyChase : MonoBehaviour
 {
+    // HP
+    public int hp = 2;
 
     // プレイヤー
     public Transform player;
 
     // 移動速度
-    public float speed = 2.0f;
+    public float speed = 2f;
 
     // 追尾する範囲
     public float chaseRange = 4f;
@@ -25,16 +27,16 @@ public class EnemyChase : MonoBehaviour
             Vector2 direction = (player.position - transform.position).normalized;
 
             // 移動
-            transform.position += (Vector3)(direction * Time.deltaTime);
+            transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
             // 向き変更
             if (direction.x > 0)
             {
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(4, 4, 1);
             }
             else
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-4, 4, 1);
             }
         }
 
@@ -43,5 +45,7 @@ public class EnemyChase : MonoBehaviour
         {
             // 何もしない
         }
+        
+
     }
 }
