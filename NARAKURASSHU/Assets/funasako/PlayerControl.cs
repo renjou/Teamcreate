@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     SpriteRenderer playerSp;
     SpecialUI specialUI;
     public float jumpforce = 1000;
-    public float speed = 5.0f; // 移動速度
+    public float speed = 10.0f; // 移動速度
     public float speGauge = 0;
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
@@ -100,9 +100,9 @@ public class PlayerControl : MonoBehaviour
         if (isAttacking) return; // 攻撃中は別の攻撃は不可
         move();
         jump();
-        if (Keyboard.current.rKey.wasPressedThisFrame) attack1();
-        else if (Keyboard.current.eKey.wasPressedThisFrame) attack2();
-        else if (Keyboard.current.wKey.wasPressedThisFrame && speGauge >= 5)
+        if (Keyboard.current.jKey.wasPressedThisFrame) attack1();
+        else if (Keyboard.current.kKey.wasPressedThisFrame) attack2();
+        else if (Keyboard.current.shiftKey.wasPressedThisFrame && speGauge >= 5)
         {
             SpecialAttack();
         }
@@ -123,14 +123,14 @@ public class PlayerControl : MonoBehaviour
     {
         float move = 0;
         // 右に移動
-        if (Keyboard.current.rightArrowKey.isPressed)
+        if (Keyboard.current.dKey.isPressed)
         {
             move = 1;
             playerDirection = 1;
             sprite.localScale = new Vector3(1, 1, 1);
         }
         // 左に移動
-        if (Keyboard.current.leftArrowKey.isPressed)
+        if (Keyboard.current.aKey.isPressed)
         {
             move = -1;
             playerDirection = -1;
