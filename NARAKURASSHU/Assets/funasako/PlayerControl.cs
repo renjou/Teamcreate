@@ -178,7 +178,7 @@ public class PlayerControl : MonoBehaviour
         isAttacking2 = true;
         audioSource.PlayOneShot(attack2SE);
         playerRigid.linearVelocityX = 0;
-        playerRigid.linearVelocityY = 0;
+    //  playerRigid.linearVelocityY = 0;
         Debug.Log("攻撃2右");
         StartCoroutine(attack2Instantlate());
         Invoke(nameof(endAttack), 0.6f);
