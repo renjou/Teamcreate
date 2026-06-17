@@ -12,6 +12,8 @@ public class TitleMenu : MonoBehaviour
 
     private int selected = 0;
 
+    public TitleManager titleManager;
+
     void Start()
     {
         UpdateMenu();
@@ -19,6 +21,11 @@ public class TitleMenu : MonoBehaviour
 
     void Update()
     {
+        if (titleManager.isControlsOpen)
+        {
+            return;
+        }
+
         if (Keyboard.current.downArrowKey.wasPressedThisFrame)
         {
             selected++;
@@ -75,7 +82,7 @@ public class TitleMenu : MonoBehaviour
                 break;
 
             case 1:
-                Debug.Log("Controls");
+                titleManager.ShowControls();
                 break;
 
             case 2:

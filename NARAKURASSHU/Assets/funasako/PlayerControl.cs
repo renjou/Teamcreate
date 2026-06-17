@@ -21,8 +21,8 @@ public class PlayerControl : MonoBehaviour
     bool isAttacking2 = false;
     bool isKnockBack = false;
     bool isDameging = false;
-    public bool pose = false;
     public bool gameover = false;
+    public bool ispose = false;
     public Collider2D normalAttack;
     public SpriteRenderer circleSp;
     public Transform sprite;
@@ -30,6 +30,7 @@ public class PlayerControl : MonoBehaviour
     public Transform circle;
     public HPUI hpUI;
     public SpecialGaugeUI spUI;
+    public PoseUI poseUI;
     // public GameObject attack1Prefab;
     public GameObject attack2Prefab;
     public GameObject specialPrefab;
@@ -47,6 +48,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         Debug.Log("Player Start");
+        Debug.Log(poseUI);
         hpUI.UpdateHP(playerHP);
         Application.targetFrameRate = 60;
         //normalAttack = GetComponent<NormalAttack>();
@@ -74,8 +76,9 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         //Debug.Log("Player Update");
-        if (pose) return;
+        if (ispose) return;
         PlayerAnime();
+     // Debug.Log(poseUI.ispose);
         if (playerHP == 0 && !gameover) // 死亡
         {
             Debug.Log("gameover");
@@ -113,6 +116,7 @@ public class PlayerControl : MonoBehaviour
         {
             this.playerRigid.AddForce(transform.up * this.jumpforce);
             audioSource.PlayOneShot(jumpSE);
+            Debug.Log("ジャンプ");
         }
     }
     void move() // 左右移動
