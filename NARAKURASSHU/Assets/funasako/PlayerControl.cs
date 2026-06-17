@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     bool isAttacking2 = false;
     bool isKnockBack = false;
     bool isDameging = false;
+    public bool pose = false;
     public bool gameover = false;
     public Collider2D normalAttack;
     public SpriteRenderer circleSp;
@@ -73,6 +74,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         //Debug.Log("Player Update");
+        if (pose) return;
         PlayerAnime();
         if (playerHP == 0 && !gameover) // 死亡
         {
