@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639153536025203624
-    m_Hash: 4270835095
+      ticks: 639167642673946925
+    m_Hash: 3949659834
   m_LockFileStatus:
     m_FilePath: C:/Users/YamagataMasaki/Documents/GitHub/Teamcreate/banana/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639153536253758650
-    m_Hash: 889985076
+      ticks: 639167642673946925
+    m_Hash: 3758307590
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -4839,9 +4839,11 @@ m_ResolvedPackages:
     - 1.3.2
     - 1.3.3
     - 1.3.4
+    - 1.4.0
     compatible:
     - 1.3.3
     - 1.3.4
+    - 1.4.0
     recommended: 1.3.4
     deprecated: []
   dependencies: []
