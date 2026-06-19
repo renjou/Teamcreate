@@ -9,12 +9,14 @@ public class PlayerRespawn : MonoBehaviour
     private Checkpoint1 currentCheckpoint;
     private Rigidbody2D rb;
     //public NormalAttack normalAttack;
+    private PlayerControl playerControl;
     
     void Start()
     {
         // 初期位置を最初のチェックポイントとして登録
         respawnPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        playerControl = GetComponent<PlayerControl>();
     }
 
     // チェックポイントの位置を更新する関数（Checkpointスクリプトから呼ばれる）
@@ -62,7 +64,7 @@ public class PlayerRespawn : MonoBehaviour
     }
     private IEnumerator RespawnDelay(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
         // 位置をチェックポイントへ移動
         transform.position =respawnPosition;
 
@@ -72,8 +74,9 @@ public class PlayerRespawn : MonoBehaviour
             rb.linearVelocity = Vector2.zero; // Unity2022以前なら rb.velocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
-       
-       
+        isDead = false;
+
+
         Debug.Log("プレイヤーがリスポーンしました");
     }
 
