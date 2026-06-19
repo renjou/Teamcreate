@@ -78,7 +78,7 @@ public class TitleMenu : MonoBehaviour
         switch (selected)
         {
             case 0:
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("GameStage");
                 break;
 
             case 1:
