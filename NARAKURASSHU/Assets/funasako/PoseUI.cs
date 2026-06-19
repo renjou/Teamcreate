@@ -86,7 +86,7 @@ public class PoseUI : MonoBehaviour
         {
             case 0:
                 cursor.position =
-                    resume.rectTransform.localPosition + new Vector3(-193f, 26f, 0f);
+                    resume.rectTransform.position + new Vector3(-193f, 26f, 0f);
                 break;
 
             case 1:
