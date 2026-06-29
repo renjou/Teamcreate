@@ -12,6 +12,10 @@ public class TitleMenu : MonoBehaviour
 
     private int selected = 0;
 
+    public AudioSource audioSource;
+    public AudioClip moveSE;
+    public AudioClip decideSE;
+
     public TitleManager titleManager;
 
     void Start()
@@ -32,6 +36,8 @@ public class TitleMenu : MonoBehaviour
 
             if (selected > 2)
                 selected = 0;
+
+            audioSource.PlayOneShot(moveSE);
 
             UpdateMenu();
         }
@@ -75,6 +81,8 @@ public class TitleMenu : MonoBehaviour
 
     void SelectMenu()
     {
+        audioSource.PlayOneShot(decideSE);
+
         switch (selected)
         {
             case 0:
