@@ -108,18 +108,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2c8c89c68ce89468f797c174757a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControl
+  jumpforce: 1000
+  speed: 10
   speGauge: 0
   playerDirection: 1
   playerHP: 5
   knockBackPower: 10
   gameover: 0
+  ispose: 0
   normalAttack: {fileID: 565005561189235137}
   circleSp: {fileID: 9434466025175066}
   sprite: {fileID: 367828299657376349}
+  Idle_0: {fileID: 0}
   circle: {fileID: 2819731934970903604}
   hpUI: {fileID: 0}
+  spUI: {fileID: 0}
+  poseUI: {fileID: 0}
   attack2Prefab: {fileID: 809524503572319940, guid: 2171ba70c4abc8d4d99afe8f496b3040, type: 3}
   specialPrefab: {fileID: 7614671669860467306, guid: 21d1146bdb1b5fd4db6df8a5c851198a, type: 3}
+  jumpSE: {fileID: 0}
+  landingSE: {fileID: 0}
+  knokBackSE: {fileID: 0}
+  dethSE: {fileID: 0}
+  attack1SE: {fileID: 0}
+  attack2SE: {fileID: 0}
+  specialSE: {fileID: 0}
 --- !u!61 &5746656094146784157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -334,6 +347,10 @@ PrefabInstance:
     - target: {fileID: 5789013990508220409, guid: 965258034071bb64db76585182ea3ec1, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789013990508220409, guid: 965258034071bb64db76585182ea3ec1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5789013990508220409, guid: 965258034071bb64db76585182ea3ec1, type: 3}
       propertyPath: m_WasSpriteAssigned
