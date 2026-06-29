@@ -845,17 +845,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79ba78ed0d7d604409debb48918349dc, type: 3}
---- !u!114 &16736404 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 992329476400697816, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
-  m_PrefabInstance: {fileID: 1420684379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &17361946
 GameObject:
   m_ObjectHideFlags: 0
@@ -22774,6 +22763,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &459328507 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4416919722993256182, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
+  m_PrefabInstance: {fileID: 1420684379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &459818664
 GameObject:
   m_ObjectHideFlags: 0
@@ -69345,6 +69339,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1428931991 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1862447056226132588, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
+  m_PrefabInstance: {fileID: 1420684379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1429151689
 GameObject:
   m_ObjectHideFlags: 0
@@ -69574,17 +69573,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
---- !u!114 &1432904317 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8450540009361743403, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
-  m_PrefabInstance: {fileID: 1420684379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1435772908
 GameObject:
   m_ObjectHideFlags: 0
@@ -75276,9 +75264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f29cb9de246984fa46aaef363b511f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameClearMenu
-  retryText: {fileID: 16736404}
-  titleText: {fileID: 1432904317}
-  exitText: {fileID: 1733376908}
+  retryButton: {fileID: 2095857516}
+  titleButton: {fileID: 459328507}
+  exitButton: {fileID: 1428931991}
   cursor: {fileID: 550453187}
 --- !u!4 &1595157280
 Transform:
@@ -81213,17 +81201,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1733376908 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7411017778713532652, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
-  m_PrefabInstance: {fileID: 1420684379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1741460361
 GameObject:
   m_ObjectHideFlags: 0
@@ -97272,6 +97249,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &2095857516 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 967549276436446576, guid: 96982c5964365794db2b5d65275b4bde, type: 3}
+  m_PrefabInstance: {fileID: 1420684379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2096770671
 GameObject:
   m_ObjectHideFlags: 0
