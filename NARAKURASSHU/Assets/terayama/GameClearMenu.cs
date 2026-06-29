@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameClearMenu : MonoBehaviour
@@ -9,6 +8,9 @@ public class GameClearMenu : MonoBehaviour
     public RectTransform titleButton;
     public RectTransform exitButton;
     public RectTransform cursor;
+    public AudioSource audioSource;
+    public AudioClip moveSE;
+    public AudioClip decideSE;
 
     private int selected = 0;
 
@@ -25,6 +27,8 @@ public class GameClearMenu : MonoBehaviour
 
             if (selected > 2)
                 selected = 0;
+
+            audioSource.PlayOneShot(moveSE);
 
             UpdateMenu();
         }
@@ -68,6 +72,8 @@ public class GameClearMenu : MonoBehaviour
 
     void SelectMenu()
     {
+        audioSource.PlayOneShot(decideSE);
+
         switch (selected)
         {
             case 0:
