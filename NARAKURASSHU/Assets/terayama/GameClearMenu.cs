@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameClearMenu : MonoBehaviour
 {
-    public TextMeshProUGUI retryText;
-    public TextMeshProUGUI titleText;
-    public TextMeshProUGUI exitText;
+    public RectTransform retryButton;
+    public RectTransform titleButton;
+    public RectTransform exitButton;
     public RectTransform cursor;
 
     private int selected = 0;
@@ -50,18 +50,18 @@ public class GameClearMenu : MonoBehaviour
         switch (selected)
         {
             case 0:
-                cursor.position =
-                    retryText.rectTransform.position + new Vector3(-30f, 0f, 0f);
+                cursor.anchoredPosition =
+                    retryButton.anchoredPosition + new Vector2(-30f, 0f);
                 break;
 
             case 1:
-                cursor.position =
-                    titleText.rectTransform.position + new Vector3(-30f, 0f, 0f);
+                cursor.anchoredPosition =
+                    titleButton.anchoredPosition + new Vector2(-30f, 0f);
                 break;
 
             case 2:
-                cursor.position =
-                    exitText.rectTransform.position + new Vector3(-30f, 0f, 0f);
+                cursor.anchoredPosition =
+                    exitButton.anchoredPosition + new Vector2(-30f, 0f);
                 break;
         }
     }

@@ -25,11 +25,11 @@ public class PoseUI : MonoBehaviour
     }
     private void Update()
     {
-        PoseBoot();
+        PoseBootEnd();
         PoseCont();
     }
 
-    void PoseBoot()
+    void PoseBootEnd()
     {
         if (Keyboard.current.tKey.wasPressedThisFrame && playerControl.ispose == false)
         {
@@ -39,19 +39,20 @@ public class PoseUI : MonoBehaviour
             poseScreen.SetActive(true);
             audioSorce.PlayOneShot(poseSE);
         }
-        /*
-        else if (Keyboard.current.tKey.wasPressedThisFrame && playerControl.ispose == true)
+        
+        if (Keyboard.current.backspaceKey.wasPressedThisFrame && playerControl.ispose == true)
         {
             Debug.Log("ポーズ終了");
             playerControl.ispose = false;
             Time.timeScale = 1;
             poseScreen.SetActive(false);
         }
-        */
+        
     }
-
+    
     void PoseCont()
     {
+        /*
         if (Keyboard.current.downArrowKey.wasPressedThisFrame)
         {
             selected++;
@@ -60,7 +61,7 @@ public class PoseUI : MonoBehaviour
             if (selected > 1)
                 selected = 0;
 
-            UpdateMenu();
+        //  UpdateMenu();
         }
 
         if (Keyboard.current.upArrowKey.wasPressedThisFrame)
@@ -71,22 +72,23 @@ public class PoseUI : MonoBehaviour
             if (selected < 0)
                 selected = 1;
 
-            UpdateMenu();
+        //  UpdateMenu();
         }
+        */
 
         if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
             SelectMenu();
         }
     }
-
+    /*
     void UpdateMenu()
     {
         switch (selected)
         {
             case 0:
                 cursor.position =
-                    resume.rectTransform.localPosition + new Vector3(-193f, 26f, 0f);
+                    resume.rectTransform.position + new Vector3(-193f, 26f, 0f);
                 break;
 
             case 1:
@@ -95,9 +97,12 @@ public class PoseUI : MonoBehaviour
                 break;
         }
     }
+    */
 
     void SelectMenu()
     {
+        SceneManager.LoadScene("Title");
+        /*
         switch (selected)
         {
             case 0:
@@ -110,5 +115,7 @@ public class PoseUI : MonoBehaviour
                 SceneManager.LoadScene("Title");
                 break;
         }
+        */
     }
+    
 }
