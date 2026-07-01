@@ -9,10 +9,16 @@ public class Bat : MonoBehaviour
     public int EnemyHp = 1;// HP
 
     private Animator anim;
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public void EnemyDamage(int damage)
     {
-        Debug.Log("Enemy HP : " + EnemyHp);
         EnemyHp -= damage;
+
+        Debug.Log("Enemy HP : " + EnemyHp);
+
         if (EnemyHp <= 0) 
         {
             Die();
