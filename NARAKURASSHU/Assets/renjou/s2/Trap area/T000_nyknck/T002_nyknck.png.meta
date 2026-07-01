@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 5cb8aff1b3e279141b14312e7e679e03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8525870545284232847
+    second: T002_nyknck_0
+  - first:
+      213: 1284872225177317040
+    second: T002_nyknck_1
+  - first:
+      213: 7804649600533691837
+    second: T002_nyknck_2
+  - first:
+      213: 3845782783290443050
+    second: T002_nyknck_3
+  - first:
+      213: -8736067727363596065
+    second: T002_nyknck_4
+  - first:
+      213: 1549013588766997802
+    second: T002_nyknck_5
+  - first:
+      213: 5339674076307615549
+    second: T002_nyknck_6
+  - first:
+      213: 2614780943296548241
+    second: T002_nyknck_7
+  - first:
+      213: 6392590739133064387
+    second: T002_nyknck_8
+  - first:
+      213: 8957380773921876675
+    second: T002_nyknck_9
+  - first:
+      213: -7848672874869705650
+    second: T002_nyknck_10
+  - first:
+      213: 8284270506577005287
+    second: T002_nyknck_11
+  - first:
+      213: -8516007620624338436
+    second: T002_nyknck_12
+  - first:
+      213: -2995004178184359376
+    second: T002_nyknck_13
+  - first:
+      213: 5454082336332419562
+    second: T002_nyknck_14
+  - first:
+      213: -7405516729824973306
+    second: T002_nyknck_15
+  - first:
+      213: -1776393236694933191
+    second: T002_nyknck_16
+  - first:
+      213: 3248213599389037011
+    second: T002_nyknck_17
+  - first:
+      213: 1127614456551999652
+    second: T002_nyknck_18
+  - first:
+      213: -6199062767201679751
+    second: T002_nyknck_19
+  - first:
+      213: -6822817471880208197
+    second: T002_nyknck_20
+  - first:
+      213: -324626748316946312
+    second: T002_nyknck_21
+  - first:
+      213: -41489154740297121
+    second: T002_nyknck_22
+  - first:
+      213: 8558538544503272435
+    second: T002_nyknck_23
+  - first:
+      213: -8158472926466127415
+    second: T002_nyknck_24
+  - first:
+      213: 8459275426746509664
+    second: T002_nyknck_25
+  - first:
+      213: 3746022661952204975
+    second: T002_nyknck_26
+  - first:
+      213: -2039349243624352629
+    second: T002_nyknck_27
+  - first:
+      213: -7991622859940286139
+    second: T002_nyknck_28
+  - first:
+      213: -3232533561105935843
+    second: T002_nyknck_29
+  - first:
+      213: 8650938525565902832
+    second: T002_nyknck_30
+  - first:
+      213: 316916454047031320
+    second: T002_nyknck_31
+  - first:
+      213: -3200567466148329826
+    second: T002_nyknck_32
+  - first:
+      213: -4051442133946440692
+    second: T002_nyknck_33
+  - first:
+      213: 1936279660114515074
+    second: T002_nyknck_34
+  - first:
+      213: 5760712600323852666
+    second: T002_nyknck_35
+  - first:
+      213: -6727185683122296635
+    second: T002_nyknck_36
+  - first:
+      213: -6972140360051958219
+    second: T002_nyknck_37
+  - first:
+      213: 4680185356983706906
+    second: T002_nyknck_38
+  - first:
+      213: 5958251036797592389
+    second: T002_nyknck_39
+  - first:
+      213: -1199729971458220925
+    second: T002_nyknck_40
+  - first:
+      213: 1292406631040143322
+    second: T002_nyknck_41
+  - first:
+      213: -7794901567264780154
+    second: T002_nyknck_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: T002_nyknck_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86f1a4c61af15670800000000000000
+      internalID: 8525870545284232847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 319
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bea5733b78c4d110800000000000000
+      internalID: 1284872225177317040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 319
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd743cf57faf4c60800000000000000
+      internalID: 7804649600533691837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 319
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a250759c017fe5530800000000000000
+      internalID: 3845782783290443050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 319
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd02db800b043c680800000000000000
+      internalID: -8736067727363596065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 319
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2db5b6e6a33f7510800000000000000
+      internalID: 1549013588766997802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_6
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 319
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f6da618455a1a40800000000000000
+      internalID: 5339674076307615549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dc6aa0a61994420800000000000000
+      internalID: 2614780943296548241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c46a78686b07b850800000000000000
+      internalID: 6392590739133064387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_9
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cae68b0b520f4c70800000000000000
+      internalID: 8957380773921876675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44b527ba99e31390800000000000000
+      internalID: -7848672874869705650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_11
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea84cf3224a7f270800000000000000
+      internalID: 8284270506577005287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_12
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1ba24503011d980800000000000000
+      internalID: -8516007620624338436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_13
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 255
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032b282719b9f66d0800000000000000
+      internalID: -2995004178184359376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 191
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae193d8ecfac0bb40800000000000000
+      internalID: 5454082336332419562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_15
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ee19435c15a3990800000000000000
+      internalID: -7405516729824973306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_16
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931646153cbf857e0800000000000000
+      internalID: -1776393236694933191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_17
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d13d221f09f31d20800000000000000
+      internalID: 3248213599389037011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_18
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a88066bf5716af00800000000000000
+      internalID: 1127614456551999652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_19
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976089cd14188f9a0800000000000000
+      internalID: -6199062767201679751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_20
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 191
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0604d78ab7051a0800000000000000
+      internalID: -6822817471880208197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_21
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 191
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8707afd31b1be7bf0800000000000000
+      internalID: -324626748316946312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f526ca565d99c6ff0800000000000000
+      internalID: -41489154740297121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_23
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f33b9d067906c670800000000000000
+      internalID: 8558538544503272435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_24
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9485c491847ce80800000000000000
+      internalID: -8158472926466127415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_25
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069aa647e22656570800000000000000
+      internalID: 8459275426746509664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_26
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0793683cb8cf330800000000000000
+      internalID: 3746022661952204975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b841fc8faa6c2b3e0800000000000000
+      internalID: -2039349243624352629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_28
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 127
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5413e5ea95d081190800000000000000
+      internalID: -7991622859940286139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1290c55adbb323d0800000000000000
+      internalID: -3232533561105935843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_30
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd81e11ce4e0870800000000000000
+      internalID: 8650938525565902832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_31
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81023faf5d9e56400800000000000000
+      internalID: 316916454047031320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_32
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e968e8cc8dc4593d0800000000000000
+      internalID: -3200567466148329826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_33
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04621a38d266c7c0800000000000000
+      internalID: -4051442133946440692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_34
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28490fe871c0fda10800000000000000
+      internalID: 1936279660114515074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_35
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 63
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a798b63a69922ff40800000000000000
+      internalID: 5760712600323852666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8e66b634c34a2a0800000000000000
+      internalID: -6727185683122296635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_37
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e50f2584bfd3f90800000000000000
+      internalID: -6972140360051958219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_38
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15aff519cb53f040800000000000000
+      internalID: 4680185356983706906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_39
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5436ce2ffb5ffa250800000000000000
+      internalID: 5958251036797592389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_40
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cd7d882f3b95fe0800000000000000
+      internalID: -1199729971458220925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_41
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfc184cbfc8fe110800000000000000
+      internalID: 1292406631040143322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T002_nyknck_42
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 0
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6801c00e252f2d390800000000000000
+      internalID: -7794901567264780154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      T002_nyknck_0: 8525870545284232847
+      T002_nyknck_1: 1284872225177317040
+      T002_nyknck_10: -7848672874869705650
+      T002_nyknck_11: 8284270506577005287
+      T002_nyknck_12: -8516007620624338436
+      T002_nyknck_13: -2995004178184359376
+      T002_nyknck_14: 5454082336332419562
+      T002_nyknck_15: -7405516729824973306
+      T002_nyknck_16: -1776393236694933191
+      T002_nyknck_17: 3248213599389037011
+      T002_nyknck_18: 1127614456551999652
+      T002_nyknck_19: -6199062767201679751
+      T002_nyknck_2: 7804649600533691837
+      T002_nyknck_20: -6822817471880208197
+      T002_nyknck_21: -324626748316946312
+      T002_nyknck_22: -41489154740297121
+      T002_nyknck_23: 8558538544503272435
+      T002_nyknck_24: -8158472926466127415
+      T002_nyknck_25: 8459275426746509664
+      T002_nyknck_26: 3746022661952204975
+      T002_nyknck_27: -2039349243624352629
+      T002_nyknck_28: -7991622859940286139
+      T002_nyknck_29: -3232533561105935843
+      T002_nyknck_3: 3845782783290443050
+      T002_nyknck_30: 8650938525565902832
+      T002_nyknck_31: 316916454047031320
+      T002_nyknck_32: -3200567466148329826
+      T002_nyknck_33: -4051442133946440692
+      T002_nyknck_34: 1936279660114515074
+      T002_nyknck_35: 5760712600323852666
+      T002_nyknck_36: -6727185683122296635
+      T002_nyknck_37: -6972140360051958219
+      T002_nyknck_38: 4680185356983706906
+      T002_nyknck_39: 5958251036797592389
+      T002_nyknck_4: -8736067727363596065
+      T002_nyknck_40: -1199729971458220925
+      T002_nyknck_41: 1292406631040143322
+      T002_nyknck_42: -7794901567264780154
+      T002_nyknck_5: 1549013588766997802
+      T002_nyknck_6: 5339674076307615549
+      T002_nyknck_7: 2614780943296548241
+      T002_nyknck_8: 6392590739133064387
+      T002_nyknck_9: 8957380773921876675
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
