@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Accessibility;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -40,7 +40,7 @@ public class PoseUI : MonoBehaviour
             audioSorce.PlayOneShot(poseSE);
         }
         
-        if (Keyboard.current.backspaceKey.wasPressedThisFrame && playerControl.ispose == true)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && playerControl.ispose == true)
         {
             Debug.Log("ポーズ終了");
             playerControl.ispose = false;
