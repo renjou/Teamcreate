@@ -7,10 +7,18 @@ public class Bat : MonoBehaviour
     public float detectRange = 5.0f;    // 索敵範囲
     public float moveSpeed = 2.0f;     // スピード
     public int EnemyHp = 1;   // HP
+
     private Animator anim;
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public void EnemyDamage(int damage)
     {
         EnemyHp -= damage;
+
+        Debug.Log("Enemy HP : " + EnemyHp);
+
         if (EnemyHp <= 0) 
         {
             Die();
