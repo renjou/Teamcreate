@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -56,15 +56,15 @@ public class TitleMenu : MonoBehaviour
             switch (selected)
             {
                 case 0:
-                    cursor.position = startText.transform.position + new Vector3(-140f, 0f, 0f);
+                    cursor.position = startText.transform.position + new Vector3(-155f, 0f, 0f);
                     break;
 
                 case 1:
-                    cursor.position = controlsText.transform.position + new Vector3(-140f, 0f, 0f);
+                    cursor.position = controlsText.transform.position + new Vector3(-155f, 0f, 0f);
                     break;
 
                 case 2:
-                    cursor.position = exitText.transform.position + new Vector3(-140f, 0f, 0f);
+                    cursor.position = exitText.transform.position + new Vector3(-155f, 0f, 0f);
                     break;
             }
         }
