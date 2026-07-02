@@ -892,6 +892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TitleManager
   controlsPanel: {fileID: 1594570387}
   audioSource: {fileID: 0}
+  cursor: {fileID: 1880563381}
   isControlsOpen: 0
 --- !u!4 &735922206
 Transform:
@@ -1028,6 +1029,10 @@ PrefabInstance:
     - target: {fileID: 564046657508402278, guid: 55c699310d39a5043881b69832ec3de4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 917027338088731162, guid: 55c699310d39a5043881b69832ec3de4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1145424400061764966, guid: 55c699310d39a5043881b69832ec3de4, type: 3}
       propertyPath: m_IsActive
@@ -2152,17 +2157,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880563380}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9185423, w: 0.39532274}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96464, y: 0.7260267, z: 0.96464}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7936212, w: 0.6084123}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.76851904, y: 0.5784182, z: 0.76851904}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1666729672}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -133.428}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105.05}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141, y: -4}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -137.76288, y: -5.2}
+  m_SizeDelta: {x: 83.8908, y: 125.3775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880563382
 MonoBehaviour:
@@ -2184,7 +2189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc0915b0b19d78844ab3123e2a2f1701, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5f9cc9a5efbe894eb85de4851711ba8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
