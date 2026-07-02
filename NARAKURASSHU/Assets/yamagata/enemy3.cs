@@ -1,7 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
-public class Bat : MonoBehaviour
+public class enemy3 : MonoBehaviour
 {
     public Transform player;
     public float detectRange = 5.0f;    // 索敵範囲
