@@ -1,12 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
-public class Bat : MonoBehaviour
+public class enemy3 : MonoBehaviour
 {
     public Transform player;
     public float detectRange = 5.0f;    // 索敵範囲
     public float moveSpeed = 2.0f;     // スピード
-    public int EnemyHp = 1;// HP
+    public int EnemyHp = 1;   // HP
 
     private Animator anim;
     private void Start()

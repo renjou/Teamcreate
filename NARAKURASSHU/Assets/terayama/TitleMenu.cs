@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -8,7 +8,7 @@ public class TitleMenu : MonoBehaviour
     public TextMeshProUGUI startText;
     public TextMeshProUGUI controlsText;
     public TextMeshProUGUI exitText;
-    public RectTransform cursor;
+    public Transform cursor;
 
     private int selected = 0;
 
@@ -51,27 +51,23 @@ public class TitleMenu : MonoBehaviour
             SelectMenu();
         }
     }
-
-    void UpdateMenu()
-    {
-        switch (selected)
+        void UpdateMenu()
         {
-            case 0:
-                cursor.position =
-                    startText.rectTransform.position + new Vector3(-60f, 4f, 0f);
-                break;
+            switch (selected)
+            {
+                case 0:
+                    cursor.position = startText.transform.position + new Vector3(-155f, 0f, 0f);
+                    break;
 
-            case 1:
-                cursor.position =
-                    controlsText.rectTransform.position + new Vector3(-60f, 4f, 0f);
-                break;
+                case 1:
+                    cursor.position = controlsText.transform.position + new Vector3(-155f, 0f, 0f);
+                    break;
 
-            case 2:
-                cursor.position =
-                    exitText.rectTransform.position + new Vector3(-60f, 4f, 0f);
-                break;
+                case 2:
+                    cursor.position = exitText.transform.position + new Vector3(-155f, 0f, 0f);
+                    break;
+            }
         }
-    }
 
     void SelectMenu()
     {

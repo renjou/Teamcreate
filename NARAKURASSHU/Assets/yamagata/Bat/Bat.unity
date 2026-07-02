@@ -691,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8353938778710112630, guid: 49b7c49c491763e45a87eebc1150ee16, type: 3}
       propertyPath: m_Name
-      value: Bat
+      value: enemy3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

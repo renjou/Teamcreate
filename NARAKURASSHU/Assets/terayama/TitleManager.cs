@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
@@ -6,6 +6,7 @@ public class TitleManager : MonoBehaviour
 {
     public GameObject controlsPanel;
     public AudioSource audioSource;
+    public Transform cursor;
 
     public bool isControlsOpen = false;
 
@@ -13,7 +14,7 @@ public class TitleManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
-
+       
         controlsPanel.SetActive(false);
     }
 
@@ -24,6 +25,7 @@ public class TitleManager : MonoBehaviour
             if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             {
                 ShowControls();
+                cursor.gameObject.SetActive(true);
             }
         }
     }
@@ -37,6 +39,7 @@ public class TitleManager : MonoBehaviour
 
     public void ShowControls()
     {
+        cursor.gameObject.SetActive(false);
         isControlsOpen = !isControlsOpen;
         controlsPanel.SetActive(isControlsOpen);
     }
