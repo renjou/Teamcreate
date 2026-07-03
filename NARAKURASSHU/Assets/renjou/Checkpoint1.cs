@@ -1,6 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Reflection;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class Checkpoint1 : MonoBehaviour
 {
@@ -11,12 +12,20 @@ public class Checkpoint1 : MonoBehaviour
     [Header("活性化時の色（オプション）")]
     public Color activatedColor = Color.green;
 
+    [SerializeField] private AudioClip soundToPlay;
+
+    private AudioSource aoudioSource;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;
+        }
+        aoudioSource = GetComponent<AudioSource>();
+        if(aoudioSource != null)
+        {
+            aoudioSource=gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -50,8 +59,13 @@ public class Checkpoint1 : MonoBehaviour
             {
                 Debug.LogWarning("シーン内に 'RespawnManager' が見つからないため、位置を保存できませんでした。");
             }
+            if(soundToPlay !=null && aoudioSource != null)
+            {
+                aoudioSource.PlayOneShot(soundToPlay);
+            }
         }
     }
+    
 
     /// <summary>
     /// RespawnManager内の private な辞書（respawnPoints）を安全に書き換える関数
