@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Layouts;
@@ -88,6 +88,8 @@ public class PlayerControl : MonoBehaviour
             isKnockBack = false;
             playerRigid.linearVelocity = Vector3.zero;
             Invoke(nameof(RespawanCall), 2f);
+            StartCoroutine(RespawnFlash());
+
         }
         if (gameover) return;
 
@@ -298,6 +300,26 @@ public class PlayerControl : MonoBehaviour
         reborn.RespawnALL();
         hpUI.UpdateHP(playerHP);
         gameover = false;
+    }
+
+    IEnumerator RespawnFlash()
+    {
+        yield return new WaitForSeconds(2f);
+        playerSp.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        playerSp.enabled = true;
     }
 
     void EndInvincible()
