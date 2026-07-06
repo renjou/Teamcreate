@@ -1,4 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
+
 
 public class enemy1 : MonoBehaviour
 {
@@ -24,25 +27,28 @@ public class enemy1 : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip deathSE;
     public AudioClip damageSE;
+
+    [SerializeField] private GameObject die;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
 
+        // 始めた時の座標保存
         startpos = transform.position;
-
+        // サイズ保存
         baseScale = transform.localScale;
 
         anim = GetComponent<Animator>();
     }
 
     void Update()
-    {/*
+    {
         // Pキーでダメージ
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-        */
+      
         // 左右移動
         transform.Translate(
             Vector2.right * direction * Bspeed * Time.deltaTime);
@@ -108,12 +114,21 @@ public class enemy1 : MonoBehaviour
         }
         else
         {
-            Debug.Log("Boss が設定されていません");
+          //  Debug.Log("Boss が設定されていません");
         }
 
-        // 1秒後に削除
-        Destroy(gameObject, 0.5f);
+        // 1秒後に非表示
+        StartCoroutine(Deth());
     }
+
+    // 雑魚敵のhpがなくなった時の処理
+    IEnumerator Deth()
+    {
+        yield return new WaitForSeconds(0.8f);
+
+        gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D collison)
     {
         if (collison.CompareTag("Player"))
