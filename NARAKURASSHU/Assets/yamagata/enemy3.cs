@@ -8,13 +8,12 @@ public class enemy3 : MonoBehaviour
     public float detectRange = 5.0f;    // 索敵範囲
     public float moveSpeed = 2.0f;     // スピード
     public int EnemyHp = 1;   // HP
+    public float attackRange = 1.5f;
 
     private Animator animator;
 
     public AudioSource audioSource;
 
-    public AudioClip shotSE;
-    public AudioClip deathSE;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -22,15 +21,11 @@ public class enemy3 : MonoBehaviour
 
     void Shoot()
     {
-        audioSource.PlayOneShot(shotSE);
-
         animator.SetTrigger("Attack");
     }
 
     public void EnemyDamage(int damage)
     {
-        audioSource.PlayOneShot(deathSE);
-
         EnemyHp -= damage;
 
         Debug.Log("Enemy HP : " + EnemyHp);
@@ -59,15 +54,21 @@ public class enemy3 : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // プレイヤーが範囲内なら追尾
-        if (distance <= detectRange)
+        if (distance <= attackRange)
         {
-            transform.position = Vector2.MoveTowards(
+            Shoot();
+        }
+
+        // プレイヤーが範囲内なら追尾
+        else if (distance <= detectRange)
+        {
+            transform.position = Vector2.MoveTowards
+            (
                 transform.position,
                 player.position,
                 moveSpeed * Time.deltaTime
             );
-              
+
 
 
         }
