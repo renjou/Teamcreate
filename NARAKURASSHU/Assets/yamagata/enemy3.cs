@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 
 public class enemy3 : MonoBehaviour
 {
@@ -7,12 +8,22 @@ public class enemy3 : MonoBehaviour
     public float detectRange = 5.0f;    // 索敵範囲
     public float moveSpeed = 2.0f;     // スピード
     public int EnemyHp = 1;   // HP
+    public float attackRange = 1.5f;
 
-    private Animator anim;
+    private Animator animator;
+
+    public AudioSource audioSource;
+
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
+
+    void Shoot()
+    {
+        animator.SetTrigger("Attack");
+    }
+
     public void EnemyDamage(int damage)
     {
         EnemyHp -= damage;
@@ -28,7 +39,7 @@ public class enemy3 : MonoBehaviour
     void Die()
     {
 
-        anim.SetTrigger("Die");
+        animator.SetTrigger("Die");
 
         GetComponent<Collider2D>().enabled = false;
 
@@ -43,15 +54,21 @@ public class enemy3 : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // プレイヤーが範囲内なら追尾
-        if (distance <= detectRange)
+        if (distance <= attackRange)
         {
-            transform.position = Vector2.MoveTowards(
+            Shoot();
+        }
+
+        // プレイヤーが範囲内なら追尾
+        else if (distance <= detectRange)
+        {
+            transform.position = Vector2.MoveTowards
+            (
                 transform.position,
                 player.position,
                 moveSpeed * Time.deltaTime
             );
-              
+
 
 
         }
