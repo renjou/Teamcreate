@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -8,7 +8,7 @@ public class GameClearMenu : MonoBehaviour
     public RectTransform retryButton;
     public RectTransform titleButton;
     public RectTransform exitButton;
-    public RectTransform cursor;
+    public Transform cursor;
 
     private int selected = 0;
 
@@ -50,18 +50,15 @@ public class GameClearMenu : MonoBehaviour
         switch (selected)
         {
             case 0:
-                cursor.anchoredPosition =
-                    retryButton.anchoredPosition + new Vector2(-30f, 0f);
+                cursor.position = retryButton.transform.position + new Vector3(-155f, 0f, 0f);
                 break;
 
             case 1:
-                cursor.anchoredPosition =
-                    titleButton.anchoredPosition + new Vector2(-30f, 0f);
+                cursor.position = titleButton.transform.position + new Vector3(-155f, 0f, 0f);
                 break;
 
             case 2:
-                cursor.anchoredPosition =
-                    exitButton.anchoredPosition + new Vector2(-30f, 0f);
+                cursor.position = exitButton.transform.position + new Vector3(-155f, 0f, 0f);
                 break;
         }
     }
