@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
@@ -11,7 +11,8 @@ public class Elevator : MonoBehaviour
     private float timer = 0f;
     private bool isWaiting = false;
     private bool isPlayerOn = false; // プレイヤーが乗っているか
-
+    [SerializeField] private AudioClip soundToPlay;
+    private AudioSource audioSource;
 
     private void Start()
     {
@@ -22,6 +23,18 @@ public class Elevator : MonoBehaviour
             // 「到着して待機している状態（プレイヤーが乗るのを待つ状態）」からスタートさせる
             isWaiting = true;
             currentWaypointIndex = 1; // 次に目指すのは地下(1)
+        }
+        audioSource = GetComponent<AudioSource>();
+        if(audioSource ==null)
+        {
+            audioSource=gameObject.AddComponent<AudioSource>();
+        }
+        if (audioSource != null)
+        {
+
+            audioSource.clip = soundToPlay;
+            audioSource.loop = true;
+
         }
     }
     void Update()
@@ -56,6 +69,8 @@ public class Elevator : MonoBehaviour
                 isWaiting = false;
                 timer = 0f;
                 currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+
+                audioSource.Play();
             }
             return;
         }
@@ -68,16 +83,21 @@ public class Elevator : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) < 0.01f)
         {
             isWaiting = true;
+
+            audioSource.Stop();
         }
     }
 
-    // --- プレイヤーの接触判定と親子関係の切り替え ---
+        // --- プレイヤーの接触判定と親子関係の切り替え ---
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(transform);
             isPlayerOn = true;
+
+           
         }
     }
 
@@ -87,6 +107,8 @@ public class Elevator : MonoBehaviour
         {
             collision.transform.SetParent(null);
             isPlayerOn = false;
+
+           
         }
     }
 }
