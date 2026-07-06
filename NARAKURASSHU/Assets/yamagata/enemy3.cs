@@ -13,6 +13,12 @@ public class enemy3 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
+    void Shoot()
+    {
+        anim.SetTrigger("Attack");
+    }
+
     public void EnemyDamage(int damage)
     {
         EnemyHp -= damage;
