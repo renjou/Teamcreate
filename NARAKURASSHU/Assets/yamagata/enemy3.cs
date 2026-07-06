@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 
 public class enemy3 : MonoBehaviour
 {
@@ -8,19 +9,28 @@ public class enemy3 : MonoBehaviour
     public float moveSpeed = 2.0f;     // スピード
     public int EnemyHp = 1;   // HP
 
-    private Animator anim;
+    private Animator animator;
+
+    public AudioSource audioSource;
+
+    public AudioClip shotSE;
+    public AudioClip deathSE;
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Shoot()
     {
-        anim.SetTrigger("Attack");
+        audioSource.PlayOneShot(shotSE);
+
+        animator.SetTrigger("Attack");
     }
 
     public void EnemyDamage(int damage)
     {
+        audioSource.PlayOneShot(deathSE);
+
         EnemyHp -= damage;
 
         Debug.Log("Enemy HP : " + EnemyHp);
@@ -34,7 +44,7 @@ public class enemy3 : MonoBehaviour
     void Die()
     {
 
-        anim.SetTrigger("Die");
+        animator.SetTrigger("Die");
 
         GetComponent<Collider2D>().enabled = false;
 
