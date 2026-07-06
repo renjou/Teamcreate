@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AttackObject1 : MonoBehaviour
 {
@@ -6,6 +6,7 @@ public class AttackObject1 : MonoBehaviour
     PlayerControl player;
     enemy1 enemy1;
     enemy2 enemy2;
+    enemy3 enemy3;
     Boss boss;
     public AudioClip hit;
 
@@ -36,6 +37,10 @@ public class AttackObject1 : MonoBehaviour
             {
                 Destroy(gameObject);
                 enemy2.EnemyDamage(20);
+            }
+            if (collision.TryGetComponent<enemy3>(out enemy3 enemy3))
+            {
+                enemy3.EnemyDamage(20);
             }
         }
 

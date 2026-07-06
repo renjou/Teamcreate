@@ -9,7 +9,7 @@ public class PoseUI : MonoBehaviour
 {
     public PlayerControl playerControl;
     public GameObject poseScreen;
-    public TextMeshProUGUI resume;
+    public TextMeshProUGUI cont;
     public TextMeshProUGUI title;
     public RectTransform cursor;
     public AudioClip poseSE;
@@ -52,7 +52,6 @@ public class PoseUI : MonoBehaviour
     
     void PoseCont()
     {
-        /*
         if (Keyboard.current.downArrowKey.wasPressedThisFrame)
         {
             selected++;
@@ -61,7 +60,7 @@ public class PoseUI : MonoBehaviour
             if (selected > 1)
                 selected = 0;
 
-        //  UpdateMenu();
+            UpdateMenu();
         }
 
         if (Keyboard.current.upArrowKey.wasPressedThisFrame)
@@ -72,37 +71,33 @@ public class PoseUI : MonoBehaviour
             if (selected < 0)
                 selected = 1;
 
-        //  UpdateMenu();
+            UpdateMenu();
         }
-        */
 
         if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
             SelectMenu();
         }
     }
-    /*
     void UpdateMenu()
     {
         switch (selected)
         {
             case 0:
                 cursor.position =
-                    resume.rectTransform.position + new Vector3(-193f, 26f, 0f);
+                    cont.rectTransform.position + new Vector3(-547f, -21f, 0f);
                 break;
 
             case 1:
                 cursor.position =
-                    title.rectTransform.position + new Vector3(-236.9f, 26f, 0f);
+                    title.rectTransform.position + new Vector3(-555f, -21f, 0f);
                 break;
         }
     }
-    */
 
     void SelectMenu()
     {
         SceneManager.LoadScene("Title");
-        /*
         switch (selected)
         {
             case 0:
@@ -115,7 +110,6 @@ public class PoseUI : MonoBehaviour
                 SceneManager.LoadScene("Title");
                 break;
         }
-        */
     }
     
 }

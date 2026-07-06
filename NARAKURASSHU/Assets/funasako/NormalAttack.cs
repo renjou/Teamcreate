@@ -8,6 +8,7 @@ public class NormalAttack : MonoBehaviour
     Boss boss;
     enemy1 enemy1;
     enemy2 enemy2;
+    enemy3 enemy3;
     public AudioClip nHit;
 
     BoxCollider2D attackCollider;
@@ -35,6 +36,10 @@ public class NormalAttack : MonoBehaviour
             if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
             {
                 enemy2.EnemyDamage(20);
+            }
+            if (collision.TryGetComponent<enemy3>(out enemy3 enemy3))
+            {
+                enemy3.EnemyDamage(20);
             }
         }
         if (collision.CompareTag("boss"))
