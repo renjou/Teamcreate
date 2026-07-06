@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class enemy2 : MonoBehaviour
 {
@@ -67,7 +68,7 @@ public class enemy2 : MonoBehaviour
         {
             EnemyDamage(1);
         }
-        */
+       */ 
         LookPlayer();
 
         if (player == null) return;
@@ -140,6 +141,13 @@ public class enemy2 : MonoBehaviour
 
         enabled = false;
 
-        Destroy(gameObject, 1f);
+        StartCoroutine(Deth());
+    }
+
+    IEnumerator Deth()
+    {
+        yield return new WaitForSeconds(2f);
+
+        gameObject.SetActive(false);
     }
 }
