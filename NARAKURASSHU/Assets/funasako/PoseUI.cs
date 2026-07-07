@@ -9,6 +9,7 @@ public class PoseUI : MonoBehaviour
 {
     public PlayerControl playerControl;
     public GameObject poseScreen;
+    public GameObject control;
     public TextMeshProUGUI cont;
     public TextMeshProUGUI title;
     public RectTransform cursor;
@@ -17,6 +18,7 @@ public class PoseUI : MonoBehaviour
     AudioSource audioSorce;
 
     private int selected = 0;
+    bool isControl = false;
 
     private void Start()
     {
@@ -25,8 +27,20 @@ public class PoseUI : MonoBehaviour
     }
     private void Update()
     {
-        PoseBootEnd();
-        PoseCont();
+        if (!isControl)
+        {
+            PoseBootEnd();
+            PoseCont();
+        }
+        else
+        {
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                ControlBoot();
+                cursor.gameObject.SetActive(true);
+            }
+        }
+       
     }
 
     void PoseBootEnd()
@@ -97,13 +111,10 @@ public class PoseUI : MonoBehaviour
 
     void SelectMenu()
     {
-        SceneManager.LoadScene("Title");
         switch (selected)
         {
             case 0:
-                playerControl.ispose = false;
-                Time.timeScale = 1;
-                poseScreen.SetActive(false);
+                ControlBoot();
                 break;
 
             case 1:
@@ -112,4 +123,10 @@ public class PoseUI : MonoBehaviour
         }
     }
     
+    void ControlBoot()
+    {
+        cursor.gameObject.SetActive(false);
+        isControl = !isControl;
+        control.SetActive(isControl);
+    }
 }
