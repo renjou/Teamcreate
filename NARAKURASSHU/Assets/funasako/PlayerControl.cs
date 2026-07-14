@@ -31,6 +31,7 @@ public class PlayerControl : MonoBehaviour
     public HPUI hpUI;
     public SpecialGaugeUI spUI;
     public PoseUI poseUI;
+    public HitStop hitstop;
     // public GameObject attack1Prefab;
     public GameObject attack2Prefab;
     public GameObject specialPrefab;
@@ -75,6 +76,15 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+        if (hitstop.isHitStop)
+        {
+            int stopTimer = 0;
+            if (stopTimer > hitstop.time)
+            {
+                stopTimer++;
+                return;
+            }
+        }
         //Debug.Log("Player Update");
         if (ispose) return;
         PlayerAnime();
