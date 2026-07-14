@@ -18,15 +18,15 @@ public class HitShake : MonoBehaviour
     {
         
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    // 攻撃対象（敵など）に当たったかチェック
-    //    if (collision.CompareTag(targetTag))
-    //    {
-    //        if (CameraShake.Instance != null)
-    //        {
-    //            CameraShake.Instance.Shake(shakeDur, shakeMag);
-    //        }
-    //    }
-    //}
+   public void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 攻撃対象（敵など）に当たったかチェック
+        if (collision.CompareTag(targetTag))
+        {
+            if (CameraShake.Instance != null)
+            {
+                CameraShake.Instance.Shake(shakeDur, shakeMag);
+            }
+        }
+    }
 }

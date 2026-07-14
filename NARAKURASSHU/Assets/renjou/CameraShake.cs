@@ -22,18 +22,17 @@ public class CameraShake : MonoBehaviour
     {
         originalPosition = transform.localPosition;
     }
-    private void Shake(float duration, float magnitude)
+ public void Shake(float duration, float magnitude)
     {
         StopAllCoroutines();
         StartCoroutine(DoShake(duration, magnitude));
     }
-    private IEnumerator DoShake(float duration, float magnitude)
+  public IEnumerator DoShake(float duration, float magnitude)
     {
         float elapsed = 0.0f;
 
         while (elapsed < duration)
         {
-            // ランダムな位置を計算（2DなのでZ軸は固定）
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
