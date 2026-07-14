@@ -141,4 +141,29 @@ public class enemy1 : MonoBehaviour
           //  player.KnockBack(transform.position);
         }
     }
+    public void Respawn()
+    {
+        // 元の位置に戻す
+        transform.position = startpos;
+
+        // HPを元に戻す
+        EnemyHp = 3;
+
+        // 当たり判定を戻す
+        GetComponent<Collider2D>().enabled = true;
+
+        // 向きを初期状態に戻す
+        direction = -1;
+        transform.localScale = baseScale;
+
+        // Animatorを初期状態に戻す
+        anim.Rebind();
+        anim.Update(0f);
+
+        // スクリプトを有効化
+        enabled = true;
+
+        // 表示
+        gameObject.SetActive(true);
+    }
 }

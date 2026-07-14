@@ -50,15 +50,15 @@ public class GameClearMenu : MonoBehaviour
         switch (selected)
         {
             case 0:
-                cursor.position = retryButton.transform.position + new Vector3(-155f, 0f, 0f);
+                cursor.position = retryButton.transform.position + new Vector3(-275f, 0f, 0f);
                 break;
 
             case 1:
-                cursor.position = titleButton.transform.position + new Vector3(-155f, 0f, 0f);
+                cursor.position = titleButton.transform.position + new Vector3(-275f, 0f, 0f);
                 break;
 
             case 2:
-                cursor.position = exitButton.transform.position + new Vector3(-155f, 0f, 0f);
+                cursor.position = exitButton.transform.position + new Vector3(-275f, 0f, 0f);
                 break;
         }
     }
