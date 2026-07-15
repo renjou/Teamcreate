@@ -43,12 +43,13 @@ public class enemy1 : MonoBehaviour
 
     void Update()
     {
+        /*
         // Pキーでダメージ
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-      
+      */
         // 左右移動
         transform.Translate(
             Vector2.right * direction * Bspeed * Time.deltaTime);
@@ -96,7 +97,7 @@ public class enemy1 : MonoBehaviour
     {
         audioSource.PlayOneShot(deathSE);
 
-        Debug.Log("Enemy Dead");
+     //   Debug.Log("Enemy Dead");
 
         // Dieアニメーション再生
         anim.SetTrigger("Die");
@@ -109,7 +110,7 @@ public class enemy1 : MonoBehaviour
 
         if (boss != null)
         {
-            Debug.Log("Boss Spawn");
+        //   Debug.Log("Boss Spawn");
         //    boss.SetActive(true);
         }
         else
