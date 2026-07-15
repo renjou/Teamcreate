@@ -57,6 +57,9 @@ public class enemy2 : MonoBehaviour
             player = p.transform;
         }
 
+        // 初期位置を保存
+        startpos = transform.position;
+
         baseScale = transform.localScale;
 
         anim = GetComponent<Animator>();
@@ -66,12 +69,12 @@ public class enemy2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {/*
+    {
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-       */ 
+       
         LookPlayer();
 
         if (player == null) return;
@@ -161,6 +164,9 @@ public class enemy2 : MonoBehaviour
 
         // HPを元に戻す
         EnemyHp = 3;
+
+        // 発射タイマー
+        shotTimer = shotInterval;
 
         // 当たり判定を戻す
         GetComponent<Collider2D>().enabled = true;
