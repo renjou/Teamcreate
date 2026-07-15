@@ -568,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5322581248404397681, guid: 7c404013e6df9f04c9bceb4d771c5c52, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9193833008303373832, guid: 7c404013e6df9f04c9bceb4d771c5c52, type: 3}
       propertyPath: deathSE
@@ -982,7 +982,7 @@ GameObject:
   - component: {fileID: 1833354916}
   - component: {fileID: 1833354915}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: EnemyManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,8 +1083,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5672915372400636680, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2091819467}
   m_SourcePrefab: {fileID: 100100000, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
+--- !u!1 &2091819463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5672915372400636680, guid: 8fd983d85ba190f40a190adbe6256e88, type: 3}
+  m_PrefabInstance: {fileID: 1924331880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2091819467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091819463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2d2d070892b0f42a7553e746487787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
+  enemyManager: {fileID: 1833354915}
 --- !u!1 &2136139736
 GameObject:
   m_ObjectHideFlags: 0
