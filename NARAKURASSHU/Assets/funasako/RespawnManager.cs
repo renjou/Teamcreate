@@ -41,6 +41,7 @@ public class RespawnManager : MonoBehaviour
 
     public void RespawnALL()
     {
+        enemyManager.RespawnEnemies();
         foreach (var pair in respawnPoints)
         {
             if (pair.Key == playerTransform && hasCheckpoint)
