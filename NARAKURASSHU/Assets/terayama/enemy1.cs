@@ -20,9 +20,15 @@ public class enemy1 : MonoBehaviour
     // 移動方向
     private int direction = -1;
 
+    private bool isKnockBack = false;
+
     private Animator anim;
 
     private Vector3 baseScale;
+
+    private Rigidbody2D rb;
+
+    private PlayerControl player;
 
     public AudioSource audioSource;
     public AudioClip deathSE;
@@ -31,6 +37,8 @@ public class enemy1 : MonoBehaviour
     [SerializeField] private GameObject die;
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+
         audioSource = GetComponent<AudioSource>();
 
         // 始めた時の座標保存
@@ -51,10 +59,13 @@ public class enemy1 : MonoBehaviour
         }
       */
         // 左右移動
-        transform.Translate(
-            Vector2.right * direction * Bspeed * Time.deltaTime);
+        if (!isKnockBack)
+        {
+            transform.Translate(
+                Vector2.right * direction * Bspeed * Time.deltaTime);
+        }
 
-        
+
         // 一定距離で反転
         if (transform.position.x > startpos.x + Brange)
         {
@@ -84,7 +95,12 @@ public class enemy1 : MonoBehaviour
 
         EnemyHp -= damage;
 
-        Debug.Log("Enemy HP : " + EnemyHp);
+        //    Debug.Log("Enemy HP : " + EnemyHp);
+
+        if (player != null)
+        {
+            KnockBack(player.transform.position);
+        }
 
         if (EnemyHp <= 0)
         {
@@ -166,5 +182,24 @@ public class enemy1 : MonoBehaviour
 
         // 表示
         gameObject.SetActive(true);
+    }
+    public void KnockBack(Vector3 playerPos)
+    {
+        isKnockBack = true;
+
+        Vector2 dir = (transform.position - playerPos).normalized;
+
+        rb.linearVelocity = Vector2.zero;
+
+        rb.AddForce(dir * 5f, ForceMode2D.Impulse);
+
+        StartCoroutine(EndKnockBack());
+    }
+
+    IEnumerator EndKnockBack()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        isKnockBack = false;
     }
 }
