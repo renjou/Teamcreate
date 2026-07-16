@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +10,7 @@ public class RespawnManager : MonoBehaviour
     private Transform playerTransform;
     private Vector3 currentCheckpointPosition;
     private bool hasCheckpoint = false;
+    public EnemyManager enemyManager;
     public void Register(Transform obj)
     {
         Debug.Log("REBORN");
@@ -40,6 +41,7 @@ public class RespawnManager : MonoBehaviour
 
     public void RespawnALL()
     {
+        enemyManager.RespawnEnemies();
         foreach (var pair in respawnPoints)
         {
             if (pair.Key == playerTransform && hasCheckpoint)

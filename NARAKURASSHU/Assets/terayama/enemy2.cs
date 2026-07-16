@@ -8,6 +8,9 @@ public class enemy2 : MonoBehaviour
 
     private Animator anim;
 
+    // 初期位置
+    private Vector3 startpos;
+
     private Vector3 baseScale;
 
     public GameObject bulletPrefab;
@@ -54,6 +57,9 @@ public class enemy2 : MonoBehaviour
             player = p.transform;
         }
 
+        // 初期位置を保存
+        startpos = transform.position;
+
         baseScale = transform.localScale;
 
         anim = GetComponent<Animator>();
@@ -63,12 +69,12 @@ public class enemy2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {/*
+    {
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             EnemyDamage(1);
         }
-       */ 
+       
         LookPlayer();
 
         if (player == null) return;
@@ -149,5 +155,32 @@ public class enemy2 : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         gameObject.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        // 元の位置に戻す
+        transform.position = startpos;
+
+        // HPを元に戻す
+        EnemyHp = 3;
+
+        // 発射タイマー
+        shotTimer = shotInterval;
+
+        // 当たり判定を戻す
+        GetComponent<Collider2D>().enabled = true;
+      
+        transform.localScale = baseScale;
+
+        // Animatorを初期状態に戻す
+        anim.Rebind();
+        anim.Update(0f);
+
+        // スクリプトを有効化
+        enabled = true;
+
+        // 表示
+        gameObject.SetActive(true);
     }
 }

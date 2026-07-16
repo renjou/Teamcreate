@@ -15,7 +15,7 @@ public class EnemyManager : MonoBehaviour
 
         for (int i = 0; i < enemies2.Length; i++)
         {
-     //       enemies2[i].Respawn();
+            enemies2[i].Respawn();
         }
 
         for (int i = 0;i < enemies3.Length; i++)
