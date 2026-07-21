@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     public int playerHP = 5;
     public float knockBackPower = 10f;
     int stopTimer = 0;
+    Vector2 saveVelocity;
     bool isAttacking = false;
     bool isAttacking1 = false;
     bool isAttacking2 = false;
@@ -79,6 +80,12 @@ public class PlayerControl : MonoBehaviour
     {
         if (hitstop.isHitStop)
         {
+            if (stopTimer == 0)
+            {
+                saveVelocity = playerRigid.linearVelocity;
+                playerRigid.simulated = false;
+                animator.speed = 0;
+            }
             if (stopTimer < hitstop.time)
             {
                 stopTimer++;
@@ -86,6 +93,9 @@ public class PlayerControl : MonoBehaviour
             }
             else
             {
+                playerRigid.simulated = true;
+                playerRigid.linearVelocity = saveVelocity; ;
+                animator.speed = 1;
                 hitstop.time = 0;
                 stopTimer = 0;
                 hitstop.isHitStop = false;

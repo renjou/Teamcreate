@@ -24,13 +24,13 @@ public class HitStop : MonoBehaviour
             case 0:
                 break;
             case 1:
-                time = 120;
+                time = 4;
                 break;
             case 2:
-                time = 6;
+                time = 8;
                 break;
             case 3:
-                time = 9;
+                time = 12;
                 break;
         }
     }

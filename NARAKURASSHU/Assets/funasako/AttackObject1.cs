@@ -4,6 +4,7 @@ public class AttackObject1 : MonoBehaviour
 {
     Collider2D collider2d;
     PlayerControl player;
+    HitStop hitStop;
     enemy1 enemy1;
     enemy2 enemy2;
     enemy3 enemy3;
@@ -17,6 +18,7 @@ public class AttackObject1 : MonoBehaviour
         Destroy(gameObject, 1f);
         collider2d = GetComponent<Collider2D>();
         player = FindFirstObjectByType<PlayerControl>();
+        hitStop = FindFirstObjectByType<HitStop>();
         boss = FindFirstObjectByType<Boss>();
     }
 
@@ -30,16 +32,20 @@ public class AttackObject1 : MonoBehaviour
             player.SpeGaugeIncrease();
             if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
             {
+                hitStop.HitStopBoot(2);
                 Destroy(gameObject);
                 enemy1.EnemyDamage(20);
             }
             if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
             {
+                hitStop.HitStopBoot(2);
                 Destroy(gameObject);
                 enemy2.EnemyDamage(20);
             }
             if (collision.TryGetComponent<enemy3>(out enemy3 enemy3))
             {
+                hitStop.HitStopBoot(2);
+                Destroy(gameObject);
                 enemy3.EnemyDamage(20);
             }
         }
@@ -47,7 +53,7 @@ public class AttackObject1 : MonoBehaviour
         if (collision.CompareTag("boss"))
         {
             Debug.Log("ボスヒット");
-            player.SpeGaugeIncrease();
+            hitStop.HitStopBoot(2);
             Destroy(gameObject);
             boss.BossDamage(10);
         }
