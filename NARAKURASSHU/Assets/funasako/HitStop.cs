@@ -14,9 +14,9 @@ public class HitStop : MonoBehaviour
         
     }
 
-    void HitStopBoot(int attack)
+    public void HitStopBoot(int attack)
     {
-        
+        Debug.Log("起動");   
         isHitStop = true;
 
         switch (attack)
@@ -24,7 +24,7 @@ public class HitStop : MonoBehaviour
             case 0:
                 break;
             case 1:
-                time = 3;
+                time = 120;
                 break;
             case 2:
                 time = 6;

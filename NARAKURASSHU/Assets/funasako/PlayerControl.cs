@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     public float playerDirection = 1; // 自機の向き　　1で右向き
     public int playerHP = 5;
     public float knockBackPower = 10f;
+    int stopTimer = 0;
     bool isAttacking = false;
     bool isAttacking1 = false;
     bool isAttacking2 = false;
@@ -78,11 +79,16 @@ public class PlayerControl : MonoBehaviour
     {
         if (hitstop.isHitStop)
         {
-            int stopTimer = 0;
-            if (stopTimer > hitstop.time)
+            if (stopTimer < hitstop.time)
             {
                 stopTimer++;
                 return;
+            }
+            else
+            {
+                hitstop.time = 0;
+                stopTimer = 0;
+                hitstop.isHitStop = false;
             }
         }
         //Debug.Log("Player Update");
