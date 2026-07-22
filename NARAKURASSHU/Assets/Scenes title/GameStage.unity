@@ -143589,6 +143589,18 @@ PrefabInstance:
       propertyPath: m_LayerOverridePriority
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3902129199296607313, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
+      propertyPath: shotSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 230f8896bc06c854b88c0af25b435514, type: 3}
+    - target: {fileID: 3902129199296607313, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
+      propertyPath: deathSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cd7064215cd2414288709b0e1595871, type: 3}
+    - target: {fileID: 3902129199296607313, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
+      propertyPath: damageSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a6bae7b4630579479d7dfe3daa9c7c1, type: 3}
     - target: {fileID: 5013878295576335254, guid: d79e548103eb25143bf28337c4138cd4, type: 3}
       propertyPath: m_Name
       value: "slim \u2190 (9)"
