@@ -48222,7 +48222,7 @@ GameObject:
   - component: {fileID: 719188199}
   - component: {fileID: 719188198}
   m_Layer: 5
-  m_Name: cutsol
+  m_Name: cursol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
