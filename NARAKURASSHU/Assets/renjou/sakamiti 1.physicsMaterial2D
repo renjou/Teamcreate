@@ -6,7 +6,7 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NoFriction
+  m_Name: sakamiti 1
   serializedVersion: 2
   friction: 1
   bounciness: 0
