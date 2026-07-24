@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameClearMenu : MonoBehaviour
 {
@@ -11,8 +12,15 @@ public class GameClearMenu : MonoBehaviour
 
     private int selected = 0;
 
-    void Start()
+    void OnEnable()
     {
+        selected = 0;
+        StartCoroutine(UpdateCursor());
+    }
+
+    IEnumerator UpdateCursor()
+    {
+        yield return null;   // 1フレーム待つ
         UpdateMenu();
     }
 
@@ -68,8 +76,7 @@ public class GameClearMenu : MonoBehaviour
         {
             case 0:
                 Time.timeScale = 1f;
-                SceneManager.LoadScene(
-                    SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 break;
 
             case 1:
