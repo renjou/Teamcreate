@@ -56,22 +56,22 @@ public class enemy3 : MonoBehaviour
 
         if (distance <= attackRange)
         {
-            Shoot();
+            animator.SetBool("IsAttacking", true);
+        }
+        else
+        {
+            animator.SetBool("IsAttackig", false);
         }
 
         // プレイヤーが範囲内なら追尾
         //else 
-        if (distance <= detectRange)
+        if (distance <= detectRange && distance <= detectRange)
         {
-            transform.position = Vector2.MoveTowards
-            (
+            transform.position = Vector2.MoveTowards(
                 transform.position,
                 player.position,
                 moveSpeed * Time.deltaTime
             );
-
-
-
         }
         // 範囲外なら何もしない（その場で待機）
     }
