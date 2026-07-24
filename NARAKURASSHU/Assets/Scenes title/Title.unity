@@ -1033,7 +1033,7 @@ PrefabInstance:
         ESC        : PAUSE
 
 
-        BACK
+        Back
         ESCAPE'
       objectReference: {fileID: 0}
     - target: {fileID: 2346595483533063079, guid: 55c699310d39a5043881b69832ec3de4, type: 3}

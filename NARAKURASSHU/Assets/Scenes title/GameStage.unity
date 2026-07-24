@@ -24164,6 +24164,10 @@ PrefabInstance:
       propertyPath: clearUI
       value: 
       objectReference: {fileID: 198559397}
+    - target: {fileID: 9218283749361905022, guid: 0ac1507d837a50346b8b5585be2b0cf0, type: 3}
+      propertyPath: menuRoot
+      value: 
+      objectReference: {fileID: 1595157278}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -99516,7 +99520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1595157279
 MonoBehaviour:
   m_ObjectHideFlags: 0
