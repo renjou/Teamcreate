@@ -63,6 +63,7 @@ public class Boss : MonoBehaviour
     public float knockBackDistance = 0.8f;
 
     public GameObject clearUI;
+    public GameObject menuRoot;
 
     public AudioSource audioSource;
 
@@ -494,6 +495,10 @@ public class Boss : MonoBehaviour
         if (clearUI != null)
         {
             clearUI.SetActive(true);
+        }
+        if (menuRoot != null)
+        {
+            menuRoot.SetActive(true);
         }
 
         Time.timeScale = 0f;

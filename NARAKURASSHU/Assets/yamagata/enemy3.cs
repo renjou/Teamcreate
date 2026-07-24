@@ -60,7 +60,8 @@ public class enemy3 : MonoBehaviour
         }
 
         // プレイヤーが範囲内なら追尾
-        else if (distance <= detectRange)
+        //else 
+        if (distance <= detectRange)
         {
             transform.position = Vector2.MoveTowards
             (

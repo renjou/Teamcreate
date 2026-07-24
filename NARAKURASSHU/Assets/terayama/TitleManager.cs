@@ -22,7 +22,7 @@ public class TitleManager : MonoBehaviour
     {
         if (isControlsOpen)
         {
-            if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 ShowControls();
                 cursor.gameObject.SetActive(true);
