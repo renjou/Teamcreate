@@ -1017,26 +1017,24 @@ PrefabInstance:
 
         A / D      : MOVE
 
-        W / S      : CAMERA UP
-        / DOWN
-
         SPACE      : JUMP
 
-        J          : ATTACK
+        J         
+        : ATTACK
 
-        K         
-        : RANGED ATTACK
+        K          : RANGED ATTACK
 
-        SHIFT      : SPECIAL ATTACK
+        SHIFT      : SPECIAL
+        ATTACK
 
 
-        ENTER     
-        : CONFIRM
+        ENTER      : CONFIRM
 
         ESC        : PAUSE
 
 
-        Backspace'
+        BACK
+        ESCAPE'
       objectReference: {fileID: 0}
     - target: {fileID: 2346595483533063079, guid: 55c699310d39a5043881b69832ec3de4, type: 3}
       propertyPath: m_fontSize

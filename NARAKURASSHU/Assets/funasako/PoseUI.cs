@@ -88,7 +88,7 @@ public class PoseUI : MonoBehaviour
             UpdateMenu();
         }
 
-        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        if (Keyboard.current.enterKey.wasPressedThisFrame && playerControl.ispose == true)
         {
             SelectMenu();
         }
@@ -118,6 +118,7 @@ public class PoseUI : MonoBehaviour
                 break;
 
             case 1:
+                Time.timeScale = 1f;
                 SceneManager.LoadScene("Title");
                 break;
         }
