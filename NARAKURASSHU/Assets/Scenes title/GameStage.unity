@@ -54131,6 +54131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1518570670}
     m_Modifications:
+    - target: {fileID: 1307211689228532663, guid: 4f1f788ac998a2746893f7167614dbb8, type: 3}
+      propertyPath: EnemyHp
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 5307959045274104778, guid: 4f1f788ac998a2746893f7167614dbb8, type: 3}
       propertyPath: m_SortingOrder
       value: 6
