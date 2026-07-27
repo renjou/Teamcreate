@@ -33,19 +33,19 @@ public class SpecialAttack : MonoBehaviour
             {
                 hitStop.HitStopBoot(3);
                 Destroy(gameObject);
-                enemy1.EnemyDamage(20);
+                enemy1.EnemyDamage(10);
             }
             if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
             {
                 hitStop.HitStopBoot(3);
                 Destroy(gameObject);
-                enemy2.EnemyDamage(20);
+                enemy2.EnemyDamage(10);
             }
             if (collision.TryGetComponent<enemy3>(out enemy3 enemy3))
             {
                 hitStop.HitStopBoot(3);
                 Destroy(gameObject);
-                enemy3.EnemyDamage(20);
+                enemy3.EnemyDamage(10);
             }
         }
 

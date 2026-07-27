@@ -34,17 +34,17 @@ public class NormalAttack : MonoBehaviour
             if (collision.TryGetComponent<enemy1>(out enemy1 enemy1))
             {
                 hitStop.HitStopBoot(1);
-                enemy1.EnemyDamage(20);
+                enemy1.EnemyDamage(3);
             }
             if (collision.TryGetComponent<enemy2>(out enemy2 enemy2))
             {
                 hitStop.HitStopBoot(1);
-                enemy2.EnemyDamage(20);
+                enemy2.EnemyDamage(3);
             }
             if (collision.TryGetComponent<enemy3>(out enemy3 enemy3))
             {
                 hitStop.HitStopBoot(1);
-                enemy3.EnemyDamage(20);
+                enemy3.EnemyDamage(3);
             }
         }
         if (collision.CompareTag("boss"))
@@ -52,7 +52,7 @@ public class NormalAttack : MonoBehaviour
             //    Debug.Log("ヒット");
             hitStop.HitStopBoot(1);
             playerControl.SpeGaugeIncrease();
-            boss.BossDamage(5);
+            boss.BossDamage(3);
         }
     }
 
