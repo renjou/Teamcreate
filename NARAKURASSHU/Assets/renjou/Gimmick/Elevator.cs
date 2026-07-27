@@ -105,10 +105,12 @@ public class Elevator : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(null);
-            isPlayerOn = false;
+            if (collision.transform.parent == transform)
+            {
+                collision.transform.SetParent(null);
+            }
 
-           
+            isPlayerOn = false;
         }
     }
 }
