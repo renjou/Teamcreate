@@ -48,29 +48,32 @@ public class TitleMenu : MonoBehaviour
 
         if (Keyboard.current.enterKey.wasPressedThisFrame)
         {
+
             SelectMenu();
         }
     }
         void UpdateMenu()
+    {
+        switch (selected)
         {
-            switch (selected)
-            {
-                case 0:
-                    cursor.position = startText.transform.position + new Vector3(-245f, 0f, 0f);
-                    break;
+            case 0:
+                cursor.position = startText.transform.position + new Vector3(-245f, 0f, 0f);
+                break;
 
-                case 1:
-                    cursor.position = controlsText.transform.position + new Vector3(-245f, 0f, 0f);
-                    break;
+            case 1:
+                cursor.position = controlsText.transform.position + new Vector3(-245f, 0f, 0f);
+                break;
 
-                case 2:
-                    cursor.position = exitText.transform.position + new Vector3(-245f, 0f, 0f);
-                    break;
-            }
+            case 2:
+                cursor.position = exitText.transform.position + new Vector3(-245f, 0f, 0f);
+                break;
         }
+        Debug.Log("カーソル位置 selected = " + selected);
+    }
 
     void SelectMenu()
     {
+        Debug.Log("決定 selected = " + selected);
         switch (selected)
         {
             case 0:
